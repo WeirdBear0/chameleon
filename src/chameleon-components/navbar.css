@@ -1,0 +1,27 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #e2dac9;
+    align-items: center;
+}
+.navbar a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #7ba059;
+    font-weight: bold;
+}
+.navbar .logoLink{
+    padding: 0;
+    margin-left: 2.5rem;
+}
+.navbar .logoLink .logo{
+    width: 8.50280898876rem;
+    height: 6rem;
+}
+.navbar .links{
+    align-self: center;
+}
+.navbar .links a{
+    margin-right: 2.5rem;
+}
