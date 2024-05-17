@@ -1,0 +1,11 @@
+.banner{
+    padding:0;
+    margin:0;
+    background-color:#f0ead2;
+    height: 52rem;
+}
+.banner p{
+    margin:0;
+    padding:5rem;
+    
+}

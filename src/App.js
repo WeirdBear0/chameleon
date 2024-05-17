@@ -1,10 +1,11 @@
 import Navbar from './chameleon-components/navbar';
-import './App.module.css';
+import Banner from './chameleon-components/banner'
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
+      <Banner/>
     </div>
   );
 }
