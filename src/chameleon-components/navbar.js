@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import './navbar.css'
 import logo from './logoClear.svg'
+import Font from './font';
+import './navbar.css'
 
 const Navbar = () => {
   return (
@@ -8,6 +9,7 @@ const Navbar = () => {
         <a href = "#" className='logoLink'>
             <img src = {logo} className='logo' alt = 'chameleon'></img>
         </a>
+        <p className='title'>chameleon</p>
         <div className='links'>
             <a className='sectionLink'>Home</a>
             <a className='sectionLink'>About</a>

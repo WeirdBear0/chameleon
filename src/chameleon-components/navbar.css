@@ -1,11 +1,12 @@
 .navbar{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: #e2dac9;
+    justify-content: space-around;
+    background: #e2dac9;
     align-items: center;
 }
 .navbar a{
+    font-family: 'Montserrat', serif;
     text-decoration: none;
     cursor: pointer;
     color: #7ba059;
@@ -13,15 +14,27 @@
 }
 .navbar .logoLink{
     padding: 0;
-    margin-left: 2.5rem;
+    margin: 0 2.5rem 0;
 }
 .navbar .logoLink .logo{
     width: 8.50280898876rem;
     height: 6rem;
 }
-.navbar .links{
-    align-self: center;
+.navbar .links{ 
+    padding:0;
 }
 .navbar .links a{
     margin-right: 2.5rem;
 }
+@keyframes slidein {
+    0% {padding-top:1rem; opacity: 0;}
+    100% {padding-top:0; opacity: 1;}
+}
+.navbar .title{
+    font-family: 'Libre Baskerville', serif;
+    color:#7ba059;
+    font-size: 55px;
+    animation-name: slidein;
+    animation-duration: 2.34765s;
+}
+
