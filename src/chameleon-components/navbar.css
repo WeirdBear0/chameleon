@@ -2,15 +2,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background: #e2dac9;
+    background: rgba(226, 218, 201, 1);
+    backdrop-filter: saturate(100%) blur(20px);
     align-items: center;
+    position: sticky;
+    transition: 0.4s;
+    top: 0;
 }
 .navbar a{
     font-family: 'Montserrat', serif;
     text-decoration: none;
     cursor: pointer;
     color: #7ba059;
-    font-weight: bold;
+    font-weight: 600;
 }
 .navbar .logoLink{
     padding: 0;
@@ -26,15 +30,9 @@
 .navbar .links a{
     margin-right: 2.5rem;
 }
-@keyframes slidein {
-    0% {padding-top:1rem; opacity: 0;}
-    100% {padding-top:0; opacity: 1;}
-}
 .navbar .title{
     font-family: 'Libre Baskerville', serif;
     color:#7ba059;
-    font-size: 55px;
-    animation-name: slidein;
-    animation-duration: 2.34765s;
+    transition: 0.5s;
 }
 

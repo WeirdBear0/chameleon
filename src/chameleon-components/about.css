@@ -1,0 +1,15 @@
+.aboutContainer{
+    height: 37rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(194, 197, 170, 1);
+}
+.aboutContainer .abtImg{
+    width: 600px;
+    height: 400px;
+}
+.aboutContainer .abtContent{
+    text-align: right;
+}

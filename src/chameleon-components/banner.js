@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Font from './font'
 import './banner.css'
 
 const Banner = () => {
