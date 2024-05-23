@@ -8,6 +8,7 @@
     position: sticky;
     transition: 0.4s;
     top: 0;
+    z-index: 9999;
 }
 .navbar a{
     font-family: 'Montserrat', serif;

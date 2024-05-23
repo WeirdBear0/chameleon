@@ -22,7 +22,7 @@ const Navbar = () => {
         </a>
         <p className='title' style = {{fontSize: size}}>chameleon</p>
         <div className='links'>
-            <a className='sectionLink'>Home</a>
+            <a className='sectionLink' href=''>Home</a>
             <a className='sectionLink'>About</a>
             <a className='sectionLink'>Camps</a>
         </div>

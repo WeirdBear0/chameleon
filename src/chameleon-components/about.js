@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import about from './about.jpg'
+import about from './kiwi.png'
 import './about.css'
 
 const About = () => {
@@ -8,8 +8,8 @@ const About = () => {
         <div className='aboutContainer'>
           <img className='abtImg' src = {about}></img>
           <div className='abtContent'>
-            <h1>How We Began</h1>
-            <p>
+            <h1 className='title'>How We Began</h1>
+            <p className='desc'>
               -------------------------------------------------
               <br/>-------------------------------------------------
               <br/>-------------------------------------------------

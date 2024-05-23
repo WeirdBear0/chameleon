@@ -4,6 +4,7 @@
     background-color:#f0ead2;
     height: 37rem;
     display: flex;
+    z-index: 1;
 }
 @keyframes slidein {
     0% {margin-top:1rem; opacity: 0;}
@@ -15,7 +16,7 @@
     align-self: center;
     padding-left: 10rem;
     animation-name: slidein;
-    animation-duration: 1.5s;
+    animation-duration: 2.34675s;
 }
 .banner .title-container .title{
     margin:0;

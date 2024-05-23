@@ -1,7 +1,8 @@
-import Navbar from './chameleon-components/navbar';
-import Banner from './chameleon-components/banner'
 import About from './chameleon-components/about'
+import Banner from './chameleon-components/banner'
+import Camps from './chameleon-components/camps'
 import Font from './chameleon-components/font';
+import Navbar from './chameleon-components/navbar';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar/>
       <Banner/>
       <About/>
+      <Camps/>
     </div>
   );
 }

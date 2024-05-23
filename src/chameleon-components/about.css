@@ -13,3 +13,11 @@
 .aboutContainer .abtContent{
     text-align: right;
 }
+.aboutContainer .abtContent .title{
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 600;
+}
+.aboutContainer .abtContent .desc{
+    font-family: 'Montserrat', serif;
+    font-weight: 300;
+}
