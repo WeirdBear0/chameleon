@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import logo from './logoClear.svg'
 import './navbar.css'
+import { render } from '@testing-library/react';
 
 const Navbar = () => {
   const [size, setSize] = useState("55px")
@@ -14,7 +15,10 @@ const Navbar = () => {
       setOpacity(1)
     }
   }
-  window.onscroll = () => {changeNav()};
+  window.onscroll = () => {
+    changeNav()
+    console.log(window.scrollY)
+  };
   return (
     <div className = 'navbar' style = {{background: `rgba(226, 218, 201, ${opacity})`}}>
         <a href = "#" className='logoLink'>

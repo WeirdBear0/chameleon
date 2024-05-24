@@ -1,0 +1,30 @@
+.campsContainer{
+    margin:0;
+    padding:0;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+}
+.campsContainer .title{
+    padding: 3.5rem 0rem 2rem 10rem;
+}
+.campsContainer .campsHeader .plain{
+    font-family: 'Montserrat', serif;
+    font-size: 60px;
+}
+.campsContainer .campsHeader .hide{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 60px;
+}
+.campsContainer .campCards{
+    display: flex;
+    flex-direction: row;
+    align-items: left; 
+    justify-content: space-between;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.campsContainer .campCards .card{
+    padding: 7rem 10rem;
+    background: #f0ead2;
+}
