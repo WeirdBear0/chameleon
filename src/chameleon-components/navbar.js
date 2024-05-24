@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import logo from './logoClear.svg'
 import './navbar.css'
-import { render } from '@testing-library/react';
 
 const Navbar = () => {
   const [size, setSize] = useState("55px")
@@ -16,8 +15,7 @@ const Navbar = () => {
     }
   }
   window.onscroll = () => {
-    changeNav()
-    console.log(window.scrollY)
+    changeNav();
   };
   return (
     <div className = 'navbar' style = {{background: `rgba(226, 218, 201, ${opacity})`}}>
@@ -26,7 +24,7 @@ const Navbar = () => {
         </a>
         <p className='title' style = {{fontSize: size}}>chameleon</p>
         <div className='links'>
-            <a className='sectionLink' href=''>Home</a>
+            <a className='sectionLink'>Home</a>
             <a className='sectionLink'>About</a>
             <a className='sectionLink'>Camps</a>
         </div>
