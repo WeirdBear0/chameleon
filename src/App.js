@@ -24,6 +24,9 @@ function App() {
       setOpacity(1)
     }
   }
+  window.onscroll = () => {
+    changeNav();
+  };
   return (
     <div className="App">
       <Font/>
