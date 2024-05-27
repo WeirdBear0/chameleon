@@ -11,13 +11,25 @@ function App() {
   const [opacity, setOpacity] = useState(1)
 
   const bannerRef = useRef(0)
-  const scrollBanner = () => window.scrollTo(0, 0)
+  const scrollBanner = () => window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  })
 
   const abtRef = useRef(0)
-  const scrollabt = () => window.scrollTo(0, 0+bannerRef.current.getBoundingClientRect().height)
+  const scrollabt = () => window.scrollTo({
+    top: bannerRef.current.getBoundingClientRect().height,
+    left: 0,
+    behavior: 'smooth'
+  })
 
   const campRef = useRef(0)
-  const scrollcamp = () => window.scrollTo(0, 0+bannerRef.current.getBoundingClientRect().height + abtRef.current.getBoundingClientRect().height)
+  const scrollcamp = () => window.scrollTo({
+    top: 2*(bannerRef.current.getBoundingClientRect().height),
+    left: 0,
+    behavior: 'smooth'
+  })
 
   function changeNav()   {
     if (window.scrollY > 80 || window.scrollY > 80) {
