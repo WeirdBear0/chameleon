@@ -30,6 +30,10 @@
 }
 .navbar .links a{
     margin-right: 2.5rem;
+    transition: 0.5s;
+}
+.navbar .links a:hover{
+    text-decoration: solid black;
 }
 .navbar .title{
     font-family: 'Libre Baskerville', serif;
