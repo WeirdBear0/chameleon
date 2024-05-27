@@ -9,13 +9,23 @@ import './App.css'
 function App() {
   const [size, setSize] = useState("55px")
   const [opacity, setOpacity] = useState(1)
-  const bannerRef = useRef(null)
-  const bannerScroll = () => bannerRef.current.scrollIntoView(true)
-  const abtRef = useRef(null);
-  const abtScroll = () => abtRef.current.scrollIntoView(true)
-  const campRef = useRef(null);
-  const campScroll = () => campRef.current.scrollIntoView(true)
-  function changeNav() {
+
+  const bannerRef = useRef(0)
+  const scrollBanner = () => window.scrollTo(0, 0)
+
+  const abtRef = useRef(0)
+  const scrollabt = () => window.scrollTo(0, 0+bannerRef.current.getBoundingClientRect().height)
+
+  const campRef = useRef(0)
+  const scrollcamp = () => window.scrollTo(0, 0+bannerRef.current.getBoundingClientRect().height + abtRef.current.getBoundingClientRect().height)
+
+  // const bannerScroll = () => window.scrollTo(0, bannerRef.current)
+  // const abtRef = useRef(0);
+  // const abtScroll = () => abtRef.current.scrollIntoView()
+  // const campRef = useRef(0);
+  // const campScroll = () => window.scrollTo(0, campRef.current)
+
+  function changeNav()   {
     if (window.scrollY > 80 || window.scrollY > 80) {
       setSize("34px");
       setOpacity(0.73)
@@ -36,18 +46,18 @@ function App() {
         </a>
         <p className='title' style = {{fontSize: size}}>chameleon</p>
         <div className='links'>
-            <a className='sectionLink' onClick={() => {bannerScroll()}}>Home</a>
-            <a className='sectionLink' onClick={() => {abtScroll()}}>About</a>
-            <a className='sectionLink' onClick={() => {campScroll()}}>Camps</a>
+            <a className='sectionLink' onClick={() => {scrollBanner()}}>Home</a>
+            <a className='sectionLink' onClick={() => {scrollabt()}}>About</a>
+            <a className='sectionLink' onClick={() => {scrollcamp()}}>Camps</a>
         </div>
       </div>
-      <div ref={bannerRef}>
+      <div className='banner' ref = {bannerRef}>
         <Banner/>
       </div>
-      <div ref={abtRef}>
+      <div className='abt' ref = {abtRef}>
         <About/>
       </div>
-      <div ref={campRef}>
+      <div className='camps' ref = {campRef}>
         <Camps/>
       </div>
     </div>
