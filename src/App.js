@@ -19,12 +19,6 @@ function App() {
   const campRef = useRef(0)
   const scrollcamp = () => window.scrollTo(0, 0+bannerRef.current.getBoundingClientRect().height + abtRef.current.getBoundingClientRect().height)
 
-  // const bannerScroll = () => window.scrollTo(0, bannerRef.current)
-  // const abtRef = useRef(0);
-  // const abtScroll = () => abtRef.current.scrollIntoView()
-  // const campRef = useRef(0);
-  // const campScroll = () => window.scrollTo(0, campRef.current)
-
   function changeNav()   {
     if (window.scrollY > 80 || window.scrollY > 80) {
       setSize("34px");
