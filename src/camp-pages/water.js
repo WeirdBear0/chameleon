@@ -1,9 +1,8 @@
 import React, {useState, useRef} from 'react';
-import './water.css'
 
 function Water() {
   return (
-    <div>
+    <div className='campInfo'>
         <p>WATER</p>
     </div>
   );

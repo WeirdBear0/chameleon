@@ -1,5 +1,4 @@
 import React, {useState, useRef} from 'react';
-import './explore.css'
 
 function Explore() {
   return (

@@ -1,9 +1,8 @@
 import React, {useState, useRef} from 'react';
-import './ecology.css'
 
 function Ecology() {
   return (
-    <div>
+    <div className='campInfo'>
         <p>ECOLOGY</p>
     </div>
   );
