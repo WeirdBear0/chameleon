@@ -4,6 +4,7 @@
     height: 38rem;
     display: flex;
     flex-direction: column;
+    background-color: #fefae0;
 }
 .campsContainer .title{
     padding: 3.5rem 0rem 0rem 10rem;
@@ -33,16 +34,23 @@
 .campsContainer .campCards .card{
     width: 30%;
     height: 14rem;
-    background: #f0ead2;
+    background: #6c584c;
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    text-decoration: none;
+    color: white;
 }
 .campsContainer .campCards .card .card-title{
-    font-family: 'Raleway', serif;
+    font-family: 'Montserrat', serif;
     margin-left: 5%;
 }
 .campsContainer .campCards .card .desc{
     font-family: 'Raleway', serif;
     margin: 5%;
+    color: #f0ead2;
+    font-weight: 800;
+}
+.campsContainer .campInfo{
+    padding: 3.5rem 0rem 0rem 10rem;
 }
