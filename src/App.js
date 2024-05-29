@@ -4,7 +4,6 @@ import Home from './Home'
 import Water from './camp-pages/water'
 import Ecology from './camp-pages/ecology'
 import Energies from './camp-pages/energies'
-import Explore from './camp-pages/explore'
 import './App.css'
 
 function App() {
@@ -12,8 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path = "/" element = {<Home/>}>
-          <Route index element = {<Explore/>}/>
-          <Route path = "water" element = {<Water/>}/>
+          <Route index element = {<Water/>}/>
           <Route path = "energies" element = {<Energies/>}/>
           <Route path = "ecology" element = {<Ecology/>}/>
         </Route>

@@ -48,9 +48,11 @@ function Home() {
         <div className="App">
           <Font/>
           <div className = 'navbar' style = {{background: `rgba(226, 218, 201, ${opacity})`}}>
-            <a href = "#" className='logoLink'>
-                <img src = {logo} className='logo' alt = 'chameleon'></img>
-            </a>
+            <div className='logoContainer'>
+              <a href = "#" className='logoLink' onClick={() => {scrollBanner()}}>
+                  <img src = {logo} className='logo' alt = 'chameleon'></img>
+              </a>
+            </div>
             <p className='title' style = {{fontSize: size}}>chameleon</p>
             <div className='links'>
                 <a className='sectionLink' onClick={() => {scrollBanner()}}>Home</a>

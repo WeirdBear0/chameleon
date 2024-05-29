@@ -4,36 +4,39 @@ import './camps.css'
 
 const Camps = () => {
   return (
-    <div className='campsContainer'>
-        <div className='title'>
-            <p className='campsHeader'>
-                <span className='plain'>The secrets of nature <br/></span>
-                <span className='hide'>Are hidden in plain sight</span>
-            </p>
-        </div>
-        <p className='cohort-header'>SUMMER 2024 CAMPS</p>
-        <div className='campCards'>
-          <Link to = "/water" className='card'>
-              <p className='card-title'>Week 1: Week Of Water</p>
-              <p className='desc'>
-                  ----------------------------------------------
+    <div className='ovr'>
+      <div className='campsContainer'>
+          <div className='title'>
+              <p className='campsHeader'>
+                  <span className='plain'>The secrets of nature <br/></span>
+                  <span className='hide'>Are hidden in plain sight</span>
               </p>
-          </Link>
-          <Link to = "/energies" className='card'>
-              <p className='card-title'>Week 2: Clean Energies</p>
-              <p className='desc'>
-                  ----------------------------------------------
+          </div>
+          <p className='cohort-header'>SUMMER 2024 CAMPS</p>
+          <div className='campCards'>
+            <Link to = "/" className='card'>
+                <p className='card-title'>Week 1: Week Of Water</p>
+                <p className='desc'>
+                    ----------------------------------------------
                 </p>
-          </Link>
-          <Link to = "/ecology" className='card'>
-              <p className='card-title'>Week 3: Ecology and Technology</p>
-              <p className='desc'>
-                  ----------------------------------------------
-                </p>
-          </Link>
-        </div>
-        <Outlet/>
-    </div>  
+            </Link>
+            <Link to = "/energies" className='card'>
+                <p className='card-title'>Week 2: Clean Energies</p>
+                <p className='desc'>
+                    ----------------------------------------------
+                  </p>
+            </Link>
+            <Link to = "/ecology" className='card'>
+                <p className='card-title'>Week 3: Ecology and Technology</p>
+                <p className='desc'>
+                    ----------------------------------------------
+                  </p>
+            </Link>
+          </div>
+      </div>  
+      <Outlet/>
+    </div>
+
   );
 };
 export default Camps;
