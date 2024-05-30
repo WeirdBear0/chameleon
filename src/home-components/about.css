@@ -6,27 +6,18 @@
     justify-content: center;
     background: rgba(194, 197, 170, 1);
 }
-.aboutContainer .mainContent{
-    align-self: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+.aboutContainer div{
+    margin: 10%;
+    width: 60%;
 }
-.aboutContainer .abtImg{
-    width: 600px;
-    height: 400px;
-}
-.aboutContainer .abtContent{
-    text-align: right;
-    padding-right: 5%;
-}
-.aboutContainer .abtContent .title{
+.aboutContainer div .title{
     font-family: 'Libre Baskerville', serif;
-    font-weight: 600;
 }
-.aboutContainer .abtContent .desc{
+.aboutContainer .cause{
+    text-align: right;
+}
+.aboutContainer .statement{
     font-family: 'Montserrat', serif;
-    font-weight: 300;
+    font-weight: 500;
+    text-align: center;
 }

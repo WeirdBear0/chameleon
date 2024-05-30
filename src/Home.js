@@ -4,6 +4,7 @@ import logo from './logoClear.svg'
 import Banner from './home-components/banner'
 import About from './home-components/about'
 import Camps from './home-components/camps';
+import Footer from './home-components/footer'
 import Font from './home-components/font';
 import './Home.css'
 
@@ -31,6 +32,8 @@ function Home() {
     left: 0,
     behavior: 'smooth'
   })
+
+  const footerRef = useRef(0)
 
   function changeNav()   {
     if (window.scrollY > 80 || window.scrollY > 80) {
@@ -68,6 +71,9 @@ function Home() {
           </div>
           <div className='camps' ref = {campRef}>
             <Camps/>
+          </div>
+          <div className='footer' ref = {footerRef}>
+            <Footer/>
           </div>
         </div>
   );

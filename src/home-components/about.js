@@ -6,22 +6,22 @@ const About = () => {
   return (
     <div>
         <div className='aboutContainer'>
-          <div className='mainContent'>
-            <img className='abtImg' src = {about}></img>
-            <div className='abtContent'>
-              <h1 className='title'>How We Began</h1>
-              <p className='desc'>
-                ---------------------------------------------
-                <br/>---------------------------------------------
-                <br/>---------------------------------------------
-                <br/>---------------------------------------------
-                <br/>---------------------------------------------
-                <br/>---------------------------------------------
-                <br/>---------------------------------------------
-              </p>
+              <div className='team'>
+                <h1 className='title'>Our Team</h1>
+                <p className='desc'>
+                  ---------------------------------------------
+                </p>
+              </div>
+              <span className='statement'>
+                <p>"A nation that destroys its soil destroys itself." - Franklin Delano Roosevelt</p>
+              </span>
+              <div className='cause'>
+                <h1 className='title'>Our Cause</h1>
+                  <p className='desc'>
+                    ---------------------------------------------
+                  </p>
+              </div>
             </div>
-          </div>
-        </div>
     </div>
   );
 };
