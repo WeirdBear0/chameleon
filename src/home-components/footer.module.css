@@ -1,5 +1,5 @@
 .footer{
-    margin-bottom: 0    ;
+    margin-bottom: 0;
     height: 20rem;
     background-color: rgba(226, 218, 201, 1);
     backdrop-filter: saturate(100%) blur(20px);
@@ -8,6 +8,9 @@
     padding: 0;
     font-family: 'Montserrat', serif;
     font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .title{
     font-weight: 600;
@@ -54,4 +57,16 @@
 .credits p{
     margin: 0;
     padding:1rem;
+}
+.imgContainer{
+    display: flex;
+    align-items: end;
+    justify-content: right;
+    padding-left: 1rem;
+}
+.imgContainer .img{
+    width: 272px;
+    height: 192px;
+    margin: 0;
+    opacity: 0.3;
 }

@@ -38,7 +38,7 @@ function Home() {
   function changeNav()   {
     if (window.scrollY > 80 || window.scrollY > 80) {
       setSize("34px");
-      setOpacity(0.73)
+      setOpacity(0.85)
     } else {
       setSize("55px");
       setOpacity(1)
