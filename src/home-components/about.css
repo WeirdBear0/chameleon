@@ -30,6 +30,10 @@
         flex-direction: column;
         justify-content: center;
     }
+    .aboutContainer div{
+        margin: 10%;
+        width: 80%;
+    }
     .webcontainer{
         display: flex;
         flex-direction: row;
