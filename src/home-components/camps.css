@@ -83,7 +83,7 @@
     font-size: 18px;
     text-align: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .campsContainer .campsHeader .plain{
         font-size: 30px;
     }
@@ -92,5 +92,27 @@
     }
     .campsContainer .cohort-header{
         font-size: 15px;
+    }
+    .campsContainer .campCards .card{
+        width: 31%;
+        height: 14rem;
+        background: #6c584c;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+    }
+    .campsContainer .campCards .card .card-title{
+        font-family: 'Montserrat', serif;
+        margin-left: 5%;
+        margin-bottom: 0;
+    }
+    .campsContainer .campCards .card .desc{
+        font-family: 'Raleway', serif;
+        margin: 5%;
+        font-size: 11px;
+        color: #f0ead2;
+        font-weight: 800;
     }
 }

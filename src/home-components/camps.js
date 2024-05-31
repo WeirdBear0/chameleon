@@ -23,8 +23,10 @@ const Camps = () => {
             <Link to = "/energies" className='card'>
                 <p className='card-title'>Week 2: Clean Energies</p>
                 <p className='desc'>
-                    ----------------------------------------------
-                  </p>
+                  Clean energy becomes more prominent day by day, showing through forms such as wind, solar, and hydropower energy. 
+                  Learning how these systems work and about the significance of their engineering will open minds to their endless 
+                  possibilities!
+                </p>
             </Link>
             <Link to = "/ecology" className='card'>
                 <p className='card-title'>Week 3: Ecology and Technology</p>
