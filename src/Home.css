@@ -50,8 +50,11 @@
     }
     .navbar .links a{
         text-decoration: none;
-        margin-right: 1rem;
+        margin-right: 0.5rem;
         margin-left: 0.5rem;
+    }
+    .navbar .links{
+        margin-right:2rem ;
     }
     .navbar{
         justify-content: space-between;
