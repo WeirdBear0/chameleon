@@ -36,17 +36,6 @@
     margin-right: 2.5rem;
     transition: 0.4s;
 }
-.sectionLink::after {
-    content: '';
-    width: 0px;
-    height: 1px;
-    background: #6c584c;
-    transition: 300ms;
-}
-.sectionLink:hover::after {
-    width: 100%;
-    color: white;
-}
 .navbar .title{
     font-family: 'Libre Baskerville', serif;
     color:#7ba059;

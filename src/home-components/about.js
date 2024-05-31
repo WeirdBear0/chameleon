@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import about from './kiwi.png'
 import './about.css'
 
 const About = () => {
