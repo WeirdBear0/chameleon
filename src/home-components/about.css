@@ -49,6 +49,9 @@
         display: block;
         width: 100%;
     }
+    .statementmobile p{
+        margin: 0 1rem 0;
+    }
     .statementweb{
         display: none;
     }
