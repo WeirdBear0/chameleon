@@ -32,8 +32,10 @@ const Camps = () => {
             <Link to = "/ecology" className='card'>
                 <p className='card-title'>Week 3: Ecology and Technology</p>
                 <p className='desc'>
-                    ----------------------------------------------
-                  </p>
+                    With technology rapidly expanding in our modern world, many of us feel as if the concept of ecology is pointless. In
+                    reality, with the help of technological integration into ecology, the hybrid between natural learning and STEM will
+                    carry on into the future.
+                </p>
             </Link>
           </div>
       </div>  
