@@ -51,13 +51,13 @@
     .navbar{
         justify-content: space-between;
     }
+    .navbar .links{
+        margin:0;
+    }
     .navbar .links a{
         text-decoration: none;
         margin-right: 0.5rem;
         margin-left: 0.5rem;
-    }
-    .navbar .links{
-        margin-right:1.5rem ;
     }
     .navbar .logoLink{
         padding: 0;
