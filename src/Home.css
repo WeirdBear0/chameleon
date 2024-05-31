@@ -49,10 +49,10 @@
         height: 3rem;
     }
     .navbar{
-        justify-content: space-between;
+        justify-content: center;
     }
     .navbar .links{
-        margin:0;
+        margin:0 1rem 0;
     }
     .navbar .links a{
         text-decoration: none;
