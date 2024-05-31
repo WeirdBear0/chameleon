@@ -5,9 +5,6 @@ const About = () => {
   return (
     <div>
         <div className='aboutContainer'>
-              <span className='statementmobile'>
-                <p>"A nation that destroys its soil destroys itself." - Franklin Delano Roosevelt</p>
-              </span>
               <div className='webcontainer'>
                 <div className='team'>
                   <h1 className='title'>Our Story</h1>
@@ -33,6 +30,9 @@ const About = () => {
                     </p>
                 </div>
               </div>
+              <span className='statementmobile'>
+                <p>"A nation that destroys its soil destroys itself." - Franklin Delano Roosevelt</p>
+              </span>
             </div>
     </div>
   );
