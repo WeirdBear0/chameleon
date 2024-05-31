@@ -92,7 +92,7 @@
     .imgContainer{
         display: none;
     }
-    .socials{
+    .footer .content .socials{
         display: flex;
         flex-direction: column;
     }
