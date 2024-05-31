@@ -103,9 +103,15 @@
         font-size: 12px;
     }
     .creditContainer{
-        width: 80%;
+        width: 100%;
     }
     .creditContainer p{
         padding: 1rem 1rem 0;
+    }
+    .link::after {
+        width: 0px;
+    }
+    .link:hover::after {
+        width: 0%;
     }
 }
