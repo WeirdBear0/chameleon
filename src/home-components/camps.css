@@ -83,3 +83,14 @@
     font-size: 18px;
     text-align: center;
 }
+@media (max-width: 768px) {
+    .campsContainer .campsHeader .plain{
+        font-size: 30px;
+    }
+    .campsContainer .campsHeader .hide{
+        font-size: 30px;
+    }
+    .campsContainer .cohort-header{
+        font-size: 15px;
+    }
+}
