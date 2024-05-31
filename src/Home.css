@@ -34,7 +34,6 @@
 .navbar .links a{
     text-decoration: none;
     margin-right: 2.5rem;
-    transition: 0.4s;
 }
 .navbar .title{
     font-family: 'Libre Baskerville', serif;
@@ -44,6 +43,14 @@
 @media (max-width: 768px) {
     .navbar .title{
         display: none;
+    }
+    .logoLink .logo{
+        width: 4.251rem;
+        height: 3rem;
+    }
+    .navbar .links a{
+        text-decoration: none;
+        margin-right: 1.5rem;
     }
 }
 
