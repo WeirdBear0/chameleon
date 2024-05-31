@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import logo from './logoClear.svg'
+import logo from './mainLogo.svg'
 import Banner from './home-components/banner'
 import About from './home-components/about'
 import Camps from './home-components/camps';
