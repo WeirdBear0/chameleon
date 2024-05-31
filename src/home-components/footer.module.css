@@ -88,3 +88,11 @@
     margin: 0;
     opacity: 0.3;
 }
+@media (max-width: 768px){
+    .imgContainer{
+        display: none;
+    }
+    .socials{
+        flex-direction: column;
+    }
+}
