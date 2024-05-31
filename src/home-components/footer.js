@@ -18,8 +18,8 @@ const Footer = () => {
                             <div className={styles.card}>
                                 <p className={styles.title}>LINKS</p>
                                 <div className={styles.links}>
-                                    <p>Facebook</p>
-                                    <p>Instagram</p>
+                                    <a className={styles.link} target = "_blank" href = "https://www.facebook.com/profile.php?id=61559919316355"><p>Facebook</p></a>
+                                    <a className={styles.link} target = "_blank" href = "https://www.instagram.com/chameleoncamps/"><p>Instagram</p></a>
                                 </div>
                             </div>
                         </div>
