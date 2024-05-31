@@ -33,3 +33,14 @@
     font-size: 36px;
     color: #a98467;
 }
+@media (max-width: 768px) {
+    .banner .title-container .title{
+        font-size: 50px;
+    }
+    
+    .banner .title-container .description{
+        font-family: 'Montserrat', serif;
+        font-size: 20px;
+        color: #a98467;
+    }
+}
