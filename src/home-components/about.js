@@ -20,10 +20,10 @@ const About = () => {
                 <div className='cause'>
                   <h1 className='title'>Our Goal</h1>
                     <p className='desc'>
-                      As students who use technology every day, we have firsthand experience with both the pros and cons of constant screen
-                      use. We hope to help kids learn skills that are more than just STEM, and give others a real connection to
-                      their environment. As a nonprofit, all our proceeds will go to the <a className = "amazonLink" href = 'https://tinyurl.com/5de3jwx4' target='__blank'>Brazilian Amazon Fund</a>, an organization dedicated to
-                      slowing deforestation.
+                      We believe that everyone needs to have a real connection to their environment, and deserve to be taught that
+                      in an engaging, unique way, different from your average coding class. As a nonprofit, all our proceeds will go to the
+                      <a className = "amazonLink" href = 'https://tinyurl.com/5de3jwx4' target='__blank'> Brazilian Amazon Fund</a>, 
+                      an organization dedicated to slowing deforestation.
                     </p>
                 </div>
               </div>
