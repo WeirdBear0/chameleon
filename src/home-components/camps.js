@@ -17,7 +17,8 @@ const Camps = () => {
             <Link to = "/" className='card'>
                 <p className='card-title'>Week 1: Week Of Water</p>
                 <p className='desc'>
-                    ----------------------------------------------
+                  The most necessary thing for life to exist: water. This week focuses on how water interacts with the environment, planet,
+                 and people, and how a better understanding of water can lead to a more sustainable and efficient society.
                 </p>
             </Link>
             <Link to = "/energies" className='card'>
