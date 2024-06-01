@@ -10,7 +10,10 @@
     top: 0;
     z-index: 9999;
 }
-.interest{
+.interestmob{
+    display: none;
+}
+.interestweb{
     font-size: 13px;
     font-family: 'Montserrat', serif;
     text-align: center;
@@ -39,7 +42,7 @@
 .navbar .links{ 
     padding:0;
 }
-.navbar .links a{
+.navbar .links .sectionLink{
     text-decoration: none;
     margin-right: 2.5rem;
 }
@@ -60,9 +63,9 @@
         justify-content: center;
     }
     .navbar .links{
-        margin:0 1rem 0;
+        margin:0.5rem 1rem 0;
     }
-    .navbar .links a{
+    .navbar .links .sectionLink{
         text-decoration: none;
         margin-right: 0.5rem;
         margin-left: 0.5rem;
@@ -70,6 +73,22 @@
     .navbar .logoLink{
         padding: 0;
         margin: 0 0.5rem 0;
+    }
+    .interestweb{
+        display: none;
+    }
+    .interestmob{
+        display: block;
+        font-size: 13px;
+        font-family: 'Montserrat', serif;
+        text-align: center;
+        color: #6c584c;
+    }
+    .interestmob a{
+        color: #6c584c;
+        margin:0; 
+        padding: 0;
+        font-weight: 700;
     }
 }
 
