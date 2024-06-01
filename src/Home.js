@@ -50,19 +50,24 @@ function Home() {
   return (
         <div className="App">
           <Font/>
-          <div className = 'navbar' style = {{background: `rgba(226, 218, 201, ${opacity})`}}>
-            <div className='logoContainer'>
-              <a href = "#" className='logoLink' onClick={() => {scrollBanner()}}>
-                  <img src = {logo} className='logo' alt = 'chameleon'></img>
-              </a>
+          {/* <div className='cover'> */}
+            <div className = 'navbar' style = {{background: `rgba(226, 218, 201, ${opacity})`}}>
+              <div className='logoContainer'>
+                <a href = "#" className='logoLink' onClick={() => {scrollBanner()}}>
+                    <img src = {logo} className='logo' alt = 'chameleon'></img>
+                </a>
+              </div>
+              <p className='title' style = {{fontSize: size}}>chameleon <br/> <p className='interest'>Interested? Fill out <a target = "__blank" href = "https://forms.gle/mKfSr3a5i8tzVoXZ7">this form!</a></p></p>
+              <div className='links'>
+                  <a className='sectionLink' onClick={() => {scrollBanner()}}>Home</a>
+                  <a className='sectionLink' onClick={() => {scrollabt()}}>About</a>
+                  <a className='sectionLink' onClick={() => {scrollcamp()}}>Camps</a>
+              </div>
             </div>
-            <p className='title' style = {{fontSize: size}}>chameleon</p>
-            <div className='links'>
-                <a className='sectionLink' onClick={() => {scrollBanner()}}>Home</a>
-                <a className='sectionLink' onClick={() => {scrollabt()}}>About</a>
-                <a className='sectionLink' onClick={() => {scrollcamp()}}>Camps</a>
-            </div>
-          </div>
+            {/* <div>
+              Interested?
+            </div> */}
+          {/* </div> */}
           <div className='banner' ref = {bannerRef}>
             <Banner/>
           </div>
