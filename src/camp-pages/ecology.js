@@ -3,6 +3,7 @@ import React, {useState, useRef} from 'react';
 function Ecology() {
   return (
     <div className='campInfo'>
+        <p className='specs'> July 8-12 | 10-1 PM | $200</p>
         <p className='title'>Ecology</p>
         <div className='info-container'>
           <div className='info-width'>

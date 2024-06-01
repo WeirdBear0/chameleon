@@ -62,11 +62,15 @@
     align-items: center;
     justify-content: center;
 }
+.ovr .campInfo .specs{
+    font-family: 'Montserrat', serif;
+    font-size: 13px;
+    margin-top: 2rem;
+}
 .ovr .campInfo .title{
     font-family: 'Libre Baskerville', serif;
     font-size: 30px;
     margin: 0;
-    margin-top:3rem;
     margin-bottom: 1rem;
 }
 .ovr .campInfo .info-container{
@@ -124,5 +128,15 @@
         font-size: 11px;
         color: #f0ead2;
         font-weight: 600;
+    }
+    .ovr .campInfo .title{
+        margin-top:1rem;
+    }
+    .ovr .campInfo .info-container .info-width .info{
+        margin: 0;
+        margin-bottom: 3rem;
+        font-family: 'Montserrat', serif;
+        font-size: 12px;
+        text-align: center;
     }
 }
