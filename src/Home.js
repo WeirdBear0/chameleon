@@ -57,12 +57,12 @@ function Home() {
                     <img src = {logo} className='logo' alt = 'chameleon'></img>
                 </a>
               </div>
-              <p className='title' style = {{fontSize: size}}>chameleon <br/> <p className='interestweb'>Interested? Fill out <a target = "__blank" href = "https://forms.gle/mKfSr3a5i8tzVoXZ7">this form!</a></p></p>
+              <p className='title' style = {{fontSize: size}}>chameleon <br/> <p className='interestweb'>Interested? Register <a target = "__blank" href = "https://forms.gle/Upqoz43Wm5ZQ8sch8">here!</a></p></p>
               <div className='links'>
                   <a className='sectionLink' onClick={() => {scrollBanner()}}>Home</a>
                   <a className='sectionLink' onClick={() => {scrollabt()}}>About</a>
                   <a className='sectionLink' onClick={() => {scrollcamp()}}>Camps</a>
-                  <p className='interestmob'>Interested? Fill out <a target = "__blank" href = "https://forms.gle/mKfSr3a5i8tzVoXZ7">this form!</a></p>
+                  <p className='interestmob'>Interested? Register <a target = "__blank" href = "https://forms.gle/Upqoz43Wm5ZQ8sch8">here!</a></p>
               </div>
             </div>
             {/* <div>
