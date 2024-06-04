@@ -3,7 +3,7 @@ import React, {useState, useRef} from 'react';
 function Energies() {
   return (
     <div className='campInfo'>
-        <p className='specs'> July 8-12 | 10-1 PM | $200 | Grades 6-8</p>
+        <p className='specs'> July 8-12 | 10-1 PM | $150 | Grades 6-8</p>
         <p className='title'>Energies</p>
         <div className='info-container'>
           <div className='info-width'>
