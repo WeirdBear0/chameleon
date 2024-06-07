@@ -52,6 +52,13 @@
 .link:hover::after {
     width: 100%;
 }
+.footer .content .socials .links .mailto{
+    text-decoration: none;
+    width: 0px;
+    color: #6c584c; 
+    transition: 0.4s;
+    cursor: pointer;
+}
 .footer .content .socials .links .email{
     text-decoration: underline;
 }

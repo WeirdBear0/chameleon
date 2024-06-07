@@ -12,7 +12,7 @@ const Footer = () => {
                             <div className={styles.card}>
                                 <p className={styles.title}>CONTACT</p>
                                 <div className={styles.links}>
-                                    <p>Reach us at <span className={styles.email}>camps.chameleon@gmail.com</span></p>
+                                    <a href = "mailto:camps.chameleon@gmail.com" className={styles.mailto}><p>Reach us at <span className={styles.email}>camps.chameleon@gmail.com</span></p></a>
                                 </div>
                             </div>
                             <div className={styles.card}>
