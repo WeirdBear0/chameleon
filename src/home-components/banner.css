@@ -32,6 +32,11 @@
     font-size: 36px;
     color: #a98467;
 }
+.specs{
+    font-family: 'Montserrat', serif;
+    font-size: 16px;
+    color: #6c584c;
+}
 @media (max-width: 1100px) {
     .banner .title-container .title{
         font-size: 50px;
