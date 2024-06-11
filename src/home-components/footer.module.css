@@ -59,8 +59,8 @@
     transition: 0.4s;
     cursor: pointer;
 }
-.footer .content .socials .links .email{
-    text-decoration: underline;
+.footer .content .socials .links .important{
+    font-weight: 550;
 }
 .footer .content .blurb{
     margin: 0 1rem 1rem;
