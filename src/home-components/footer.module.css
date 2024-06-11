@@ -121,4 +121,14 @@
     .link:hover::after {
         width: 0%;
     }
+    .footer .content .socials .links p{
+        margin: 0;
+        font-size: 14px;
+    }
+    .footer .content .blurb{
+        margin: 0 1rem 1rem;
+        width: 30%;
+        text-align: right;
+        font-size: 14px;
+    }
 }
