@@ -13,6 +13,7 @@ const Footer = () => {
                                 <p className={styles.title}>CONTACT</p>
                                 <div className={styles.links}>
                                     <a href = "mailto:camps.chameleon@gmail.com" className={styles.mailto}><p>Reach us at <span className={styles.email}>camps.chameleon@gmail.com</span></p></a>
+                                    <p>Call or Text at 425.738.2825</p>
                                 </div>
                             </div>
                             <div className={styles.card}>
