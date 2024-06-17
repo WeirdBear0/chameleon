@@ -57,7 +57,7 @@ function Home() {
                     <img src = {logo} className='logo' alt = 'chameleon'></img>
                 </a>
               </div>
-              {/* <p className='title' style = {{fontSize: size}}>chameleon <br/> <p className='interestweb'>Interested? Register <a target = "__blank" href = "https://forms.gle/Upqoz43Wm5ZQ8sch8">here!</a></p></p> */}
+              <p className='title' style = {{fontSize: size}}>chameleon </p>
               <div className='links'>
                   <a className='sectionLink' onClick={() => {scrollBanner()}}>Home</a>
                   <a className='sectionLink' onClick={() => {scrollabt()}}>About</a>
