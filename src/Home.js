@@ -62,7 +62,6 @@ function Home() {
                   <a className='sectionLink' onClick={() => {scrollBanner()}}>Home</a>
                   <a className='sectionLink' onClick={() => {scrollabt()}}>About</a>
                   <a className='sectionLink' onClick={() => {scrollcamp()}}>Camps</a>
-                  <p className='interestmob'>Interested? Register <a target = "__blank" href = "https://forms.gle/Upqoz43Wm5ZQ8sch8">here!</a></p>
               </div>
             </div>
             {/* <div>
