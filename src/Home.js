@@ -28,7 +28,7 @@ function Home() {
 
   const campRef = useRef(0)
   const scrollcamp = () => window.scrollTo({
-    top: 2*(bannerRef.current.getBoundingClientRect().height),
+    top: abtRef.current.getBoundingClientRect().height + bannerRef.current.getBoundingClientRect().height,
     left: 0,
     behavior: 'smooth'
   })
