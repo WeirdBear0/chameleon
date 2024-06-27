@@ -21,9 +21,7 @@ const About = () => {
                   <h1 className='title'>Our Goal</h1>
                     <p className='desc'>
                       We believe that everyone needs to have a real connection to their environment, and deserve to be taught that
-                      in an engaging, unique way, different from your average coding class. As a nonprofit, we support the
-                      <a className = "amazonLink" href = 'https://tinyurl.com/5de3jwx4' target='__blank'> Brazilian Amazon Fund</a>, 
-                      an organization dedicated to slowing deforestation.
+                      in an engaging, unique way, different from your average coding class.
                     </p>
                 </div>
               </div>
