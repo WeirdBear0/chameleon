@@ -4,6 +4,7 @@ import logo from './mainLogo.svg'
 import Banner from './home-components/banner'
 import About from './home-components/about'
 import Camps from './home-components/camps';
+import Partners from './home-components/partners';
 import Footer from './home-components/footer'
 import Font from './home-components/font';
 import './Home.css'
@@ -33,6 +34,7 @@ function Home() {
     behavior: 'smooth'
   })
 
+  const partnerRef = useRef(0)
   const footerRef = useRef(0)
 
   function changeNav()   {
@@ -76,6 +78,9 @@ function Home() {
           </div>
           <div className='camps' ref = {campRef}>
             <Camps/>
+          </div>
+          <div className='partners' ref = {partnerRef}>
+            <Partners/>
           </div>
           <div className='footer' ref = {footerRef}>
             <Footer/>
