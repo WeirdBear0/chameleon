@@ -13,7 +13,7 @@ const Camps = () => {
                   <span className='hide'>Are hidden in plain sight</span>
               </p>
           </div>
-          <p className='cohort-header'>SUMMER CAMPS - 2024</p>
+          <p className='cohort-header'>WINTER CAMPS - 2024</p>
         </div>
           <div className='campCards'>
             <Link to = "/" className='card'>
