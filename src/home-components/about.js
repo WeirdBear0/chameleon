@@ -1,7 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
+import { quotes } from './quotes';
 import './about.css'
 
 const About = () => {
+  const [randomQuote, setRandomQuote] = useState(quotes[0]);
+
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    setRandomQuote(quotes[randomIndex]);
+  }, []);
+
   return (
     <div>
         <div className='aboutContainer'>
@@ -15,7 +23,7 @@ const About = () => {
                   </p>
                 </div>
                 <span className='statementweb'>
-                  <p>"A nation that destroys its soil destroys itself." - Franklin Delano Roosevelt</p>
+                  <p>"{randomQuote.text}" - {randomQuote.author}</p>
                 </span>
                 <div className='cause'>
                   <h1 className='title'>Our Goal</h1>
@@ -26,7 +34,7 @@ const About = () => {
                 </div>
               </div>
               <span className='statementmobile'>
-                <p>"A nation that destroys its soil destroys itself." - Franklin Delano Roosevelt</p>
+                <p>"{randomQuote.text}" - {randomQuote.author}</p>
               </span>
             </div>
     </div>
