@@ -44,6 +44,35 @@ function Home() {
                 </Link>
             </div>
           </div>
+          <div className={styles.farmbeatContent}>
+            <div className={styles.microbit}>
+              <div className={styles.text}>
+                <p className={styles.textTitle}>what is a micro:bit?</p>
+                <p className={styles.textContent}></p>
+              </div>
+              <div className={styles.graphic}>
+                <img className={styles.img}></img>
+              </div>
+            </div>
+            <div className={styles.farmbeat}>
+              <div className={styles.graphic}>
+                <img className={styles.img}></img>
+              </div>
+              <div className={styles.text}>
+                <p className={styles.textTitle}>what is a micro:bit?</p>
+                <p className={styles.textContent}></p>
+              </div>
+            </div>
+            <div className={styles.instructions}>
+              <div className={styles.text}>
+                <p className={styles.textTitle}>what is a micro:bit?</p>
+                <p className={styles.textContent}></p>
+              </div>
+              <div className={styles.graphic}>
+                <img className={styles.img}></img>
+              </div>
+            </div>
+          </div>
          <div className='footer' ref = {footerRef}>
           <Footer/>
         </div>
