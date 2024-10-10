@@ -30,10 +30,12 @@ function Home() {
           <Font/>
           <div className = {styles.navbar} style = {{background: `rgba(226, 218, 201, ${opacity})`}}>
             <div className={styles.logoContainer}>
-              <a href = "#" className={styles.logoLink} >
-                  <img src = {logo} className={styles.logo} alt = 'chameleon'></img>
-                  <img src = {circleLogo} className={styles.mobLogo} alt = 'chameleon'></img>
-              </a>
+              <Link to = "/">
+                <a href = "#" className={styles.logoLink} >
+                    <img src = {logo} className={styles.logo} alt = 'chameleon'></img>
+                    <img src = {circleLogo} className={styles.mobLogo} alt = 'chameleon'></img>
+                </a>
+              </Link>
             </div>
             <p className={styles.title} style = {{fontSize: size}}>chameleon </p>
              <div className={styles.links}>

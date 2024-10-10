@@ -56,10 +56,12 @@ function Home() {
           {/* <div className='cover'> */}
             <div className = 'navbar' style = {{background: `rgba(226, 218, 201, ${opacity})`}}>
               <div className='logoContainer'>
-                <a href = "#" className='logoLink' onClick={() => {scrollBanner()}}>
-                    <img src = {logo} className='logo' alt = 'chameleon'></img>
-                    <img src = {circleLogo} className='mobLogo' alt = 'chameleon'></img>
-                </a>
+                <Link to = "/">
+                  <a href = "#" className='logoLink' onClick={() => {scrollBanner()}}>
+                      <img src = {logo} className='logo' alt = 'chameleon'></img>
+                      <img src = {circleLogo} className='mobLogo' alt = 'chameleon'></img>
+                  </a>
+                </Link>
               </div>
               <p className='title' style = {{fontSize: size}}>chameleon </p>
               <div className='links'>
