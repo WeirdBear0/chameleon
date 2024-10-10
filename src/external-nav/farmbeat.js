@@ -44,8 +44,8 @@ function Home() {
                 </Link>
             </div>
           </div>
-          <div className={styles.farmbeatContent}>
-            <div className={styles.microbit}>
+          {/* <div className={styles.farmbeatContent}>
+            <div className={styles.container}>
               <div className={styles.text}>
                 <p className={styles.textTitle}>what is a micro:bit?</p>
                 <p className={styles.textContent}></p>
@@ -54,7 +54,7 @@ function Home() {
                 <img className={styles.img}></img>
               </div>
             </div>
-            <div className={styles.farmbeat}>
+            <div className={styles.container}>
               <div className={styles.graphic}>
                 <img className={styles.img}></img>
               </div>
@@ -63,7 +63,7 @@ function Home() {
                 <p className={styles.textContent}></p>
               </div>
             </div>
-            <div className={styles.instructions}>
+            <div className={styles.container}>
               <div className={styles.text}>
                 <p className={styles.textTitle}>what is a micro:bit?</p>
                 <p className={styles.textContent}></p>
@@ -72,7 +72,7 @@ function Home() {
                 <img className={styles.img}></img>
               </div>
             </div>
-          </div>
+          </div> */}
          <div className='footer' ref = {footerRef}>
           <Footer/>
         </div>

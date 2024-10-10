@@ -64,6 +64,13 @@
     display: flex;
     justify-self: center;
 }
+.farmbeatContent{
+    background-color: #fcf3ea;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
 @media (max-width: 1100px) {
     .navbar{
         flex-direction: column;
