@@ -30,20 +30,6 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className={styles.imgContainer}>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
-                    <img className = {styles.img} src = {img} alt = "CHAMELEON"></img>
                 </div>
             </div>
             <div className={styles.credits}>
