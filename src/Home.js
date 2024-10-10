@@ -7,7 +7,6 @@ import Camps from './home-components/camps';
 import Partners from './home-components/partners';
 import Footer from './home-components/footer'
 import Font from './home-components/font';
-import Microbit from './home-components/microbit';
 import './Home.css'
 
 function Home() {
@@ -37,7 +36,6 @@ function Home() {
 
   const partnerRef = useRef(0)
   const footerRef = useRef(0)
-  const microRef = useRef(0)
 
   function changeNav()   {
     if (window.scrollY > 80 || window.scrollY > 80) {
@@ -86,9 +84,6 @@ function Home() {
           </div>
           <div className='footer' ref = {footerRef}>
             <Footer/>
-          </div>
-          <div className='footer' ref = {microRef}>
-            <Microbit/>
           </div>
         </div>
   );
