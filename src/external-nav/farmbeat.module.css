@@ -57,6 +57,8 @@
     font-family: 'Libre Baskerville', serif;
     color:#7ba059;
     transition: 0.5s;
+    display: flex;
+    justify-self: center;
 }
 @media (max-width: 1100px) {
     .navbar .title{

@@ -4,6 +4,7 @@ import Home from './Home'
 import Water from './camp-pages/water'
 import Ecology from './camp-pages/ecology'
 import Energies from './camp-pages/energies'
+import Farmbeat from './external-nav/farmbeat'
 import './App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path = "energies" element = {<Energies/>}/>
           <Route path = "ecology" element = {<Ecology/>}/>
         </Route>
+        <Route path = "farmbeat" element = {<Farmbeat/>}/>
       </Routes>
     </BrowserRouter>
   );

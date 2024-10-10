@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Outlet, Link } from 'react-router-dom';
 import logo from './mainLogo.svg'
 import Banner from './home-components/banner'
 import About from './home-components/about'
@@ -64,6 +64,9 @@ function Home() {
                   <a className='sectionLink' onClick={() => {scrollBanner()}}>Home</a>
                   <a className='sectionLink' onClick={() => {scrollabt()}}>About</a>
                   <a className='sectionLink' onClick={() => {scrollcamp()}}>Camps</a>
+                  <Link to = "/farmbeat">
+                    <a className='card-title'>Farmbeat</a>
+                  </Link>
               </div>
             </div>
             {/* <div>
