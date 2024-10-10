@@ -1,6 +1,7 @@
 import React, {useState, useRef} from 'react';
 import { Link } from 'react-router-dom';
 import logo from './mainLogo.svg'
+import circleLogo from '../circleLogo.svg'
 import Partners from '../home-components/partners';
 import Footer from '../home-components/footer'
 import Font from '../home-components/font';
@@ -31,6 +32,7 @@ function Home() {
             <div className={styles.logoContainer}>
               <a href = "#" className={styles.logoLink} >
                   <img src = {logo} className={styles.logo} alt = 'chameleon'></img>
+                  <img src = {circleLogo} className={styles.mobLogo} alt = 'chameleon'></img>
               </a>
             </div>
             <p className={styles.title} style = {{fontSize: size}}>chameleon </p>

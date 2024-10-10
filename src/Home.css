@@ -10,6 +10,9 @@
     top: 0;
     z-index: 9999;
 }
+.mobLogo{
+    display: none;
+}
 .interestmob{
     display: none;
 }
@@ -68,8 +71,13 @@
         align-items: center;
         justify-content: center;
     }
-    .logoContainer .logo{
+    .logoContainer .mobLogo{
+        margin-top: 0.5rem;
+        display: block;
         width: 50px;
+    }
+    .logoContainer .logo{
+        display: none;
     }
     .navbar .title{
         display: none;

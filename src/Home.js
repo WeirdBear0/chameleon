@@ -1,6 +1,7 @@
 import React, {useState, useRef} from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import logo from './mainLogo.svg'
+import circleLogo from './circleLogo.svg'
 import Banner from './home-components/banner'
 import About from './home-components/about'
 import Camps from './home-components/camps';
@@ -57,6 +58,7 @@ function Home() {
               <div className='logoContainer'>
                 <a href = "#" className='logoLink' onClick={() => {scrollBanner()}}>
                     <img src = {logo} className='logo' alt = 'chameleon'></img>
+                    <img src = {circleLogo} className='mobLogo' alt = 'chameleon'></img>
                 </a>
               </div>
               <p className='title' style = {{fontSize: size}}>chameleon </p>
