@@ -48,6 +48,7 @@
 }
 .navbar .links{ 
     padding:0;
+    width: 180px;
 }
 .navbar .links .sectionLink{
     text-decoration: none;

@@ -36,7 +36,7 @@
     font-weight: 600;
 }
 .navbar .logoContainer{
-    width: 180px;
+    width: 400px;
 }
 .navbar .logoLink{
     padding: 0;
@@ -48,6 +48,7 @@
 }
 .navbar .links{ 
     padding:0;
+    width: 400px;
 }
 .navbar .links .sectionLink{
     text-decoration: none;
