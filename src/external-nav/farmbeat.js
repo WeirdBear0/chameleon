@@ -10,7 +10,7 @@ import microbit1 from './farmbeat-pics/microbit-1.jpg'
 function Home() {
   const [size, setSize] = useState("55px")
   const [opacity, setOpacity] = useState(1)
-
+  const [isTextVisible, setIsTextVisible] = useState(false); // State for dropdown visibility
   const footerRef = useRef(0)
 
   function changeNav()   {
@@ -25,6 +25,11 @@ function Home() {
   window.onscroll = () => {
     changeNav();
   };
+
+  const toggleTextContent = () => {
+    setIsTextVisible(!isTextVisible); // Toggle visibility
+  };
+
   return (
         <div className="App">
           <Font/>
@@ -73,8 +78,15 @@ function Home() {
             </div>
             <div className={styles.container}>
               <div className={styles.text}>
-                <p className={styles.textTitle}>give project instructions</p>
-                <p className={styles.textContent}></p>
+                <p className={styles.textTitle} onClick={toggleTextContent} style={{ cursor: 'pointer' }}>
+                  give project instructions
+                </p>
+                {isTextVisible && (
+                  <p className={styles.textContent} style={{ transition: 'max-height 0.5s ease-in-out', overflow: 'hidden' }}>
+                    {/* Add your project instructions here */}
+                    Here are the project instructions that will be revealed when the title is clicked.
+                  </p>
+                )}
               </div>
               <div className={styles.graphic}>
                 <img className={styles.img}></img>
