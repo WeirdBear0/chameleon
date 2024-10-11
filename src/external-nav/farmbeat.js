@@ -6,11 +6,13 @@ import Footer from '../home-components/footer'
 import Font from '../home-components/font';
 import styles from'./farmbeat.module.css'
 import microbit1 from './farmbeat-pics/microbit-1.jpg'
+import farmbeat1 from './farmbeat-pics/farmbeats-1.jpg'
 
 function Home() {
   const [size, setSize] = useState("55px")
   const [opacity, setOpacity] = useState(1)
   const [isTextVisible, setIsTextVisible] = useState(false); // State for dropdown visibility
+  const [arrow, setArrow] = useState("↓")
   const footerRef = useRef(0)
 
   function changeNav()   {
@@ -28,6 +30,12 @@ function Home() {
 
   const toggleTextContent = () => {
     setIsTextVisible(!isTextVisible); // Toggle visibility
+    if(arrow.includes("↓")){
+      setArrow("↑")
+    }
+    else{
+      setArrow("↓")
+    }
   };
 
   return (
@@ -61,30 +69,39 @@ function Home() {
                 </p>
               </div>
               <div className={styles.graphic}>
-              <div className={styles.img}> 
-                <iframe title="Micro:Bit" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b453f11ad77a4545a33b3e0ecfba6fc5/embed">
-                </iframe> 
-              </div>
+                <img className={styles.img} src = {microbit1}></img>
               </div>
             </div>
             <div className={styles.container}>
-              <div className={styles.graphic}>
-                <img className={styles.img}></img>
+              <div className={styles.graphicbeat}>
+                <img className={styles.img} src = {farmbeat1}></img>
               </div>
               <div className={styles.textTwo}>
                 <p className={styles.textTitle}>introducing farmbeat</p>
                 <p className={styles.textContent}>the farmbeat is a tool that integrates software and ai with relatively simple hardware to aid data analysis with respect to agriculture. it is also an education initiative designed to teach students the basics of electronics, data construction, and, ultimately, ai.</p>
               </div>
+              <div className={styles.graphicMob}>
+                <img className={styles.img} src = {farmbeat1}></img>
+              </div>
             </div>
             <div className={styles.container}>
               <div className={styles.text}>
-                <p className={styles.textTitle} onClick={toggleTextContent} style={{ cursor: 'pointer' }}>
-                  give project instructions
+                <p className={styles.textTitle}>
+                  <span onClick={toggleTextContent} style = {{cursor : 'pointer'}}>give project instructions {arrow}</span>
                 </p>
                 {isTextVisible && (
-                  <p className={styles.textContent} style={{ transition: 'max-height 0.5s ease-in-out', overflow: 'hidden' }}>
-                    {/* Add your project instructions here */}
-                    Here are the project instructions that will be revealed when the title is clicked.
+                  <p className={styles.giveInstructions} style={{ transition: 'max-height 0.5s ease-in-out', overflow: 'hidden' }}>
+                      1. take out battery pack and insert two batteries inside <br/>
+                      2. unfold cardstock battery sleeve and follow folding steps specified on the front <br/>
+                      3. once the battery sleeve is on, take out the micro:bit and the kritonik soil moisture prong <br/>
+                      4. grab three screws and three bolts from the bag <br/>
+                      5. insert the screws into the corresponding holes on the micro:bit and the prong labeled P1, 3V and GND <br/>
+                      6. once these are secured, use the empty holes on the cardstock sleeve to secure the microbit to the battery pack <br/>
+                      7. grab the dangling wire from the battery pack and insert it into the large white port on the left of the micro:bit <br/>
+                      8. write ur code!! (link ez, link hard) <br/>
+                      9. download code off the makeCode platform <br/>
+                      10. insert your soil moisture sensor into a houseplant or some samples you gather and watch the magic happen! <br/>
+                    (all readings from 0-1023 are in microvolts (mV) signifying the conductivity of your soil)
                   </p>
                 )}
               </div>
