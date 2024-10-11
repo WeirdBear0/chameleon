@@ -75,8 +75,8 @@ function Home() {
             </div>
             {/* <div>
               Interested?
-            </div> */}
-          {/* </div> */}
+            </div>
+          </div> */}
           <div className='banner' ref = {bannerRef}>
             <Banner/>
           </div>
