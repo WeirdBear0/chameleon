@@ -8,7 +8,7 @@ function Energies() {
         <div className='info-container'>
           <div className='info-width'>
             <p className='info'>
-              In our Energies camp, students will learn about, examine, build, and test different methods of renewable energy, namely wind
+              In our Energies experience, students will learn about, examine, build, and test different methods of renewable energy, namely wind
               and hydro-power. Students will be shown specialized gearboxes that are used in fundamental structures such as windmills and
               dams, and will explore mechanisms such as the nacelle turning mechanism, in windmills. Attendees will then generate small
               amounts of electricity with their own mechanisms, and test them on natural subjects, such as creeks and streams. Finishing off,

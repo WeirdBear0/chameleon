@@ -8,7 +8,7 @@ function Water() {
         <div className='info-container'>
           <div className='info-width'>
             <p className='info'>
-              In our Week of Water, students will begin learning about the water cycle and fundamental concepts that affect how water interacts with
+              In our Water Project, students will begin learning about the water cycle and fundamental concepts that affect how water interacts with
               the environment around it. As students dive into the project, they will be presented with a diorama featuring a prominent water feature (river, lake, waterfall)
               and objects such as mountains, villages, and forests. The problem students will aim to solve will be to prevent the village from being destroyed from the 
               prominent water feature. Concepts regarding engineering and environmental science will be implemented to protect the village. Midweek, students will

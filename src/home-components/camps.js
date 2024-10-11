@@ -58,17 +58,17 @@ const Camps = () => {
               <span className='hide' ref={hiddenTextRef}>Are hidden in plain sight</span>
             </p>
           </div>
-          <p className='cohort-header'>WINTER CAMPS - 2024</p>
+          <p className='cohort-header'>Projects - 2024</p>
         </div>
         <div className='campCards'>
           <Link to = "/" className='card'>
-              <p className='card-title'>Week 1: Week Of Water</p>
+              <p className='card-title'>Project Water</p>
           </Link>
           <Link to = "/energies" className='card'>
-              <p className='card-title'>Week 2: Clean Energies</p>
+              <p className='card-title'>Clean Energies</p>
           </Link>
           <Link to = "/ecology" className='card'>
-              <p className='card-title'>Week 3: Ecology and Technology</p>
+              <p className='card-title'>Ecology and Technology</p>
           </Link>
         </div>
       </div>  
