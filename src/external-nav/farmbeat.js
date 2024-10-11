@@ -2,10 +2,10 @@ import React, {useState, useRef} from 'react';
 import { Link } from 'react-router-dom';
 import logo from './mainLogo.svg'
 import circleLogo from '../circleLogo.svg'
-import Partners from '../home-components/partners';
 import Footer from '../home-components/footer'
 import Font from '../home-components/font';
 import styles from'./farmbeat.module.css'
+import microbit1 from './farmbeat-pics/microbit-1.jpg'
 
 function Home() {
   const [size, setSize] = useState("55px")
@@ -44,35 +44,43 @@ function Home() {
                 </Link>
             </div>
           </div>
-          {/* <div className={styles.farmbeatContent}>
+          <div className={styles.farmbeatContent}>
             <div className={styles.container}>
               <div className={styles.text}>
                 <p className={styles.textTitle}>what is a micro:bit?</p>
-                <p className={styles.textContent}></p>
+                <p className={styles.textContent}>
+                  micro:bit is a small, programmable device
+                  featuring a 5x5 LED matrix for visual output
+                  two programmable buttons
+                  and an accelerometer and compass for motion and orientation sensing
+                </p>
               </div>
               <div className={styles.graphic}>
-                <img className={styles.img}></img>
+              <div className={styles.img}> 
+                <iframe title="Micro:Bit" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b453f11ad77a4545a33b3e0ecfba6fc5/embed">
+                </iframe> 
+              </div>
               </div>
             </div>
             <div className={styles.container}>
               <div className={styles.graphic}>
                 <img className={styles.img}></img>
               </div>
-              <div className={styles.text}>
-                <p className={styles.textTitle}>what is a micro:bit?</p>
-                <p className={styles.textContent}></p>
+              <div className={styles.textTwo}>
+                <p className={styles.textTitle}>introducing farmbeat</p>
+                <p className={styles.textContent}>the microsoft farmbeat is a tool that integrates software and ai with relatively simple hardware to aid data analysis with respect to agriculture. it is also an education initiative designed to teach students the basics of electronics, data construction, and, ultimately, ai.</p>
               </div>
             </div>
             <div className={styles.container}>
               <div className={styles.text}>
-                <p className={styles.textTitle}>what is a micro:bit?</p>
+                <p className={styles.textTitle}>give project instructions</p>
                 <p className={styles.textContent}></p>
               </div>
               <div className={styles.graphic}>
                 <img className={styles.img}></img>
               </div>
             </div>
-          </div> */}
+          </div>
          <div className='footer' ref = {footerRef}>
           <Footer/>
         </div>

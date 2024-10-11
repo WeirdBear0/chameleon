@@ -66,10 +66,32 @@
 }
 .farmbeatContent{
     background-color: #fcf3ea;
+    height: 100%;
+    font-family: 'Montserrat';
 }
 .container{
     display: flex;
     flex-direction: row;
+    padding:2rem;
+    justify-content: space-between;
+}
+.container .text{
+    width: 60%;
+}
+.container .textTwo{
+    width: 60%;
+    text-align: right;
+}
+.container .graphic{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.container .textTitle{
+    font-weight: bold;
+}
+.img{
+    width: 100%;
 }
 @media (max-width: 1100px) {
     .navbar{
