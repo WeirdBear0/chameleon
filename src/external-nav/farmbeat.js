@@ -84,14 +84,14 @@ function Home() {
                 <img className={styles.img} src = {farmbeat1}></img>
               </div>
             </div>
-            <div className={styles.container}>
+            <div className={styles.givecontainer}>
               <div className={styles.text}>
                 <p className={styles.textTitle}>
-                  <span onClick={toggleTextContent} style = {{cursor : 'pointer'}}>give project instructions {arrow}</span>
+                  <span onClick={toggleTextContent} style = {{cursor : 'pointer'}}>give project instructions {arrow} </span>
                 </p>
                 {isTextVisible && (
                   <p className={styles.giveInstructions} style={{ transition: 'max-height 0.5s ease-in-out', overflow: 'hidden' }}>
-                      1. take out battery pack and insert two batteries inside <br/>
+                      {/* 1. take out battery pack and insert two batteries inside <br/>
                       2. unfold cardstock battery sleeve and follow folding steps specified on the front <br/>
                       3. once the battery sleeve is on, take out the micro:bit and the kritonik soil moisture prong <br/>
                       4. grab three screws and three bolts from the bag <br/>
@@ -101,12 +101,12 @@ function Home() {
                       8. write ur code!! (link ez, link hard) <br/>
                       9. download code off the makeCode platform <br/>
                       10. insert your soil moisture sensor into a houseplant or some samples you gather and watch the magic happen! <br/>
-                    (all readings from 0-1023 are in microvolts (mV) signifying the conductivity of your soil)
+                    (all readings from 0-1023 are in microvolts (mV) signifying the conductivity of your soil) */}
+                    <iframe src="https://docs.google.com/document/d/1QZeToSJ8FswY-0m2fAZPDajzJOOZfMi76fEG_dFxfIM/edit?embedded=true" width="640" height="718" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                   </p>
                 )}
               </div>
-              <div className={styles.graphic}>
-                <img className={styles.img}></img>
+              <div className={styles.doc}>
               </div>
             </div>
           </div>
