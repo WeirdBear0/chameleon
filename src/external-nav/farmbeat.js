@@ -50,9 +50,9 @@ function Home() {
                 <p className={styles.textTitle}>what is a micro:bit?</p>
                 <p className={styles.textContent}>
                   micro:bit is a small, programmable device
-                  featuring a 5x5 LED matrix for visual output
-                  two programmable buttons
-                  and an accelerometer and compass for motion and orientation sensing
+                  featuring a 5x5 LED matrix for visual output,
+                  two programmable buttons,
+                  and an accelerometer and compass for motion and orientation sensing. our use case utilizes a soil moisture sensor which triggers visual output on the micro:bit.
                 </p>
               </div>
               <div className={styles.graphic}>
@@ -68,7 +68,7 @@ function Home() {
               </div>
               <div className={styles.textTwo}>
                 <p className={styles.textTitle}>introducing farmbeat</p>
-                <p className={styles.textContent}>the microsoft farmbeat is a tool that integrates software and ai with relatively simple hardware to aid data analysis with respect to agriculture. it is also an education initiative designed to teach students the basics of electronics, data construction, and, ultimately, ai.</p>
+                <p className={styles.textContent}>the farmbeat is a tool that integrates software and ai with relatively simple hardware to aid data analysis with respect to agriculture. it is also an education initiative designed to teach students the basics of electronics, data construction, and, ultimately, ai.</p>
               </div>
             </div>
             <div className={styles.container}>
