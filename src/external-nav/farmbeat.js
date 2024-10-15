@@ -88,20 +88,10 @@ function Home() {
               <div className={styles.text}>
                 <p className={styles.textTitle}>
                   <span onClick={toggleTextContent} style = {{cursor : 'pointer'}}>give project instructions {arrow} </span>
+                  <a href = "https://docs.google.com/document/d/1QZeToSJ8FswY-0m2fAZPDajzJOOZfMi76fEG_dFxfIM/edit?usp=sharing"  target = "_blank" style = {{color: "#6c584c"}}> google docs link </a>
                 </p>
                 {isTextVisible && (
                   <p className={styles.giveInstructions} style={{ transition: 'max-height 0.5s ease-in-out', overflow: 'hidden' }}>
-                      {/* 1. take out battery pack and insert two batteries inside <br/>
-                      2. unfold cardstock battery sleeve and follow folding steps specified on the front <br/>
-                      3. once the battery sleeve is on, take out the micro:bit and the kritonik soil moisture prong <br/>
-                      4. grab three screws and three bolts from the bag <br/>
-                      5. insert the screws into the corresponding holes on the micro:bit and the prong labeled P1, 3V and GND <br/>
-                      6. once these are secured, use the empty holes on the cardstock sleeve to secure the microbit to the battery pack <br/>
-                      7. grab the dangling wire from the battery pack and insert it into the large white port on the left of the micro:bit <br/>
-                      8. write ur code!! (link ez, link hard) <br/>
-                      9. download code off the makeCode platform <br/>
-                      10. insert your soil moisture sensor into a houseplant or some samples you gather and watch the magic happen! <br/>
-                    (all readings from 0-1023 are in microvolts (mV) signifying the conductivity of your soil) */}
                     <iframe src="https://docs.google.com/document/d/1QZeToSJ8FswY-0m2fAZPDajzJOOZfMi76fEG_dFxfIM/edit?embedded=true" width="640" height="718" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                   </p>
                 )}

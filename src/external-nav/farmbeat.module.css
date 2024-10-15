@@ -187,5 +187,8 @@
     .graphicMob .img{
         width: 60%;
     }
+    .giveInstructions{
+        text-align: center;
+    }
 }
 

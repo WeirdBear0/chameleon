@@ -37,7 +37,7 @@ const Camps = () => {
         if (scrollProgress >= letterProgress * 0.6) { // The 0.6 is the percentage of the text that is revealed
           letter.style.opacity = '1';
         } else {
-          letter.style.opacity = '0.05';
+          letter.style.opacity = '0';
         }
       });
     };
