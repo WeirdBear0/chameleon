@@ -22,12 +22,6 @@
     text-align: center;
     color: #6c584c;
 }
-.interestweb a{
-    margin:0; 
-    padding: 0;
-    font-weight: 700;
-    color: #6c584c !important;
-}
 .cover{
     position: sticky;
 }
@@ -57,10 +51,20 @@
     text-decoration: none;
     margin-right: 2.5rem;
 }
+.navbar .title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .navbar .title{
     font-family: 'Libre Baskerville', serif;
     color:#7ba059;
     transition: 0.5s;
+    margin-bottom: 10px;
+}
+.mob-donate{
+    display: none;
 }
 @media (max-width: 1100px) {
     .navbar{
@@ -95,6 +99,14 @@
     .navbar .logoLink{
         padding: 0;
         margin: 0 0.5rem 0;
+    }
+    .navbar .donate-container{
+        display: none;
+    }
+    .mob-donate{
+        display: block;
+        margin-top:10px;
+        margin-bottom: 20px;
     }
 }
 

@@ -8,6 +8,7 @@ import Camps from './home-components/camps';
 import Partners from './home-components/partners';
 import Footer from './home-components/footer'
 import Font from './home-components/font';
+import Donate  from './home-components/donate'
 import './Home.css'
 
 function Home() {
@@ -63,7 +64,11 @@ function Home() {
                   </a>
                 </Link>
               </div>
-              <p className='title' style = {{fontSize: size}}>chameleon </p>
+              <div className='title-container'>
+                <p className='title' style = {{fontSize: size}}>chameleon</p> 
+                <div className='donate-container' style = {{marginBottom:size}}><Donate/></div>
+              </div>
+              <div className='mob-donate'><Donate/></div>
               <div className='links'>
                   <a className='sectionLink' onClick={() => {scrollBanner()}}>Home</a>
                   <a className='sectionLink' onClick={() => {scrollabt()}}>About</a>
