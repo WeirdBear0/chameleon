@@ -28,7 +28,7 @@ const About = () => {
                 <div className='cause'>
                   <h1 className='title'>Our Goal</h1>
                     <p className='desc'>
-                      
+                    We believe that everyone needs to have a real connection to their environment, and deserve to be taught that in an engaging, unique way, different from your average coding class.
                     </p>
                 </div>
               </div>
