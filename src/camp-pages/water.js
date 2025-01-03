@@ -3,7 +3,7 @@ import React, {useState, useRef} from 'react';
 function Water() {
   return (
     <div className='campInfo'>
-        <p className='specs'>Grades 3-5</p>
+        <p className='specs'></p>
         <p className='title'>Water</p>
         <div className='info-container'>
           <div className='info-width'>

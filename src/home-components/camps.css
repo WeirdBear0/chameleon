@@ -26,6 +26,9 @@
     font-size: 20px;
     font-weight: 250;
 }
+.cohort-header .notifclick{
+    font-size: 13px;
+}
 .campsContainer .campCards{
     display: flex;
     flex-direction: column;
@@ -36,17 +39,21 @@
     height: 120%;
 }
 .campsContainer .campCards .card{
-    width: 120%;
+    width: 14rem;
+    height: 3rem;
     background: #6c584c;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     text-decoration: none;
     color: white;
+    margin: 0.3rem;
+    border-radius: 5px;
 }
 .campsContainer .campCards .card .card-title{
     font-family: 'Montserrat', serif;
-    margin-left: 5%;
+    align-self: left;
+    margin-left:5%;
 }
 .campsContainer .campCards .card .desc{
     font-family: 'Raleway', serif;
@@ -69,6 +76,7 @@
     margin-top: 2rem;
 }
 .ovr .campInfo .title{
+    margin-top: 2rem;
     font-family: 'Libre Baskerville', serif;
     font-size: 30px;
     margin: 0;
@@ -114,7 +122,7 @@
         justify-content: space-between;
     }
     .campsContainer .campCards .card{
-        width: 100%;
+        width: 20vh;
         background: #6c584c;
         display: flex;
         flex-direction: column;
@@ -124,6 +132,7 @@
     }
     .campsContainer .campCards .card .card-title{
         font-family: 'Montserrat', serif;
+        font-size: 13px;
         margin-left: 5%;
         margin-bottom: 1rem;
         padding-bottom: 0;

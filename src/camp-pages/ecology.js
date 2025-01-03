@@ -3,7 +3,7 @@ import React, {useState, useRef} from 'react';
 function Ecology() {
   return (
     <div className='campInfo'>
-        <p className='specs'> Grades 6-8 </p>
+        <p className='specs'></p>
         <p className='title'>Ecology</p>
         <div className='info-container'>
           <div className='info-width'>

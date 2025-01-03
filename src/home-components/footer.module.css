@@ -1,6 +1,5 @@
 .footer{
     margin-bottom: 0;
-    height: 20rem;
     background-color: rgba(226, 218, 201, 1);
     backdrop-filter: saturate(100%) blur(20px);
     color: #6c5848;
@@ -18,7 +17,7 @@
 .footer .content{
     display: flex;
     flex-direction: row;
-    margin: 0;
+    margin-bottom: 1rem;
     justify-content: space-between;
 }
 .footer .content .socials{

@@ -58,7 +58,7 @@ const Camps = () => {
               <span className='hide' ref={hiddenTextRef}>Are hidden in plain sight</span>
             </p>
           </div>
-          <p className='cohort-header'>Projects - 2024</p>
+          <p className='cohort-header'>Future Projects - 2025 <br/><span className='notifclick'>click to learn more — view info below!</span></p>
         </div>
         <div className='campCards'>
           <Link to = "/" className='card'>
@@ -68,7 +68,7 @@ const Camps = () => {
               <p className='card-title'>Clean Energies</p>
           </Link>
           <Link to = "/ecology" className='card'>
-              <p className='card-title'>Ecology and Technology</p>
+              <p className='card-title'>Eco-Tech</p>
           </Link>
         </div>
       </div>  

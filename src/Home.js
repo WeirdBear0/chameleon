@@ -66,9 +66,9 @@ function Home() {
               </div>
               <div className='title-container'>
                 <p className='title' style = {{fontSize: size}}>chameleon</p> 
-                <div className='donate-container' style = {{marginBottom:size}}><Donate/></div>
+                {/* <div className='donate-container' style = {{marginBottom:size}}><Donate/></div> */}
               </div>
-              <div className='mob-donate'><Donate/></div>
+              {/* <div className='mob-donate'><Donate/></div> */}
               <div className='links'>
                   <a className='sectionLink' onClick={() => {scrollBanner()}}>Home</a>
                   <a className='sectionLink' onClick={() => {scrollabt()}}>About</a>

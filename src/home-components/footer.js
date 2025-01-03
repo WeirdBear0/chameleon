@@ -6,7 +6,6 @@ const Footer = () => {
     return(
         <div>
             <div className={styles.footer}>
-                <div>
                     <div className={styles.content}>
                         <div className={styles.socials}>
                             <div className={styles.card}>
@@ -28,9 +27,6 @@ const Footer = () => {
                             <p><span className={styles.title}>CHAMELEON</span> acknowledges that we are on the Indigenous Land of Coast Salish peoples who have reserved treaty rights to this land, specifically the Snoqualmie Indian Tribe.</p>
                         </div>
                     </div>
-                </div>
-                <div className={styles.imgContainer}>
-                </div>
             </div>
             <div className={styles.credits}>
                 <div className={styles.creditContainer}>
