@@ -1,20 +1,41 @@
 .partners{
     margin:0;
     height: 20rem;
+    width: 100%;
     background-color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     vertical-align: middle;
 }
 .partners .partnerHeader{
     font-family: 'Montserrat', serif;
-    font-size: 55px;
+    font-size: 40px;
     text-align: center;
     margin:0;
 }
 .partners .imgContainer{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    width: 100%
+}
+.give{
+    width: 300px;
+}
+.fm{
+    width: 190px
+}
+@media (max-width: 1100px) {
+    .partners{
+        margin:0;
+        height: 50rem;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        vertical-align: middle;
+    }
 }
