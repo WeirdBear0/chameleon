@@ -48,4 +48,8 @@
     .specs{
         font-size: 12px;
     }
+    .donate-banner{
+        display: none;
+    }
 }
+
