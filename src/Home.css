@@ -89,7 +89,6 @@
         display: none;
     }
     .navbar .links{
-        margin:0.5rem 1rem 0;
         width: 400px;
         display: flex;
         flex-direction: row;
