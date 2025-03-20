@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import './camps.css'
+import Carousel from './campsgallery';
 
 const Camps = () => {
   const hiddenTextRef = useRef(null);
@@ -49,6 +50,17 @@ const Camps = () => {
   }, [isInView]);
 
   return (
+
+    // <div style={{ height: '600px', position: 'relative' }}>
+    //   <Carousel
+    //     baseWidth={300}
+    //     autoplay={true}
+    //     autoplayDelay={3000}
+    //     pauseOnHover={true}
+    //     loop={true}
+    //     round={false}
+    //   />
+    // </div>
     <div className='ovr'>
       <div className='campsContainer'>
         <div className="sectionHeader">
