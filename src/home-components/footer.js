@@ -1,43 +1,71 @@
-import React, {useState} from "react";
+import React from "react";
 import styles from './footer.module.css'
 import img from './logoAlt.svg'
 
 const Footer = () => {
-    return(
-        <div>
-            <div className={styles.footer}>
-                    <div className={styles.content}>
-                        <div className={styles.socials}>
-                            <div className={styles.card}>
-                                <p className={styles.title}>CONTACT</p>
-                                <div className={styles.links}>
-                                    <a href = "mailto:camps.chameleon@gmail.com" className={styles.mailto}><p>Reach us at <span className={styles.important}>camps.chameleon@gmail.com</span></p></a>
-                                    <p>Call or Text at <span className={styles.important}>425.738.2825</span></p>
-                                </div>
-                            </div>
-                            <div className={styles.card}>
-                                <p className={styles.title}>LINKS</p>
-                                <div className={styles.links}>
-                                    <a className={styles.link} target = "_blank" href = "https://www.facebook.com/profile.php?id=61559919316355"><p>Facebook</p></a>
-                                    <a className={styles.link} target = "_blank" href = "https://www.instagram.com/chameleoncamps/"><p>Instagram</p></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.blurb}>
-                            <p><span className={styles.title}>CHAMELEON</span> acknowledges that we are on the Indigenous Land of Coast Salish peoples who have reserved treaty rights to this land, specifically the Snoqualmie Indian Tribe.</p>
+    return (
+        <footer className={styles.footer}>
+            <div className={styles.footerContent}>
+                <div className={styles.footerGrid}>
+                    <div className={styles.footerSection}>
+                        <h3 className={styles.sectionTitle}>Contact Us</h3>
+                        <div className={styles.contactInfo}>
+                            <a href="mailto:camps.chameleon@gmail.com" className={styles.contactLink}>
+                                <span className={styles.contactIcon}>✉️</span>
+                                camps.chameleon@gmail.com
+                            </a>
+                            <a href="tel:+14257382825" className={styles.contactLink}>
+                                <span className={styles.contactIcon}>📞</span>
+                                425.738.2825
+                            </a>
                         </div>
                     </div>
-            </div>
-            <div className={styles.credits}>
-                <div className={styles.creditContainer}>
-                    <p><span className={styles.title}>Ayush</span> Agarwal</p>
-                    <p><span className={styles.title}>Andrew</span> Wang</p>
-                    <p><span className={styles.title}>Kruthik</span> Ankam</p>
+
+                    <div className={styles.footerSection}>
+                        <h3 className={styles.sectionTitle}>Follow Us</h3>
+                        <div className={styles.socialLinks}>
+                            <a 
+                                className={styles.socialLink} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                href="https://www.facebook.com/profile.php?id=61559919316355"
+                            >
+                                <span className={styles.socialIcon}>📘</span>
+                                Facebook
+                            </a>
+                            <a 
+                                className={styles.socialLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.instagram.com/chameleoncamps/"
+                            >
+                                <span className={styles.socialIcon}>📸</span>
+                                Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className={styles.footerSection}>
+                        <h3 className={styles.sectionTitle}>Land Acknowledgement</h3>
+                        <p className={styles.landAck}>
+                            CHAMELEON acknowledges that we are on the Indigenous Land of Coast Salish peoples who have reserved treaty rights to this land, specifically the Snoqualmie Indian Tribe.
+                        </p>
+                    </div>
                 </div>
-                <p>chameleon 2024</p>
+
+                <div className={styles.credits}>
+                    <div className={styles.creditContainer}>
+                        <div className={styles.creditNames}>
+                            <span className={styles.creditName}><strong>Ayush</strong> Agarwal</span>
+                            <span className={styles.creditName}><strong>Andrew</strong> Wang</span>
+                            <span className={styles.creditName}><strong>Kruthik</strong> Ankam</span>
+                        </div>
+                        <p className={styles.copyright}>© chameleon 2024</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    )
-}
+        </footer>
+    );
+};
 
 export default Footer;

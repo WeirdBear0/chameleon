@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import logo from './mainLogo.svg'
 import circleLogo from './circleLogo.svg'
@@ -12,53 +12,44 @@ import Donate  from './home-components/donate'
 import './Home.css'
 
 function Home() {
-  const [size, setSize] = useState("55px")
-  const [opacity, setOpacity] = useState(1)
+  const [navStyle, setNavStyle] = useState({ size: "55px", opacity: 1 });
+  const bannerRef = useRef(null);
+  const abtRef = useRef(null);
+  const campRef = useRef(null);
+  const partnerRef = useRef(null);
+  const footerRef = useRef(null);
 
-  const bannerRef = useRef(0)
-  const scrollBanner = () => window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: 'smooth'
-  })
+  const scrollToSection = useCallback((ref) => {
+    if (!ref.current) return;
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, []);
 
-  const abtRef = useRef(0)
-  const scrollabt = () => window.scrollTo({
-    top: bannerRef.current.getBoundingClientRect().height,
-    left: 0,
-    behavior: 'smooth'
-  })
-
-  const campRef = useRef(0)
-  const scrollcamp = () => window.scrollTo({
-    top: abtRef.current.getBoundingClientRect().height + bannerRef.current.getBoundingClientRect().height,
-    left: 0,
-    behavior: 'smooth'
-  })
-
-  const partnerRef = useRef(0)
-  const footerRef = useRef(0)
-
-  function changeNav()   {
-    if (window.scrollY > 80 || window.scrollY > 80) {
-      setSize("34px");
-      setOpacity(0.85)
+  const handleNavChange = useCallback(() => {
+    const scrollY = window.scrollY;
+    if (scrollY > 80) {
+      setNavStyle({ size: "34px", opacity: 0.85 });
     } else {
-      setSize("55px");
-      setOpacity(1)
+      setNavStyle({ size: "55px", opacity: 1 });
     }
-  }
-  window.onscroll = () => {
-    changeNav();
-  };
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleNavChange);
+    return () => window.removeEventListener('scroll', handleNavChange);
+  }, [handleNavChange]);
+
   return (
         <div className="App">
           <Font/>
           {/* <div className='cover'> */}
-            <div className = 'navbar' style = {{background: `rgba(226, 218, 201, ${opacity})`}}>
+            <div className = 'navbar' style = {{background: `rgba(226, 218, 201, ${navStyle.opacity})`}}>
               <div className='logoContainer'>
                 <Link to = "/">
-                  <a href = "#" className='logoLink' onClick={() => {scrollBanner()}}>
+                  <a href = "#" className='logoLink' onClick={() => {scrollToSection(bannerRef)}}>
                       <img src = {logo} className='logo' alt = 'chameleon'></img>
                       <img src = {circleLogo} className='mobLogo' alt = 'chameleon'></img>
                   </a>
@@ -69,9 +60,9 @@ function Home() {
               </div>
               <div className='mob-donate'><Donate/></div>
               <div className='links'>
-                  <a className='sectionLink' onClick={() => {scrollBanner()}}>Home</a>
-                  <a className='sectionLink' onClick={() => {scrollabt()}}>About</a>
-                  <a className='sectionLink' onClick={() => {scrollcamp()}}>Camps</a>
+                  <a className='sectionLink' onClick={() => {scrollToSection(bannerRef)}}>Home</a>
+                  <a className='sectionLink' onClick={() => {scrollToSection(abtRef)}}>About</a>
+                  <a className='sectionLink' onClick={() => {scrollToSection(campRef)}}>Camps</a>
                   <Link to = "/farmbeat">
                     <a className='card-title'>Farmbeat</a>
                   </Link>
