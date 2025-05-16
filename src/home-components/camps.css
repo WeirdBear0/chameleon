@@ -1,66 +1,87 @@
 .campsContainer{
     margin:0;
-    padding:0;
-    padding-top: 2.5rem;
-    padding-bottom: 3.5rem;
+    padding:4rem 2rem;
     display: flex;
     flex-direction: row;
     background-color: #fefae0;
     align-items: center;
     justify-content: center;
+    gap: 7rem;
+    width: 100vw;
+    height: 100%;
 }
 .sectionHeader{
     display: flex;
     flex-direction: column;
+    max-width: 700px;
+    min-width: 500px;
 }
 .campsContainer .campsHeader .plain{
     font-family: 'Montserrat', serif;
-    font-size: 55px;
+    font-size: 3.5rem;
+    color: #6c584c;
+    margin: 0;
+    line-height: 1.2;
 }
 .campsContainer .campsHeader .hide{
     font-family: 'Libre Baskerville', serif;
-    font-size: 55px;
+    font-size: 3.5rem;
+    color: #a98467;
+    margin: 0;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 .campsContainer .cohort-header{
     font-family: 'Montserrat', serif;
-    font-size: 20px;
-    font-weight: 250;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #6c584c;
+    margin-top: 1rem;
 }
 .cohort-header .notifclick{
-    font-size: 13px;
+    font-size: 0.9rem;
+    color: #a98467;
+    font-style: italic;
 }
 .campsContainer .campCards{
     display: flex;
     flex-direction: column;
-    align-items: left; 
-    justify-content: space-between;
-    margin-left:5%;
-    margin-right:5%;
-    height: 120%;
+    gap: 1rem;
+    min-width: 340px;
 }
 .campsContainer .campCards .card{
-    width: 14rem;
-    height: 3rem;
-    background: #6c584c;
+    width: 100%;
+    padding: 1.5rem;
+    background: white;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     text-decoration: none;
-    color: white;
-    margin: 0.3rem;
-    border-radius: 5px;
+    color: #6c584c;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.campsContainer .campCards .card:hover {
+    transform: translateY(-5px);
+    border-color: #a98467;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 .campsContainer .campCards .card .card-title{
-    font-family: 'Montserrat', serif;
-    align-self: left;
-    margin-left:5%;
-}
-.campsContainer .campCards .card .desc{
-    font-family: 'Raleway', serif;
-    color: #f0ead2;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5rem;
     font-weight: 600;
+    color: #6c584c;
+    margin: 0;
 }
-/* moving to camp-info style */
+.ovr {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
 .ovr .campInfo{
     margin:0;
     background-color: #e9edc9;
@@ -69,83 +90,94 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 4rem 2rem;
+    height: 100%;
 }
 .ovr .campInfo .specs{
     font-family: 'Montserrat', serif;
-    font-size: 13px;
-    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #6c584c;
+    margin: 0;
 }
 .ovr .campInfo .title{
-    margin-top: 2rem;
     font-family: 'Libre Baskerville', serif;
-    font-size: 30px;
-    margin: 0;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #6c584c;
+    margin: 1rem 0 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+.ovr .campInfo .title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #a98467;
 }
 .ovr .campInfo .info-container{
-    width: 60%;
-    display: flex;
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 .ovr .campInfo .info-container .info-width{
     width: 100%;
 }
 .ovr .campInfo .info-container .info-width .info{
     margin: 0;
-    margin-bottom: 3rem;
     font-family: 'Montserrat', serif;
-    font-size: 18px;
-    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #6c584c;
+    text-align: left;
 }
 @media (max-width: 1100px) {
     .campsContainer{
-        display: flex;
         flex-direction: column;
-        justify-content: center;
+        padding: 3rem 1.5rem;
+        gap: 3rem;
+        height: 100%;
     }
-    .campsContainer .campsHeader{
-        text-align: center;
+    .sectionHeader{
+        max-width: 100%;
+        min-width: 0;
     }
     .campsContainer .campsHeader .plain{
-        font-size: 30px;
+        font-size: 2.5rem;
+        text-align: center;
     }
     .campsContainer .campsHeader .hide{
-        font-size: 30px;
+        font-size: 2.5rem;
+        text-align: center;
+        white-space: normal;
     }
     .campsContainer .cohort-header{
-        font-size: 15px;
         text-align: center;
+        font-size: 1.1rem;
     }
     .campsContainer .campCards{
-        display: flex;
-        flex-direction: column;
-        align-items: left; 
-        justify-content: space-between;
+        min-width: 0;
+        width: 100%;
+        max-width: 400px;
     }
-    .campsContainer .campCards .card{
-        width: 20vh;
-        background: #6c584c;
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        text-decoration: none;
-        color: white;
-    }
-    .campsContainer .campCards .card .card-title{
-        font-family: 'Montserrat', serif;
-        font-size: 13px;
-        margin-left: 5%;
-        margin-bottom: 1rem;
-        padding-bottom: 0;
+    .ovr .campInfo{
+        padding: 3rem 1.5rem;
+        height: 100%;
     }
     .ovr .campInfo .title{
-        margin-top:1rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .ovr .campInfo .info-container{
+        padding: 1.5rem;
     }
     .ovr .campInfo .info-container .info-width .info{
-        margin: 0;
-        margin-bottom: 3rem;
-        font-family: 'Montserrat', serif;
-        font-size: 12px;
-        text-align: center;
+        font-size: 1rem;
     }
 }
 

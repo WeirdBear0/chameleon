@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link, useNavigate } from 'react-router-dom';
 import './camps.css'
 import Carousel from './campsgallery';
 
 const Camps = () => {
   const hiddenTextRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,7 +36,7 @@ const Camps = () => {
       
       hiddenTextRef.current.querySelectorAll('.fade-letter').forEach((letter, index) => {
         const letterProgress = (index + 1) / hiddenTextRef.current.querySelectorAll('.fade-letter').length;
-        if (scrollProgress >= letterProgress * 0.6) { // The 0.6 is the percentage of the text that is revealed
+        if (scrollProgress >= letterProgress * 0.6) {
           letter.style.opacity = '1';
         } else {
           letter.style.opacity = '0';
@@ -44,10 +45,15 @@ const Camps = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial call to set initial state
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isInView]);
+
+  const handleCampClick = (e, path) => {
+    e.preventDefault();
+    navigate(path);
+  };
 
   return (
 
@@ -73,14 +79,14 @@ const Camps = () => {
           <p className='cohort-header'>Future Projects - 2025 <br/><span className='notifclick'>click to learn more — view info below!</span></p>
         </div>
         <div className='campCards'>
-          <Link to = "/" className='card'>
-              <p className='card-title'>Project Water</p>
+          <Link to="/" className='card' onClick={(e) => handleCampClick(e, '/')}>
+            <p className='card-title'>Project Water</p>
           </Link>
-          <Link to = "/energies" className='card'>
-              <p className='card-title'>Clean Energies</p>
+          <Link to="/energies" className='card' onClick={(e) => handleCampClick(e, '/energies')}>
+            <p className='card-title'>Clean Energies</p>
           </Link>
-          <Link to = "/ecology" className='card'>
-              <p className='card-title'>Eco-Tech</p>
+          <Link to="/ecology" className='card' onClick={(e) => handleCampClick(e, '/ecology')}>
+            <p className='card-title'>Eco-Tech</p>
           </Link>
         </div>
       </div>  

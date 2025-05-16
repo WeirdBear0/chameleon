@@ -9,6 +9,8 @@
     transition: 0.4s;
     top: 0;
     z-index: 9999;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .mobLogo{
     display: none;
@@ -66,20 +68,27 @@
 }
 .farmbeatContent{
     background-color: #fcf3ea;
-    height: 100%;
-    font-family: 'Montserrat';
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    padding: 2rem 0;
 }
 .container{
     display: flex;
     flex-direction: row;
-    padding:2rem;
+    padding: 4rem 2rem;
     justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
 }
 .givecontainer{
     display: flex;
     flex-direction: row;
-    padding:2rem;
+    padding: 4rem 2rem;
     justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .givecontainer .text{
     width: 100%;
@@ -90,31 +99,66 @@
 .giveInstructions iframe{
     width: 100%;
 }
-.container .text{
-    width: 60%;
+.container .text, .container .textTwo {
+    width: 50%;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
 }
-.container .textTwo{
-    width: 60%;
-    text-align: right;
+.container .text:hover, .container .textTwo:hover {
+    transform: translateY(-5px);
 }
-.container .graphic{
-    width: 30%;
+.container .textTitle {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #6c584c;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+.container .textTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #a98467;
+}
+.container .textContent {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #6c584c;
+}
+.container .graphic, .container .graphicbeat {
+    width: 40%;
     display: flex;
     justify-content: center;
-}
-.container .textTitle{
-    font-weight: bold;
+    align-items: center;
 }
 .img{
     width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.img:hover {
+    transform: scale(1.02);
 }
 .giveInstructions{
-    text-align: left;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 1rem;
 }
-.graphicbeat{
-    width: 30%;
-    display: flex;
-    justify-content: center;
+.giveInstructions iframe{
+    width: 100%;
+    border: none;
+    border-radius: 8px;
 }
 .graphicMob{
     display: none;
@@ -122,6 +166,7 @@
 @media (max-width: 1100px) {
     .navbar{
         flex-direction: column;
+        padding: 1rem;
     }
     .logoContainer{
         display: flex;
@@ -155,40 +200,28 @@
         margin: 0 0.5rem 0;
     }
     .container{
-        display: flex;
         flex-direction: column;
-        padding: 2rem;
-        justify-content: center;
+        padding: 2rem 1rem;
+        gap: 2rem;
     }
-    .container .text{
+    .container .text, .container .textTwo {
         width: 100%;
-        text-align: center;
+        padding: 1.5rem;
     }
-    .container .textTwo{
+    .container .graphic, .container .graphicbeat {
         width: 100%;
-        text-align: center;
     }
-    .container .graphic{
-        width: 100%;
-        display: flex;
-        justify-content: center;
+    .container .textTitle {
+        font-size: 1.75rem;
     }
-    .graphic .img{
-        width: 60%;
+    .container .textContent {
+        font-size: 1rem;
     }
-    .container .graphicbeat{
-        display: none;
+    .givecontainer {
+        padding: 2rem 1rem;
     }
-    .container .graphicMob{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .graphicMob .img{
-        width: 60%;
-    }
-    .giveInstructions{
-        text-align: center;
+    .giveInstructions {
+        padding: 1rem;
     }
 }
 
