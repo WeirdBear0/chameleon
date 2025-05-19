@@ -75,6 +75,14 @@
     color: #6c584c;
     margin: 0;
 }
+.campsContainer .campCards .card-desc {
+    font-family: 'Montserrat', serif;
+    font-size: 1rem;
+    color: #a98467;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
 .ovr {
     width: 100vw;
     height: 100%;
@@ -139,44 +147,64 @@
 @media (max-width: 1100px) {
     .campsContainer{
         flex-direction: column;
-        padding: 3rem 1.5rem;
-        gap: 3rem;
+        padding: 2rem 0.5rem;
+        gap: 2rem;
         height: 100%;
+        width: 100vw;
+        align-items: center;
     }
     .sectionHeader{
         max-width: 100%;
         min-width: 0;
-    }
-    .campsContainer .campsHeader .plain{
-        font-size: 2.5rem;
+        width: 100%;
+        align-items: center;
         text-align: center;
     }
+    .campsContainer .campsHeader .plain{
+        font-size: 2rem;
+        text-align: center;
+        white-space: normal;
+    }
     .campsContainer .campsHeader .hide{
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-align: center;
         white-space: normal;
     }
     .campsContainer .cohort-header{
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .campsContainer .campCards{
         min-width: 0;
         width: 100%;
         max-width: 400px;
+        align-items: center;
     }
-    .ovr .campInfo{
+    .campsContainer .campCards .card{
+        width: 100%;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    .ovr .campInfo {
         padding: 3rem 1.5rem;
         height: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
-    .ovr .campInfo .title{
+    .ovr .campInfo .title {
         font-size: 2rem;
         text-align: center;
     }
-    .ovr .campInfo .info-container{
+    .ovr .campInfo .info-container {
         padding: 1.5rem;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
-    .ovr .campInfo .info-container .info-width .info{
+    .ovr .campInfo .info-container .info-width .info {
         font-size: 1rem;
     }
 }
