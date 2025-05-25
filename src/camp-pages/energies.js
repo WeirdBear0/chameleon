@@ -8,11 +8,7 @@ function Energies() {
         <div className='info-container'>
           <div className='info-width'>
             <p className='info'>
-              In our Energies experience, students will learn about, examine, build, and test different methods of renewable energy, namely wind
-              and hydro-power. Students will be shown specialized gearboxes that are used in fundamental structures such as windmills and
-              dams, and will explore mechanisms such as the nacelle turning mechanism, in windmills. Attendees will then generate small
-              amounts of electricity with their own mechanisms, and test them on natural subjects, such as creeks and streams. Finishing off,
-              kids will explore the various environmental benefits of clean energy solutions and learn how to scale what they built over the week!
+            In the Energies experience, students will explore renewable energy by learning about, building, and testing wind and hydro-power systems. They’ll study components like gearboxes and nacelle mechanisms, generate electricity using their own designs, and test them in natural settings. The week ends with discussions on the environmental benefits of clean energy and how to scale their creations!
             </p>
           </div>
           

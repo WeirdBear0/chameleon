@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     gap: 7rem;
-    width: 100vw;
+    width: 100%;
     height: 100%;
 }
 .sectionHeader{
@@ -47,7 +47,6 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    min-width: 340px;
 }
 .campsContainer .campCards .card{
     width: 100%;
@@ -84,7 +83,7 @@
     font-weight: 400;
 }
 .ovr {
-    width: 100vw;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -132,6 +131,8 @@
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 .ovr .campInfo .info-container .info-width{
     width: 100%;
@@ -144,7 +145,7 @@
     color: #6c584c;
     text-align: left;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1500px) {
     .campsContainer{
         flex-direction: column;
         padding: 2rem 0.5rem;

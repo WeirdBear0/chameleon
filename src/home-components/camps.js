@@ -81,15 +81,12 @@ const Camps = () => {
         <div className='campCards'>
           <Link to="/" className='card' onClick={(e) => handleCampClick(e, '/')}>
             <p className='card-title'>Project Water</p>
-            <p className='card-desc'>Explore water's journey and importance.</p>
           </Link>
           <Link to="/energies" className='card' onClick={(e) => handleCampClick(e, '/energies')}>
             <p className='card-title'>Clean Energies</p>
-            <p className='card-desc'>Discover sustainable power solutions.</p>
           </Link>
           <Link to="/ecology" className='card' onClick={(e) => handleCampClick(e, '/ecology')}>
             <p className='card-title'>Eco-Tech</p>
-            <p className='card-desc'>Innovate for a greener tomorrow.</p>
           </Link>
         </div>
       </div>  
