@@ -18,6 +18,9 @@ function Home() {
   const campRef = useRef(null);
   const partnerRef = useRef(null);
   const footerRef = useRef(null);
+  const [projectsOpen, setProjectsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const projectsRef = useRef(null);
 
   const scrollToSection = useCallback((ref) => {
     if (!ref.current) return;
@@ -42,6 +45,25 @@ function Home() {
     return () => window.removeEventListener('scroll', handleNavChange);
   }, [handleNavChange]);
 
+  const handleDropdownClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setProjectsOpen(false);
+      setIsClosing(false);
+    }, 200); // Match this with the animation duration
+  };
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (projectsRef.current && !projectsRef.current.contains(event.target)) {
+        handleDropdownClose();
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
         <div className="App">
           <Font/>
@@ -63,9 +85,29 @@ function Home() {
                   <a className='sectionLink' onClick={() => {scrollToSection(bannerRef)}}>Home</a>
                   <a className='sectionLink' onClick={() => {scrollToSection(abtRef)}}>About</a>
                   <a className='sectionLink' onClick={() => {scrollToSection(campRef)}}>Camps</a>
-                  <Link to = "/farmbeat">
-                    <a className='card-title'>Farmbeat</a>
-                  </Link>
+                  <div className='dropdown' ref={projectsRef}>
+                    <button 
+                      className='dropdown-toggle' 
+                      onClick={() => {
+                        if (projectsOpen) {
+                          handleDropdownClose();
+                        } else {
+                          setProjectsOpen(true);
+                        }
+                      }}
+                      aria-expanded={projectsOpen}
+                    >
+                      Projects
+                    </button>
+                    {(projectsOpen || isClosing) && (
+                      <div className={`dropdown-menu ${isClosing ? 'closing' : ''}`}>
+                        <Link to="/farmbeat" className='dropdown-link' onClick={handleDropdownClose}>Farmbeat</Link>
+                        <Link to="/ripple" className='dropdown-link' onClick={handleDropdownClose}>Ripple</Link>
+                        <Link to="/turbine" className='dropdown-link' onClick={handleDropdownClose}>Turbine</Link>
+                        <Link to="/rover" className='dropdown-link' onClick={handleDropdownClose}>Rover</Link>
+                      </div>
+                    )}
+                  </div>
               </div>
             </div>
             {/* <div>
