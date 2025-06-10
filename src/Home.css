@@ -216,6 +216,12 @@
   outline: none;
 }
 
+.dropdown-link.disabled {
+  color: #b8b8b8;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 @media (max-width: 900px) {
   .dropdown-menu {
     left: 50%;

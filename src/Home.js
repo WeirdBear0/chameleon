@@ -102,9 +102,9 @@ function Home() {
                     {(projectsOpen || isClosing) && (
                       <div className={`dropdown-menu ${isClosing ? 'closing' : ''}`}>
                         <Link to="/farmbeat" className='dropdown-link' onClick={handleDropdownClose}>Farmbeat</Link>
-                        <Link to="/ripple" className='dropdown-link' onClick={handleDropdownClose}>Ripple</Link>
-                        <Link to="/turbine" className='dropdown-link' onClick={handleDropdownClose}>Turbine</Link>
-                        <Link to="/rover" className='dropdown-link' onClick={handleDropdownClose}>Rover</Link>
+                        <span className='dropdown-link disabled'>Ripple</span>
+                        <span className='dropdown-link disabled'>Turbine</span>
+                        <span className='dropdown-link disabled'>Rover</span>
                       </div>
                     )}
                   </div>
