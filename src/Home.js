@@ -65,71 +65,71 @@ function Home() {
   }, []);
 
   return (
-        <div className="App">
-          <Font/>
-          {/* <div className='cover'> */}
-            <div className = 'navbar' style = {{background: `rgba(226, 218, 201, ${navStyle.opacity})`}}>
-              <div className='logoContainer'>
-                <Link to = "/">
-                  <a href = "#" className='logoLink' onClick={() => {scrollToSection(bannerRef)}}>
-                      <img src = {logo} className='logo' alt = 'chameleon'></img>
-                      <img src = {circleLogo} className='mobLogo' alt = 'chameleon'></img>
-                  </a>
-                </Link>
-              </div>
-              <div className='title-container'>
-                <p className='title' style = {{fontSize: '40px'}}>chameleon</p> 
-              </div>
-              <div className='mob-donate'><Donate/></div>
-              <div className='links'>
-                  <a className='sectionLink' onClick={() => {scrollToSection(bannerRef)}}>Home</a>
-                  <a className='sectionLink' onClick={() => {scrollToSection(abtRef)}}>About</a>
-                  <a className='sectionLink' onClick={() => {scrollToSection(campRef)}}>Camps</a>
-                  <div className='dropdown' ref={projectsRef}>
-                    <button 
-                      className='dropdown-toggle' 
-                      onClick={() => {
-                        if (projectsOpen) {
-                          handleDropdownClose();
-                        } else {
-                          setProjectsOpen(true);
-                        }
-                      }}
-                      aria-expanded={projectsOpen}
-                    >
-                      Projects
-                    </button>
-                    {(projectsOpen || isClosing) && (
-                      <div className={`dropdown-menu ${isClosing ? 'closing' : ''}`}>
-                        <Link to="/farmbeat" className='dropdown-link' onClick={handleDropdownClose}>Farmbeat</Link>
-                        <span className='dropdown-link disabled'>Ripple</span>
-                        <span className='dropdown-link disabled'>Turbine</span>
-                        <span className='dropdown-link disabled'>Rover</span>
-                      </div>
-                    )}
+    <div className="App">
+      <Font/>
+      <div className='navbar'>
+        <div className='navbar-main'>
+          <div className='logoContainer'>
+            <Link to = "/">
+              <a href = "#" className='logoLink' onClick={() => {scrollToSection(bannerRef)}}>
+                  <img src = {logo} className='logo' alt = 'chameleon'></img>
+                  <img src = {circleLogo} className='mobLogo' alt = 'chameleon'></img>
+              </a>
+            </Link>
+          </div>
+          <div className='title-container'>
+            <p className='title' style = {{fontSize: '40px'}}>chameleon</p>
+          </div>
+          <div className='mob-donate'><Donate/></div>
+          <div className='links'>
+              <a className='sectionLink' onClick={() => {scrollToSection(bannerRef)}}>Home</a>
+              <a className='sectionLink' onClick={() => {scrollToSection(abtRef)}}>About</a>
+              <a className='sectionLink' onClick={() => {scrollToSection(campRef)}}>Camps</a>
+              <div className='dropdown' ref={projectsRef}>
+                <button 
+                  className='dropdown-toggle' 
+                  onClick={() => {
+                    if (projectsOpen) {
+                      handleDropdownClose();
+                    } else {
+                      setProjectsOpen(true);
+                    }
+                  }}
+                  aria-expanded={projectsOpen}
+                >
+                  Projects
+                </button>
+                {(projectsOpen || isClosing) && (
+                  <div className={`dropdown-menu ${isClosing ? 'closing' : ''}`}>
+                    <Link to="/farmbeat" className='dropdown-link' onClick={handleDropdownClose}>Farmbeat</Link>
+                    <span className='dropdown-link disabled'>Ripple</span>
+                    <span className='dropdown-link disabled'>Turbine</span>
+                    <span className='dropdown-link disabled'>Rover</span>
                   </div>
+                )}
               </div>
-            </div>
-            {/* <div>
-              Interested?
-            </div>
-          </div> */}
-          <div className='banner' ref = {bannerRef}>
-            <Banner/>
-          </div>
-          <div className='abt' ref = {abtRef}>
-            <About/>
-          </div>
-          <div className='camps' ref = {campRef}>
-            <Camps/>
-          </div>
-          <div className='partners' ref = {partnerRef}>
-            <Partners/>
-          </div>
-          <div className='footer' ref = {footerRef}>
-            <Footer/>
           </div>
         </div>
+        <div className='navbar-announcement'>
+          <Link to="/signup" className='signup-button'>Sign Up for Workshops</Link>
+        </div>
+      </div>
+      <div className='banner' ref = {bannerRef}>
+        <Banner/>
+      </div>
+      <div className='abt' ref = {abtRef}>
+        <About/>
+      </div>
+      <div className='camps' ref = {campRef}>
+        <Camps/>
+      </div>
+      <div className='partners' ref = {partnerRef}>
+        <Partners/>
+      </div>
+      <div className='footer' ref = {footerRef}>
+        <Footer/>
+      </div>
+    </div>
   );
 }
 

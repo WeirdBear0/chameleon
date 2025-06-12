@@ -1,15 +1,32 @@
 .navbar{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background: rgba(226, 218, 201, 1);
-    backdrop-filter: saturate(100%) blur(20px);
-    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #0000ff,
+        #4b0082,
+        #9400d3,
+        #ff0000
+    );
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
     position: sticky;
     transition: 0.4s;
     top: 0;
     z-index: 9999;
+    width: 100%;
 }
+
+/* Override for sign-up page navbar */
+.signup-page .navbar {
+  background: rgba(226, 218, 201, 1);
+  animation: none;
+}
+
 .mobLogo{
     display: none;
 }
@@ -54,23 +71,52 @@
     text-decoration: none;
     margin-right: 2.5rem;
 }
-.navbar .title-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.navbar .links .sectionLink.signup-link {
+  background-color: #7ba059;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
 }
-.navbar .title{
-    font-family: 'Libre Baskerville', serif;
-    color:#7ba059;
-    transition: 0.5s;
+.navbar .links .sectionLink.signup-link:hover {
+  background-color: #6c584c;
+}
+.navbar .title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.navbar .title {
+  font-family: 'Libre Baskerville', serif;
+  color: #7ba059;
+  transition: 0.5s;
+  margin: 0;
+  line-height: 1;
+}
+.navbar .signup-button {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+.navbar .signup-button:hover {
+  color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
 }
 .mob-donate{
     display: none;
 }
 
 @media (max-width: 1100px) {
-    .navbar{
+    .navbar-main {
         flex-direction: column;
     }
     .logoContainer{
@@ -231,6 +277,56 @@
   .dropdown-toggle {
     width: 100%;
     text-align: left;
+  }
+}
+
+.navbar-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 0;
+  background: rgba(226, 218, 201, 1);
+  height: 100%;
+}
+
+.navbar-announcement {
+  padding: 0.75rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navbar-announcement {
+  padding: 0.75rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+@keyframes gradientPulse {
+  0% {
+    background: linear-gradient(90deg, #849B5C, #BFFFC7);
+  }
+  50% {
+    background: linear-gradient(90deg, #BFFFC7, #849B5C);
+  }
+  100% {
+    background: linear-gradient(90deg, #849B5C, #BFFFC7);
   }
 }
 
