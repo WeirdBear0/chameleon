@@ -217,13 +217,13 @@
   transform: translate(-50%, -50%);
   background: white;
   padding: 2rem;
-  border-radius: 50%;
+  border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: checkmark 2s ease-in-out forwards;
+  animation: fadeInOut 2s ease-in-out forwards;
 }
 
 .checkmark {
@@ -238,5 +238,33 @@
   }
   50% {
     transform: scale(1.1);
+  }
+}
+
+.thank-you-message {
+  color: #7ba059;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+@keyframes fadeInOut {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
   }
 } 

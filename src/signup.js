@@ -156,7 +156,7 @@ function SignUp() {
 
       {showCheckmark && (
         <div className="checkmark-container">
-          <img src="/check.svg" alt="Success" className="checkmark" />
+          <p className="thank-you-message">Thank you for signing up!</p>
         </div>
       )}
     </div>
