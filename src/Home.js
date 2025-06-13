@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link, useLocation } from 'react-router-dom';
 import logo from './mainLogo.svg'
 import circleLogo from './circleLogo.svg'
 import Banner from './home-components/banner'
@@ -21,7 +21,10 @@ function Home() {
   const [projectsOpen, setProjectsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const projectsRef = useRef(null);
+  const dropdownMenuRef = useRef(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const location = useLocation();
 
   const scrollToSection = useCallback((ref) => {
     if (!ref.current) return;
@@ -61,10 +64,11 @@ function Home() {
     }
   };
 
-  // Close dropdown when clicking outside
+  // Close dropdown when clicking outside button and menu
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!event.target.closest('.dropdown-button') && !event.target.closest('.dropdown-content')) {
+      if (projectsRef.current && !projectsRef.current.contains(event.target) &&
+          dropdownMenuRef.current && !dropdownMenuRef.current.contains(event.target)) {
         setIsDropdownOpen(false);
       }
     };
@@ -74,6 +78,11 @@ function Home() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+  // Effect to close dropdown on route change
+  useEffect(() => {
+    setIsDropdownOpen(false);
+  }, [location.pathname]);
 
   return (
     <div className="App">
@@ -107,11 +116,11 @@ function Home() {
                   Projects
                 </button>
                 {isDropdownOpen && (
-                  <div className='dropdown-menu'>
-                    <Link to="/farmbeat" className='dropdown-link' onClick={() => setIsDropdownOpen(false)}>Farmbeat</Link>
-                    <span className='dropdown-link disabled'>Ripple</span>
-                    <span className='dropdown-link disabled'>Turbine</span>
-                    <span className='dropdown-link disabled'>Rover</span>
+                  <div className='dropdown-menu' ref={dropdownMenuRef}>
+                    <Link to="/farmbeat" className='dropdown-link'>Farmbeat</Link>
+                    <span className='dropdown-link disabled' onClick={() => setIsDropdownOpen(false)}>Ripple</span>
+                    <span className='dropdown-link disabled' onClick={() => setIsDropdownOpen(false)}>Turbine</span>
+                    <span className='dropdown-link disabled' onClick={() => setIsDropdownOpen(false)}>Rover</span>
                   </div>
                 )}
               </div>

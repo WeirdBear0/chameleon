@@ -8,7 +8,7 @@ import styles from'./farmbeat.module.css'
 import microbit1 from './farmbeat-pics/microbit-1.jpg'
 import farmbeat1 from './farmbeat-pics/farmbeats-1.jpg'
 
-function Home() {
+function Farmbeat() {
   const [size, setSize] = useState("55px")
   const [opacity, setOpacity] = useState(1)
   const [isTextVisible, setIsTextVisible] = useState(false); // State for dropdown visibility
@@ -107,4 +107,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Farmbeat;

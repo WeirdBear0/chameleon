@@ -92,19 +92,13 @@
 .ovr .campInfo{
     margin:0;
     background-color: #e9edc9;
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 4rem 2rem;
     height: 100%;
-}
-.ovr .campInfo .specs{
-    font-family: 'Montserrat', serif;
-    font-size: 0.9rem;
-    color: #6c584c;
-    margin: 0;
 }
 .ovr .campInfo .title{
     font-family: 'Libre Baskerville', serif;
@@ -162,12 +156,12 @@
         text-align: center;
     }
     .campsContainer .campsHeader .plain{
-        font-size: 2rem;
+        font-size: 1.7rem;
         text-align: center;
         white-space: normal;
     }
     .campsContainer .campsHeader .hide{
-        font-size: 2rem;
+        font-size: 1.7rem;
         text-align: center;
         white-space: normal;
     }
@@ -182,9 +176,12 @@
         align-items: center;
     }
     .campsContainer .campCards .card{
-        width: 100%;
+        /* width: 100%; */
         font-size: 1rem;
         padding: 1rem;
+    }
+    .campsContainer .campCards .card .card-title{
+        font-size: 1rem;
     }
     .ovr .campInfo {
         padding: 3rem 1.5rem;
@@ -195,14 +192,13 @@
         flex-direction: column;
     }
     .ovr .campInfo .title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
     }
     .ovr .campInfo .info-container {
-        padding: 1.5rem;
-        width: 100%;
+        width: 80%;
         max-width: 400px;
-        margin: 0 auto;
+        margin: 0;
         box-sizing: border-box;
     }
     .ovr .campInfo .info-container .info-width .info {
@@ -214,4 +210,71 @@
   display: inline-block;
   opacity: 0;
   transition: opacity 0.1s ease; /* Reduce the speed of the fade by changing the 0.1 to a higher number */
+}
+
+.campInfo {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.campInfo .title {
+  font-family: 'Libre Baskerville', serif;
+  color: #6c584c;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.campInfo .title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #a98467;
+  margin: 0.5rem auto 0;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.info-width {
+  max-width: 800px; /* Max width for content */
+  width: 100%;
+}
+
+.info {
+  font-family: 'Montserrat', sans-serif;
+  color: #6c584c;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.specs {
+  color: #6c584c;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 700px) {
+  .campInfo {
+    /* padding: 1.5rem 0.5rem; Reduced padding for mobile */
+    padding:0;
+    margin: 0;
+  }
+  .campInfo .title {
+    font-size: 2rem;
+  }
+  .info-container {
+    padding: 0 0rem; /* Reduced horizontal padding for mobile */
+  }
+  .info {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 }

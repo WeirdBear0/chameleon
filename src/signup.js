@@ -74,9 +74,11 @@ function SignUp() {
       <div className="signup-container">
         <Link to="/" className='logoLink'>
             <img src={logo} className='logo' alt='chameleon'></img>
-            <img src={circleLogo} className='mobLogo' alt='chameleon'></img>
         </Link>
         <div className="signup-form-container">
+            <Link to="/" className='logoLink'>
+                <img src={circleLogo} className='mobLogo' alt='chameleon'></img>
+            </Link>
           <div className="signup-header">
             <h1>Workshop Sign Up</h1>
           </div>
