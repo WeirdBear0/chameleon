@@ -21,6 +21,7 @@ function Home() {
   const [projectsOpen, setProjectsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const projectsRef = useRef(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const scrollToSection = useCallback((ref) => {
     if (!ref.current) return;
@@ -53,15 +54,25 @@ function Home() {
     }, 200); // Match this with the animation duration
   };
 
-  // Close dropdown on outside click
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (projectsRef.current && !projectsRef.current.contains(event.target)) {
-        handleDropdownClose();
-      }
+  const toggleDropdown = (e) => {
+    // Only toggle if clicking the button itself
+    if (e.target.closest('.dropdown-button')) {
+      setIsDropdownOpen(!isDropdownOpen);
     }
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest('.dropdown-button') && !event.target.closest('.dropdown-content')) {
+        setIsDropdownOpen(false);
+      }
+    };
+
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   return (
@@ -88,20 +99,16 @@ function Home() {
               <div className='dropdown' ref={projectsRef}>
                 <button 
                   className='dropdown-toggle' 
-                  onClick={() => {
-                    if (projectsOpen) {
-                      handleDropdownClose();
-                    } else {
-                      setProjectsOpen(true);
-                    }
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsDropdownOpen(!isDropdownOpen);
                   }}
-                  aria-expanded={projectsOpen}
                 >
                   Projects
                 </button>
-                {(projectsOpen || isClosing) && (
-                  <div className={`dropdown-menu ${isClosing ? 'closing' : ''}`}>
-                    <Link to="/farmbeat" className='dropdown-link' onClick={handleDropdownClose}>Farmbeat</Link>
+                {isDropdownOpen && (
+                  <div className='dropdown-menu'>
+                    <Link to="/farmbeat" className='dropdown-link' onClick={() => setIsDropdownOpen(false)}>Farmbeat</Link>
                     <span className='dropdown-link disabled'>Ripple</span>
                     <span className='dropdown-link disabled'>Turbine</span>
                     <span className='dropdown-link disabled'>Rover</span>

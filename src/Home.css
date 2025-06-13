@@ -330,3 +330,13 @@
   }
 }
 
+.nav-link,
+.nav-link a,
+.logoLink,
+.submit-button,
+.home-link,
+.navbar-announcement a,
+.dropdown-button {
+  cursor: pointer;
+}
+
