@@ -29,7 +29,7 @@ function Home() {
   const scrollToSection = useCallback((ref) => {
     if (!ref.current) return;
     window.scrollTo({
-      top: ref.current.offsetTop,
+      top: ref.current.offsetTop - 160,
       left: 0,
       behavior: 'smooth'
     });

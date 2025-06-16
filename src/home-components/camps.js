@@ -45,7 +45,7 @@ const Camps = () => {
       
       hiddenTextRef.current.querySelectorAll('.fade-letter').forEach((letter, index) => {
         const letterProgress = (index + 1) / hiddenTextRef.current.querySelectorAll('.fade-letter').length;
-        if (scrollProgress >= letterProgress * 0.6) {
+        if (scrollProgress >= letterProgress * 0.25) {
           letter.style.opacity = '1';
         } else {
           letter.style.opacity = '0';

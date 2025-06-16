@@ -37,7 +37,7 @@
 }
 
 .partner-card {
-  background: white;
+  background: brown;
   border-radius: 12px;
   padding: 2rem;
   text-decoration: none;
@@ -54,7 +54,7 @@
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(108, 88, 76, 0.15);
   border-color: rgba(169, 132, 103, 0.3);
-  background: white;
+  background: #7BA059;
 }
 
 .partner-image-container {
