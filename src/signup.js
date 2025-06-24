@@ -141,7 +141,7 @@ function SignUp() {
                 required
               >
                 <option value="">Select a workshop</option>
-                <option value="july8">July 8 - Turbine Workshop</option>
+                <option value="july8">July 2, 2025 - Turbine Workshop</option>
               </select>
             </div>
 

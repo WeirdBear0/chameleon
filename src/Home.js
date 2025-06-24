@@ -128,6 +128,7 @@ function Home() {
         </div>
         <div className='navbar-announcement'>
           <Link to="/signup" className='signup-button'>Sign Up for Workshops</Link>
+          {/* <FlowingMenu items={demoItems} /> */}
         </div>
       </div>
       <div className='banner' ref = {bannerRef}>
