@@ -142,7 +142,7 @@ function SignUp() {
               >
                 <option value="">Select a workshop</option>
                 <option value="july8">July 2, 2025 1-4PM - Turbine Workshop</option>
-                <option value="july8">July 16, 2025 1-4PM - Smart Farming Workshop</option>
+                <option value="july16">July 16, 2025 1-4PM - Smart Farming Workshop</option>
               </select>
             </div>
 
