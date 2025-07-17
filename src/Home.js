@@ -119,7 +119,7 @@ function Home() {
                   <div className='dropdown-menu' ref={dropdownMenuRef}>
                     <Link to="/farmbeat" className='dropdown-link'>Farmbeat</Link>
                     <span className='dropdown-link disabled' onClick={() => setIsDropdownOpen(false)}>Ripple</span>
-                    <span className='dropdown-link disabled' onClick={() => setIsDropdownOpen(false)}>Turbine</span>
+                    <Link to="/windmill" className='dropdown-link'>Turbine</Link>
                     <span className='dropdown-link disabled' onClick={() => setIsDropdownOpen(false)}>Rover</span>
                   </div>
                 )}

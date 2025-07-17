@@ -8,6 +8,7 @@ const Water = lazy(() => import('./camp-pages/water'));
 const Ecology = lazy(() => import('./camp-pages/ecology'));
 const Energies = lazy(() => import('./camp-pages/energies'));
 const Farmbeat = lazy(() => import('./external-nav/farmbeat'));
+const Windmill = lazy(() => import('./external-nav/windmill'));
 const SignUp = lazy(() => import('./signup'));
 
 // Loading component
@@ -24,6 +25,7 @@ function App() {
             <Route path="ecology" element={<Ecology />} />
           </Route>
           <Route path="farmbeat" element={<Farmbeat />} />
+          <Route path="windmill" element={<Windmill />} />
           <Route path="signup" element={<SignUp />} />
         </Routes>
       </Suspense>
