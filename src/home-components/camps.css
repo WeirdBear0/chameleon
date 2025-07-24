@@ -317,6 +317,9 @@
   width: 100%;
   text-align: center;
 }
+.workshop-info-display.full-bg > div > h3{
+    font-family: "Libre Baskerville";
+}
 .workshop-signup-btn {
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
