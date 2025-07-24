@@ -63,10 +63,10 @@ const Footer = () => {
                             CHAMELEON acknowledges that we are on the Indigenous Land of Coast Salish peoples who have reserved treaty rights to this land, specifically the Snoqualmie Indian Tribe.
                         </p>
                     </div>
-                </div>
+            </div>
 
-                <div className={styles.credits}>
-                    <div className={styles.creditContainer}>
+            <div className={styles.credits}>
+                <div className={styles.creditContainer}>
                         <div className={styles.creditNames}>
                             <span className={styles.creditName}><strong>Ayush</strong> Agarwal</span>
                             <span className={styles.creditName}><strong>Andrew</strong> Wang</span>

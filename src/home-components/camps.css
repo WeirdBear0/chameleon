@@ -1,6 +1,6 @@
 .campsContainer{
     margin:0;
-    padding:4rem 2rem;
+    padding:4rem 0rem;
     display: flex;
     flex-direction: row;
     background-color: #fefae0;
@@ -142,7 +142,7 @@
 @media (max-width: 1500px) {
     .campsContainer{
         flex-direction: column;
-        padding: 2rem 0.5rem;
+        padding: 2rem 0rem;
         gap: 2rem;
         height: 100%;
         width: 100vw;
@@ -261,6 +261,86 @@
   margin-bottom: 0.5rem;
 }
 
+.workshop-dropdown-container {
+  display: flex;
+  justify-content: center;
+  margin: 1.2rem 0 0.5rem 0;
+}
+.workshop-dropdown {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #b5c99a;
+  background: #f0ead2;
+  color: #6c584c;
+  outline: none;
+  transition: border-color 0.2s;
+  box-shadow: 0 2px 8px rgba(108, 88, 76, 0.04);
+}
+.workshop-dropdown:focus {
+  border-color: #7ba059;
+}
+.workshop-info-display {
+  padding: 1.5rem 2rem;
+  background: #e9edc9;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #6c584c;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+.workshop-info-display h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #7ba059;
+  font-family: 'Montserrat', sans-serif;
+}
+.workshop-info-display.full-bg {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: #e9edc9;
+  border-radius: 0;
+  max-width: none;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.workshop-info-display.full-bg > div {
+  max-width: 600px;
+  margin: 2rem;
+  padding: 1.2rem 2.5rem;
+  background: #e9edc9;
+  width: 100%;
+  text-align: center;
+}
+.workshop-signup-btn {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  /* background: rgba(123, 160, 89, 0.07); very subtle green tint */
+  font-weight: 400;
+  font-size: 0.97rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 7px;
+  color: #6c584c;
+  margin: 0.7rem 0 0.3rem 0;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  /* border: 1px solid #d4dccd; */
+  cursor: pointer;
+  box-shadow: none;
+  width: 2rem;
+  width: auto;
+}
+.workshop-signup-btn:hover {
+  /* background: #e9edc9;*/
+  color: black;
+  /*border: 1px solid #b5c99a; */
+}
+
 @media (max-width: 700px) {
   .campInfo {
     /* padding: 1.5rem 0.5rem; Reduced padding for mobile */
@@ -276,5 +356,30 @@
   .info {
     font-size: 0.9rem;
     line-height: 1.5;
+  }
+  .workshop-dropdown {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.7rem;
+  }
+  .workshop-info-display {
+    padding: 1rem 0.5rem;
+    font-size: 0.95rem;
+  }
+  .workshop-info-display.full-bg {
+    padding: 0;
+    font-size: 0.95rem;
+    border-radius: 0;
+  }
+  .workshop-info-display.full-bg > div {
+    margin: 1.2rem 0.5rem 0 0.5rem;
+    padding: 0.8rem 0.7rem;
+    border-radius: 10px;
+  }
+  .workshop-signup-btn {
+    font-size: 0.93rem;
+    padding: 0.38rem 0.5rem;
+    margin: 0.5rem 0 0.2rem 0;
+    min-width: unset;
+    width: auto;
   }
 }

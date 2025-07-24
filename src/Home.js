@@ -104,7 +104,7 @@ function Home() {
           <div className='links'>
               <a className='sectionLink' onClick={() => {scrollToSection(bannerRef)}}>Home</a>
               <a className='sectionLink' onClick={() => {scrollToSection(abtRef)}}>About</a>
-              <a className='sectionLink' onClick={() => {scrollToSection(campRef)}}>Camps</a>
+              <a className='sectionLink' onClick={() => {scrollToSection(campRef)}}>Workshops</a>
               <div className='dropdown' ref={projectsRef}>
                 <button 
                   className='dropdown-toggle' 

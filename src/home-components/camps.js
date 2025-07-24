@@ -8,6 +8,7 @@ const Camps = () => {
   const [isInView, setIsInView] = useState(false);
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
+  const [selectedWorkshop, setSelectedWorkshop] = useState('');
 
   useEffect(() => {
     const handleResize = () => {
@@ -64,6 +65,17 @@ const Camps = () => {
     navigate(path);
   };
 
+  // Workshop details for display
+  // To edit camp/workshop info, update the workshopDetails object below:
+  const workshopDetails = {
+    'august 1': {
+      date: 'August 1, 2025, 1-5 PM',
+      location: 'Issaquah Library - 10 W Sunset Way, Issaquah, WA 98027',
+      title: 'Smart Farming Workshop',
+      description: 'are you a 6-8 grader? join us for a free glorious environmental hackathon on friday, august 1st from 1 PM - 4 PM! bring a laptop and some friends. we’ll provide a seedstudio microcomputer, wires, and sensors. your job is to collaborate with your team of five and come up with an idea of a possible product you can create with these components by brainstorming and researching as a group. then, try your best to make a small functional prototype, although it’s fine if you’re not able to. pitch your idea and prototype to earn potential prizes!'
+    }
+  };
+
   return (
 
     // <div style={{ height: '600px', position: 'relative' }}>
@@ -85,21 +97,36 @@ const Camps = () => {
               <span className='hide' ref={hiddenTextRef}>Are hidden in plain sight</span>
             </p>
           </div>
-          <p className='cohort-header'>Future Projects - 2025 <br/><span className='notifclick'>click to learn more — view info below!</span></p>
-        </div>
-        <div className='campCards'>
-          <Link to="/" className='card' onClick={(e) => handleCampClick(e, '/')}>
-            <p className='card-title'>Project Water</p>
-          </Link>
-          <Link to="/energies" className='card' onClick={(e) => handleCampClick(e, '/energies')}>
-            <p className='card-title'>Clean Energies</p>
-          </Link>
-          <Link to="/ecology" className='card' onClick={(e) => handleCampClick(e, '/ecology')}>
-            <p className='card-title'>Eco-Tech</p>
-          </Link>
+          <p className='cohort-header'>Workshops<br/><span className='notifclick'>click to learn more — view info below!</span></p>
+          <Link to="/signup" className="workshop-signup-btn">Sign Up for Workshops</Link>
+          <div className="workshop-dropdown-container">
+            <select
+              className="workshop-dropdown"
+              value={selectedWorkshop}
+              onChange={e => setSelectedWorkshop(e.target.value)}
+            >
+              <option value="">select a workshop</option>
+              <option value="august 1">August 1, 2025 1-5 PM - Smart Farming Workshop</option>
+            </select>
+          </div>
         </div>
       </div>  
-      <Outlet/>
+      {selectedWorkshop ? (
+        <div className="workshop-info-display full-bg">
+          <div>
+            <h3>{workshopDetails[selectedWorkshop].title}</h3>
+            <p><strong>Date:</strong> {workshopDetails[selectedWorkshop].date}</p>
+            <p><strong>Location:</strong> {workshopDetails[selectedWorkshop].location}</p>
+            <p><strong>Description:</strong> {workshopDetails[selectedWorkshop].description}</p>
+          </div>
+        </div>
+      ) : (
+        <div className="workshop-info-display full-bg">
+          <div>
+            <p style={{color:'#6c584c', fontFamily:'Montserrat, sans-serif', fontSize:'1.08rem', margin:'2.5rem 0'}}>Click dropdown to display info</p>
+          </div>
+        </div>
+      )}
     </div>
 
   );
