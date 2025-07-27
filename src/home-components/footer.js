@@ -72,7 +72,7 @@ const Footer = () => {
                             <span className={styles.creditName}><strong>Andrew</strong> Wang</span>
                             <span className={styles.creditName}><strong>Kruthik</strong> Ankam</span>
                         </div>
-                        <p className={styles.copyright}>© chameleon 2024</p>
+                        <p className={styles.copyright}>© chameleon 2025</p>
                     </div>
                 </div>
             </div>
