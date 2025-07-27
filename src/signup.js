@@ -141,7 +141,7 @@ function SignUp() {
                 required
               >
                 <option value="">Select a workshop</option>
-                <option value="august 1">August 1, 2025 1-5 PM - Smart Farming Workshop</option>
+                <option value="august 4">August 4, 2025 1:30-5 PM - Smart Farming Workshop</option>
               </select>
             </div>
 
