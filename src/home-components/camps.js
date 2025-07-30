@@ -106,7 +106,7 @@ const Camps = () => {
               onChange={e => setSelectedWorkshop(e.target.value)}
             >
               <option value="">select a workshop</option>
-              <option value="august 1">August 4, 2025 1:30-5 PM - Smart Farming Workshop</option>
+              <option value="august 4">August 4, 2025 1:30-5 PM - Smart Farming Workshop</option>
             </select>
           </div>
         </div>

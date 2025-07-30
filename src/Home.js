@@ -23,6 +23,7 @@ function Home() {
   const projectsRef = useRef(null);
   const dropdownMenuRef = useRef(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const location = useLocation();
 
@@ -64,6 +65,15 @@ function Home() {
     }
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    setIsDropdownOpen(false);
+  };
+
   // Close dropdown when clicking outside button and menu
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -82,6 +92,7 @@ function Home() {
   // Effect to close dropdown on route change
   useEffect(() => {
     setIsDropdownOpen(false);
+    setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
   return (
@@ -112,6 +123,7 @@ function Home() {
                     e.stopPropagation();
                     setIsDropdownOpen(!isDropdownOpen);
                   }}
+                  aria-expanded={isDropdownOpen}
                 >
                   Projects
                 </button>
@@ -125,12 +137,61 @@ function Home() {
                 )}
               </div>
           </div>
+          <div className='hamburger-menu'>
+            <button 
+              className={`hamburger-button ${isMobileMenuOpen ? 'active' : ''}`}
+              onClick={toggleMobileMenu}
+              aria-label="Toggle mobile menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </div>
         <div className='navbar-announcement'>
           <Link to="/signup" className='signup-button'>Sign Up for Workshops</Link>
           {/* <FlowingMenu items={demoItems} /> */}
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className='mobile-menu-overlay'>
+          <div className='mobile-menu'>
+            <div className='mobile-menu-header'>
+              <button className='close-mobile-menu' onClick={closeMobileMenu}>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+            <div className='mobile-menu-links'>
+              <a className='mobile-section-link' onClick={() => {scrollToSection(bannerRef); closeMobileMenu();}}>Home</a>
+              <a className='mobile-section-link' onClick={() => {scrollToSection(abtRef); closeMobileMenu();}}>About</a>
+              <a className='mobile-section-link' onClick={() => {scrollToSection(campRef); closeMobileMenu();}}>Workshops</a>
+              <div className='mobile-dropdown'>
+                <button 
+                  className='mobile-dropdown-toggle' 
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  aria-expanded={isDropdownOpen}
+                >
+                  Projects
+                  <span className='mobile-dropdown-arrow'></span>
+                </button>
+                {isDropdownOpen && (
+                  <div className='mobile-dropdown-menu'>
+                    <Link to="/farmbeat" className='mobile-dropdown-link' onClick={closeMobileMenu}>Farmbeat</Link>
+                    <span className='mobile-dropdown-link disabled'>Ripple</span>
+                    <Link to="/windmill" className='mobile-dropdown-link' onClick={closeMobileMenu}>Windmill</Link>
+                    <span className='mobile-dropdown-link disabled'>Rover</span>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className='banner' ref = {bannerRef}>
         <Banner/>
       </div>
