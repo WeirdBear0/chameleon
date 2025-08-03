@@ -128,7 +128,6 @@ function SignUp() {
                 <option value="9">9th Grade</option>
                 <option value="10">10th Grade</option>
                 <option value="11">11th Grade</option>
-                <option value="11">12th Grade</option>
               </select>
             </div>
 
@@ -142,7 +141,7 @@ function SignUp() {
                 required
               >
                 <option value="">Select a workshop</option>
-                <option value="august 4">August 4, 2025 1:30-5 PM - Smart Farming Workshop</option>
+                <option value="august 15">August 15, 2025 2-5:30 PM - Smart Farming Workshop</option>
               </select>
             </div>
 

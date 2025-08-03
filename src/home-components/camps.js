@@ -69,10 +69,10 @@ const Camps = () => {
   // To edit camp/workshop info, update the workshopDetails object below:
   const workshopDetails = {
     'august 4': {
-      date: 'August 4, 2025, 1:30-5 PM',
+      date: 'August 15, 2025, 2-5:30 PM',
       location: 'Sammamish Library -  825 228th Ave SE, Sammamish, WA',
-      title: 'Smart Farming Workshop',
-      description: 'are you a middle/high schooler? join us for a free glorious environmental hackathon on friday, august 1st from 1 PM - 4 PM! bring a laptop and some friends. we’ll provide a seedstudio microcomputer, wires, and sensors. your job is to collaborate with your team (2-5 students) and come up with an idea of a possible product you can create with these components by brainstorming and researching as a group. then, try your best to make a small functional prototype, although it’s fine if you’re not able to. pitch your idea and prototype to earn potential prizes!'
+      title: 'Smart Farming Hackathon',
+      description: 'are you a middle/high schooler? join us for a free glorious environmental hackathon on friday, august 15st from 2 PM - 5:30 PM! bring a laptop and some friends. we’ll provide a seedstudio microcomputer, wires, and sensors. your job is to collaborate with your team and come up with an idea of a possible product you can create with these components by brainstorming and researching as a group. then, try your best to make a small functional prototype, although it’s fine if you’re not able to. pitch your idea and prototype to earn potential prizes!'
     }
   };
 
@@ -106,7 +106,7 @@ const Camps = () => {
               onChange={e => setSelectedWorkshop(e.target.value)}
             >
               <option value="">select a workshop</option>
-              <option value="august 4">August 4, 2025 1:30-5 PM - Smart Farming Workshop</option>
+              <option value="august 15">August 15, 2025 2-5:30 PM - Smart Farming Workshop</option>
             </select>
           </div>
         </div>
