@@ -72,7 +72,7 @@ const Camps = () => {
       date: 'August 4, 2025, 1:30-5 PM',
       location: 'Sammamish Library -  825 228th Ave SE, Sammamish, WA',
       title: 'Smart Farming Workshop',
-      description: 'are you a 6-8 grader? join us for a free glorious environmental hackathon on friday, august 1st from 1 PM - 4 PM! bring a laptop and some friends. we’ll provide a seedstudio microcomputer, wires, and sensors. your job is to collaborate with your team of five and come up with an idea of a possible product you can create with these components by brainstorming and researching as a group. then, try your best to make a small functional prototype, although it’s fine if you’re not able to. pitch your idea and prototype to earn potential prizes!'
+      description: 'are you a middle/high schooler? join us for a free glorious environmental hackathon on friday, august 1st from 1 PM - 4 PM! bring a laptop and some friends. we’ll provide a seedstudio microcomputer, wires, and sensors. your job is to collaborate with your team (2-5 students) and come up with an idea of a possible product you can create with these components by brainstorming and researching as a group. then, try your best to make a small functional prototype, although it’s fine if you’re not able to. pitch your idea and prototype to earn potential prizes!'
     }
   };
 
@@ -98,7 +98,7 @@ const Camps = () => {
             </p>
           </div>
           <p className='cohort-header'>Workshops<br/><span className='notifclick'>click to learn more — view info below!</span></p>
-          <Link to="/signup" className="workshop-signup-btn">Sign Up for Workshops</Link>
+          <a href="https://forms.gle/BgynuhLutzQT2F8A6" className="workshop-signup-btn">Sign Up for Workshops</a>
           <div className="workshop-dropdown-container">
             <select
               className="workshop-dropdown"

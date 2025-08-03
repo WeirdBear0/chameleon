@@ -32,8 +32,8 @@
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 8px 24px rgba(108, 88, 76, 0.10);
-  width: 100%;
-  max-width: 500px;
+  width: 70%;
+  /*max-width: 500px; */
 }
 
 .signup-form-container h1 {
@@ -53,7 +53,7 @@
 .signup-form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  /* gap: 1.25rem; */
 }
 
 .form-group {
