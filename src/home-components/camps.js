@@ -72,7 +72,7 @@ const Camps = () => {
       date: 'August 15, 2025, 2-5:30 PM',
       location: 'Sammamish Library -  825 228th Ave SE, Sammamish, WA',
       title: 'Smart Farming Hackathon',
-      description: 'are you a middle/high schooler? join us for a free glorious environmental hackathon on friday, august 15st from 2 PM - 5:30 PM! bring a laptop and some friends. we’ll provide a seedstudio microcomputer, wires, and sensors. your job is to collaborate with your team and come up with an idea of a possible product you can create with these components by brainstorming and researching as a group. then, try your best to make a small functional prototype, although it’s fine if you’re not able to. pitch your idea and prototype to earn potential prizes!'
+      description: 'are you a middle/high schooler? join us for a free glorious environmental hackathon on friday, august 15th from 2 PM - 5:30 PM! bring a laptop and some friends. we’ll provide a seedstudio microcomputer, wires, and sensors. your job is to collaborate with your team and come up with an idea of a possible product you can create with these components by brainstorming and researching as a group. then, try your best to make a small functional prototype, although it’s fine if you’re not able to. pitch your idea and prototype to earn potential prizes!'
     }
   };
 
