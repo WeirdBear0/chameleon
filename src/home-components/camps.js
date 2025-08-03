@@ -68,7 +68,7 @@ const Camps = () => {
   // Workshop details for display
   // To edit camp/workshop info, update the workshopDetails object below:
   const workshopDetails = {
-    'august 4': {
+    'august 15': {
       date: 'August 15, 2025, 2-5:30 PM',
       location: 'Sammamish Library -  825 228th Ave SE, Sammamish, WA',
       title: 'Smart Farming Hackathon',
