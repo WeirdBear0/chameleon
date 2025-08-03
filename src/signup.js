@@ -128,6 +128,7 @@ function SignUp() {
                 <option value="9">9th Grade</option>
                 <option value="10">10th Grade</option>
                 <option value="11">11th Grade</option>
+                <option value="11">12th Grade</option>
               </select>
             </div>
 
