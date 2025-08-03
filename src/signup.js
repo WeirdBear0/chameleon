@@ -122,12 +122,12 @@ function SignUp() {
                 required
               >
                 <option value="">Select your grade</option>
-                <option value="3">3rd Grade</option>
-                <option value="4">4th Grade</option>
-                <option value="5">5th Grade</option>
                 <option value="6">6th Grade</option>
                 <option value="7">7th Grade</option>
                 <option value="8">8th Grade</option>
+                <option value="9">9th Grade</option>
+                <option value="10">10th Grade</option>
+                <option value="11">11th Grade</option>
               </select>
             </div>
 
