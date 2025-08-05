@@ -71,7 +71,7 @@ function SignUp() {
   return (
     <div className="signup-page">
       <Font />
-      <a href="https://forms.gle/BgynuhLutzQT2F8A6" className='signup-button'>Please visit this Google Form to sign up for workshops :)</a>
+      <a href="https://forms.gle/BgynuhLutzQT2F8A6" className='signup-redirect'>Please visit this Google Form to sign up for workshops :)</a>
       {/* <div className="signup-container">
         <Link to="/" className='logoLink'>
             <img src={logo} className='logo' alt='chameleon'></img>
