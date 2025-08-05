@@ -71,7 +71,8 @@ function SignUp() {
   return (
     <div className="signup-page">
       <Font />
-      <div className="signup-container">
+      <a href="https://forms.gle/BgynuhLutzQT2F8A6" className='signup-button'>Please visit this Google Form to sign up for workshops :)</a>
+      {/* <div className="signup-container">
         <Link to="/" className='logoLink'>
             <img src={logo} className='logo' alt='chameleon'></img>
         </Link>
@@ -160,7 +161,7 @@ function SignUp() {
         <div className="checkmark-container">
           <p className="thank-you-message">Thank you for signing up!</p>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
