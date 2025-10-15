@@ -97,8 +97,8 @@ const Camps = () => {
               <span className='hide' ref={hiddenTextRef}>Are hidden in plain sight</span>
             </p>
           </div>
-          <p className='cohort-header'>Workshops<br/><span className='notifclick'>click to learn more — view info below!</span></p>
-          <a href="https://forms.gle/BgynuhLutzQT2F8A6" className="workshop-signup-btn">Sign Up for Workshops</a>
+          <p className='cohort-header'>Workshops<br/><span className='notifclick'>returning Winter 2026</span></p>
+          {/* <a href="https://forms.gle/BgynuhLutzQT2F8A6" className="workshop-signup-btn">Sign Up for Workshops</a>
           <div className="workshop-dropdown-container">
             <select
               className="workshop-dropdown"
@@ -108,10 +108,10 @@ const Camps = () => {
               <option value="">select a workshop</option>
               <option value="august 15">August 15, 2025 2-5:30 PM - Smart Farming Workshop</option>
             </select>
-          </div>
+          </div> */}
         </div>
       </div>  
-      {selectedWorkshop ? (
+      {/* {selectedWorkshop ? (
         <div className="workshop-info-display full-bg">
           <div>
             <h3>{workshopDetails[selectedWorkshop].title}</h3>
@@ -126,7 +126,7 @@ const Camps = () => {
             <p style={{color:'#6c584c', fontFamily:'Montserrat, sans-serif', fontSize:'1.08rem', margin:'2.5rem 0'}}>Click dropdown to display info</p>
           </div>
         </div>
-      )}
+      )} */}
     </div>
 
   );
