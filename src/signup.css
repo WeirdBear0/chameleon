@@ -1,0 +1,20 @@
+.signup-page{
+  width:100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdfae0;
+  flex-direction: column;
+}
+
+.signup-redirect{
+  text-decoration: none;
+  color: #6c584c;
+  text-align: center;
+}
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+}

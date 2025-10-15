@@ -1,51 +1,103 @@
-.banner{
-    padding:0;
-    margin:0;
-    background-color:#f0ead2;
-    height: 70vh;
+.banner {
+    padding: 0;
+    margin: 0;
+    height: 80vh;
     display: flex;
     justify-content: center;
     text-align: center;
+    position: relative;
+}
+
+.gradient-banner-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gradient-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1;
 }
+
+.gradient-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradient-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* A light, semi-transparent white */
+    backdrop-filter: blur(5px); /* Adjust blur strength as needed */
+    z-index: -1; /* Place it behind the content but above the canvas */
+    border-radius: 10px;
+}
+
 @keyframes slidein {
     0% {margin-top:1rem; opacity: 0;}
     100% {margin-top:0; opacity: 1;}
 }
-.banner .title-container{
-    margin:0;
+
+.banner .title-container {
+    margin: 0;
     padding: 0;
     align-self: center;
     animation-name: slidein;
     animation-duration: 0.9s;
 }
-.banner .title-container .title{
-    margin:0;
+
+.banner .title-container .title {
+    margin: 0;
     padding: 0;
     font-family: 'Libre Baskerville', serif;
     font-weight: 600;
     color: #6c584c;
     font-size: 90px;
 }
-.banner .title-container .description{
+
+.banner .title-container .description {
     font-family: 'Montserrat', serif;
     font-size: 36px;
-    color: #a98467;
+    color: #6c584c;
 }
-.specs{
+
+.specs {
     font-family: 'Montserrat', serif;
     font-size: 16px;
     color: #6c584c;
 }
+
 @media (max-width: 1100px) {
-    .banner .title-container .title{
+    .banner .title-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .banner .title-container .title {
         font-size: 50px;
     }
-    
-    .banner .title-container .description{
+    .banner .title-container .description {
         font-size: 20px;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
-    .specs{
+    .specs {
         font-size: 12px;
     }
+    /* .donate-banner {
+        display: none;
+    } */
 }

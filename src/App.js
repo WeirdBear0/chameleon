@@ -1,23 +1,28 @@
-import React, {useState, useRef} from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './Home'
-import Water from './camp-pages/water'
-import Ecology from './camp-pages/ecology'
-import Energies from './camp-pages/energies'
-import Farmbeat from './external-nav/farmbeat'
-import './App.css'
+import './App.css';
+
+// Lazy load components for better performance
+const Home = lazy(() => import('./Home'));
+const Farmbeat = lazy(() => import('./external-nav/farmbeat'));
+const Windmill = lazy(() => import('./external-nav/windmill'));
+const SignUp = lazy(() => import('./signup'));
+
+// Loading component
+const Loading = () => <div>Loading...</div>;
 
 function App() {
   return (
     <BrowserRouter>
+      <Suspense fallback={<Loading />}>
       <Routes>
-        <Route path = "/" element = {<Home/>}>
-          <Route index element = {<Water/>}/>
-          <Route path = "energies" element = {<Energies/>}/>
-          <Route path = "ecology" element = {<Ecology/>}/>
+          <Route path="/" element={<Home />}>
         </Route>
-        <Route path = "farmbeat" element = {<Farmbeat/>}/>
+          <Route path="farmbeat" element={<Farmbeat />} />
+          <Route path="windmill" element={<Windmill />} />
+          <Route path="signup" element={<SignUp />} />
       </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

@@ -18,7 +18,7 @@ const About = () => {
                   <h1 className='title'>Our Story</h1>
                   <p className='desc'>
                     In a world flooded with endless entertainment, internet and social media, we realized that there was a lack of genuine
-                    experiences in our community. At Chameleon Camps, we create engaging projects and lessons that are designed 
+                    experiences in our community. At Chameleon, we create engaging projects and lessons that are designed 
                     to bring youth into the moment and spark ideas and wonder!
                   </p>
                 </div>
@@ -28,8 +28,7 @@ const About = () => {
                 <div className='cause'>
                   <h1 className='title'>Our Goal</h1>
                     <p className='desc'>
-                      We believe that everyone needs to have a real connection to their environment, and deserve to be taught that
-                      in an engaging, unique way, different from your average coding class.
+                    We believe that everyone needs to have a real connection to their environment, and deserve to be taught that in an engaging, unique way, different from your average coding class.
                     </p>
                 </div>
               </div>

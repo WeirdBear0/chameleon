@@ -6,11 +6,13 @@ import Footer from '../home-components/footer'
 import Font from '../home-components/font';
 import styles from'./farmbeat.module.css'
 import microbit1 from './farmbeat-pics/microbit-1.jpg'
+import farmbeat1 from './farmbeat-pics/farmbeats-1.jpg'
 
-function Home() {
+function Farmbeat() {
   const [size, setSize] = useState("55px")
   const [opacity, setOpacity] = useState(1)
   const [isTextVisible, setIsTextVisible] = useState(false); // State for dropdown visibility
+  const [arrow, setArrow] = useState("↓")
   const footerRef = useRef(0)
 
   function changeNav()   {
@@ -28,6 +30,12 @@ function Home() {
 
   const toggleTextContent = () => {
     setIsTextVisible(!isTextVisible); // Toggle visibility
+    if(arrow.includes("↓")){
+      setArrow("↑")
+    }
+    else{
+      setArrow("↓")
+    }
   };
 
   return (
@@ -55,41 +63,40 @@ function Home() {
                 <p className={styles.textTitle}>what is a micro:bit?</p>
                 <p className={styles.textContent}>
                   micro:bit is a small, programmable device
-                  featuring a 5x5 LED matrix for visual output
-                  two programmable buttons
-                  and an accelerometer and compass for motion and orientation sensing
+                  featuring a 5x5 LED matrix for visual output,
+                  two programmable buttons,
+                  and an accelerometer and compass for motion and orientation sensing. our use case utilizes a soil moisture sensor which triggers visual output on the micro:bit.
                 </p>
               </div>
               <div className={styles.graphic}>
-              <div className={styles.img}> 
-                <iframe title="Micro:Bit" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b453f11ad77a4545a33b3e0ecfba6fc5/embed">
-                </iframe> 
-              </div>
+                <img className={styles.img} src = {microbit1}></img>
               </div>
             </div>
             <div className={styles.container}>
-              <div className={styles.graphic}>
-                <img className={styles.img}></img>
+              <div className={styles.graphicbeat}>
+                <img className={styles.img} src = {farmbeat1}></img>
               </div>
               <div className={styles.textTwo}>
                 <p className={styles.textTitle}>introducing farmbeat</p>
-                <p className={styles.textContent}>the microsoft farmbeat is a tool that integrates software and ai with relatively simple hardware to aid data analysis with respect to agriculture. it is also an education initiative designed to teach students the basics of electronics, data construction, and, ultimately, ai.</p>
+                <p className={styles.textContent}>the farmbeat is a tool that integrates software and ai with relatively simple hardware to aid data analysis with respect to agriculture. it is also an education initiative designed to teach students the basics of electronics, data construction, and, ultimately, ai.</p>
+              </div>
+              <div className={styles.graphicMob}>
+                <img className={styles.img} src = {farmbeat1}></img>
               </div>
             </div>
-            <div className={styles.container}>
+            <div className={styles.givecontainer}>
               <div className={styles.text}>
-                <p className={styles.textTitle} onClick={toggleTextContent} style={{ cursor: 'pointer' }}>
-                  give project instructions
+                <p className={styles.textTitle}>
+                  <span onClick={toggleTextContent} style = {{cursor : 'pointer'}}>give project instructions {arrow} </span>
+                  <a href = "https://docs.google.com/document/d/1QZeToSJ8FswY-0m2fAZPDajzJOOZfMi76fEG_dFxfIM/edit?usp=sharing"  target = "_blank" style = {{color: "#6c584c"}}> google docs link </a>
                 </p>
                 {isTextVisible && (
-                  <p className={styles.textContent} style={{ transition: 'max-height 0.5s ease-in-out', overflow: 'hidden' }}>
-                    {/* Add your project instructions here */}
-                    Here are the project instructions that will be revealed when the title is clicked.
+                  <p className={styles.giveInstructions} style={{ transition: 'max-height 0.5s ease-in-out', overflow: 'hidden' }}>
+                    <iframe src="https://docs.google.com/document/d/1QZeToSJ8FswY-0m2fAZPDajzJOOZfMi76fEG_dFxfIM/edit?embedded=true" width="640" height="718" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                   </p>
                 )}
               </div>
-              <div className={styles.graphic}>
-                <img className={styles.img}></img>
+              <div className={styles.doc}>
               </div>
             </div>
           </div>
@@ -100,4 +107,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Farmbeat;
