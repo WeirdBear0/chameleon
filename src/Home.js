@@ -129,9 +129,10 @@ function Home() {
                 </button>
                 {isDropdownOpen && (
                   <div className='dropdown-menu' ref={dropdownMenuRef}>
+                    <Link to="/windmill" className='dropdown-link'>Windmill</Link>
+                    <Link to="/hackathon" className='dropdown-link'>Hackathon</Link>
                     <Link to="/farmbeat" className='dropdown-link'>Farmbeat</Link>
                     <span className='dropdown-link disabled' onClick={() => setIsDropdownOpen(false)}>Ripple</span>
-                    <Link to="/windmill" className='dropdown-link'>Windmill</Link>
                     <span className='dropdown-link disabled' onClick={() => setIsDropdownOpen(false)}>Rover</span>
                   </div>
                 )}
@@ -180,9 +181,10 @@ function Home() {
                 </button>
                 {isDropdownOpen && (
                   <div className='mobile-dropdown-menu'>
+                    <Link to="/windmill" className='mobile-dropdown-link' onClick={closeMobileMenu}>Windmill</Link>
+                    <Link to="/hackathon" className='mobile-dropdown-link' onClick={closeMobileMenu}>Hackathon</Link>
                     <Link to="/farmbeat" className='mobile-dropdown-link' onClick={closeMobileMenu}>Farmbeat</Link>
                     <span className='mobile-dropdown-link disabled'>Ripple</span>
-                    <Link to="/windmill" className='mobile-dropdown-link' onClick={closeMobileMenu}>Windmill</Link>
                     <span className='mobile-dropdown-link disabled'>Rover</span>
                   </div>
                 )}
