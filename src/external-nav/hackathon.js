@@ -1,0 +1,176 @@
+import React, {useState, useRef, useEffect} from 'react';
+import { Link } from 'react-router-dom';
+import logo from './mainLogo.svg'
+import circleLogo from '../circleLogo.svg'
+import Footer from '../home-components/footer'
+import Font from '../home-components/font';
+import styles from './hackathon.module.css'
+import hackathon1 from './hackathon-pics/hackathon-1.jpg'
+import hackathon2 from './hackathon-pics/hackathon-2.png'
+import hackathon3 from './hackathon-pics/hackathon-3.jpg'
+import hackathon4 from './hackathon-pics/hackathon-4.jpg'
+import hackathon5 from './hackathon-pics/hackathon-5.png'
+import hackathon6 from './hackathon-pics/hackathon-6.png'
+import hackathonMain from './hackathon-pics/hackathon-main.jpg'
+
+function Hackathon() {
+  const [size, setSize] = useState("55px")
+  const [opacity, setOpacity] = useState(1)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const footerRef = useRef(0)
+
+  // Hackathon carousel images - replace these files in hackathon-pics folder with your actual images
+  const carouselImages = [
+    { src: hackathon1, alt: "" },
+    { src: hackathon2, alt: "" },
+    { src: hackathon3, alt: "" },
+    { src: hackathon4, alt: "" },
+    { src: hackathon5, alt: "" },
+    { src: hackathon6, alt: "" }
+  ]
+
+  function changeNav()   {
+    if (window.scrollY > 80 || window.scrollY > 80) {
+      setSize("34px");
+      setOpacity(0.85)
+    } else {
+      setSize("55px");
+      setOpacity(1)
+    }
+  }
+  window.onscroll = () => {
+    changeNav();
+  };
+
+  // Carousel functions
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? carouselImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToImage = (index) => {
+    setCurrentImageIndex(index);
+  };
+
+  // Auto-play carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+        <div className="App">
+          <Font/>
+          <div className = {styles.navbar} style = {{background: `rgba(226, 218, 201, ${opacity})`}}>
+            <div className={styles.logoContainer}>
+              <Link to = "/">
+                <a href = "#" className={styles.logoLink} >
+                    <img src = {logo} className={styles.logo} alt = 'chameleon'></img>
+                    <img src = {circleLogo} className={styles.mobLogo} alt = 'chameleon'></img>
+                </a>
+              </Link>
+            </div>
+            <p className={styles.title} style = {{fontSize: size}}>chameleon </p>
+             <div className={styles.links}>
+                <Link to = "/">
+                  <a>Home</a>
+                </Link>
+            </div>
+          </div>
+          <div className={styles.hackathonContent}>
+            <div className={styles.carouselSection}>
+              <div className={styles.carouselContainer}>
+                <div className={styles.carouselImageContainer}>
+                  <img 
+                    src={carouselImages[currentImageIndex].src}
+                    alt={carouselImages[currentImageIndex].alt}
+                    className={styles.carouselImage}
+                  />
+                  <button 
+                    className={styles.carouselBtn + ' ' + styles.carouselBtnPrev}
+                    onClick={prevImage}
+                    aria-label="Previous image"
+                  >
+                    &#8249;
+                  </button>
+                  <button 
+                    className={styles.carouselBtn + ' ' + styles.carouselBtnNext}
+                    onClick={nextImage}
+                    aria-label="Next image"
+                  >
+                    &#8250;
+                  </button>
+                </div>
+                <div className={styles.carouselIndicators}>
+                  {carouselImages.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`${styles.carouselIndicator} ${
+                        index === currentImageIndex ? styles.carouselIndicatorActive : ''
+                      }`}
+                      onClick={() => goToImage(index)}
+                      aria-label={`Go to image ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className={styles.container}>
+              <div className={styles.graphicbeat}>
+                <img className={styles.img} src={hackathonMain} alt="" />
+              </div>
+              <div className={styles.textTwo}>
+                <p className={styles.textTitle}>chameleon hackathon</p>
+                <p className={styles.textContent}>
+                Chameleon successfully hosted its first Envirotech Hackathon, where teams built six innovative 
+                prototypes combining hardware and software to tackle environmental challenges such as water quality, runoff, 
+                and opium farming. The event was made possible through support from KCLS Sammamish and the dedication of all 
+                participating teams.
+                </p>
+              </div>
+              <div className={styles.graphicMob}>
+                <img className={styles.img} src={hackathonMain} alt="" />
+              </div>
+            </div>
+            <div className={styles.givecontainer}>
+              <div className={styles.text}>
+                <div className={styles.hackathonDetails} style={{ transition: 'max-height 0.5s ease-in-out', overflow: 'hidden' }}>
+                  <div className={styles.detailSection}>
+                    <h3>Event Details</h3>
+                    <p><strong>Date:</strong> August 15, 2025</p>
+                    <p><strong>Location:</strong> KCLS Sammamish</p>
+                    <p><strong>Theme:</strong> Sustainable Innovation</p>
+                  </div>
+                  <div className={styles.detailSection}>
+                    <h3>Quick Recap</h3>
+                    <ul>
+                      <li>$700 given away in cash prizes</li>
+                      <li>28 Student Competitors</li>
+                      <li>12 Teams</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.doc}>
+              </div>
+            </div>
+          </div>
+         <div className='footer' ref = {footerRef}>
+          <Footer/>
+        </div>
+      </div>
+  );
+}
+
+export default Hackathon;
+
