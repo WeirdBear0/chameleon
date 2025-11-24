@@ -4,29 +4,15 @@ import logo from './mainLogo.svg'
 import circleLogo from '../circleLogo.svg'
 import Footer from '../home-components/footer'
 import Font from '../home-components/font';
+import '../Home.css';
 import styles from'./farmbeat.module.css'
 import microbit1 from './farmbeat-pics/microbit-1.jpg'
 import farmbeat1 from './farmbeat-pics/farmbeats-1.jpg'
 
 function Farmbeat() {
-  const [size, setSize] = useState("55px")
-  const [opacity, setOpacity] = useState(1)
   const [isTextVisible, setIsTextVisible] = useState(false); // State for dropdown visibility
   const [arrow, setArrow] = useState("↓")
   const footerRef = useRef(0)
-
-  function changeNav()   {
-    if (window.scrollY > 80 || window.scrollY > 80) {
-      setSize("34px");
-      setOpacity(0.85)
-    } else {
-      setSize("55px");
-      setOpacity(1)
-    }
-  }
-  window.onscroll = () => {
-    changeNav();
-  };
 
   const toggleTextContent = () => {
     setIsTextVisible(!isTextVisible); // Toggle visibility
@@ -41,20 +27,28 @@ function Farmbeat() {
   return (
         <div className="App">
           <Font/>
-          <div className = {styles.navbar} style = {{background: `rgba(226, 218, 201, ${opacity})`}}>
-            <div className={styles.logoContainer}>
-              <Link to = "/">
-                <a href = "#" className={styles.logoLink} >
-                    <img src = {logo} className={styles.logo} alt = 'chameleon'></img>
-                    <img src = {circleLogo} className={styles.mobLogo} alt = 'chameleon'></img>
-                </a>
-              </Link>
-            </div>
-            <p className={styles.title} style = {{fontSize: size}}>chameleon </p>
-             <div className={styles.links}>
-                <Link to = "/">
-                  <a>Home</a>
+          <div className="navbar">
+            <div className="navbar-main">
+              <div className="logoContainer">
+                <Link to="/">
+                  <a href="#" className="logoLink">
+                    <img src={logo} className="logo" alt="chameleon" />
+                    <img src={circleLogo} className="mobLogo" alt="chameleon" />
+                  </a>
                 </Link>
+              </div>
+              <div className="title-container">
+                <p className="title" style={{ fontSize: '40px' }}>chameleon</p>
+              </div>
+              <div className="mob-donate" style={{ display: 'none' }}></div>
+              <div className="links">
+                <Link to="/">
+                  <a className="sectionLink">Home</a>
+                </Link>
+              </div>
+            </div>
+            <div className="navbar-announcement">
+              {/* Optionally add a signup button or announcement here */}
             </div>
           </div>
           <div className={styles.farmbeatContent}>
