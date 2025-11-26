@@ -1,0 +1,102 @@
+.stats-section {
+  padding: 4rem 2rem;
+  background-color: #fcf3ea;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(108, 88, 76, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(123, 160, 89, 0.1);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(108, 88, 76, 0.12);
+  border-color: rgba(123, 160, 89, 0.3);
+}
+
+.stat-card-link {
+  cursor: pointer;
+}
+
+.stat-card-link:hover {
+  background: #f0ead2;
+}
+
+.stat-value {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #7ba059;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: #6c584c;
+  font-weight: 500;
+}
+
+@media (max-width: 1100px) {
+  .stats-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-section {
+    padding: 2rem 1rem;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .stat-card {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .stat-value {
+    font-size: 2.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.95rem;
+  }
+}
+
+

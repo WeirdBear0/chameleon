@@ -1,20 +1,237 @@
-.signup-page{
-  width:100%;
-  height: 100vh;
+.signup-page {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fdfae0;
+  background-color: #fcf3ea;
   flex-direction: column;
+  padding: 2rem 1rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.signup-redirect{
-  text-decoration: none;
-  color: #6c584c;
-  text-align: center;
+.signup-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .logo {
   width: 120px;
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.signup-form-container {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 4px 20px rgba(108, 88, 76, 0.1);
+  border: 1px solid rgba(123, 160, 89, 0.1);
+}
+
+.signup-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.5rem;
+  color: #6c584c;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.signup-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: #6c584c;
+  text-align: center;
+  margin: 0 0 2.5rem 0;
+  font-weight: 500;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #6c584c;
+  font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"] {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid rgba(123, 160, 89, 0.3);
+  border-radius: 8px;
+  background: #fcf3ea;
+  color: #6c584c;
+  transition: all 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #7ba059;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(123, 160, 89, 0.1);
+}
+
+.form-group input.error {
+  border-color: #d32f2f;
+  background: #fff5f5;
+}
+
+.error-message {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  color: #d32f2f;
+  margin-top: -0.25rem;
+}
+
+.checkbox-group {
+  margin-top: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: #7ba059;
+  flex-shrink: 0;
+}
+
+.checkbox-label span {
+  line-height: 1.5;
+  color: #6c584c;
+}
+
+.submit-button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  background-color: #7ba059;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #6c8f4c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(123, 160, 89, 0.3);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.submit-button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submit-button:disabled:hover {
+  background-color: #a0a0a0;
+  transform: none;
+  box-shadow: none;
+}
+
+.success-message {
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 4px 20px rgba(108, 88, 76, 0.1);
+  border: 1px solid rgba(123, 160, 89, 0.1);
+}
+
+.success-message h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2rem;
+  color: #7ba059;
+  margin: 0 0 1rem 0;
+}
+
+.success-message p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: #6c584c;
+  margin: 0.75rem 0;
+  line-height: 1.6;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #7ba059;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #7ba059;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.back-link:hover {
+  background-color: #7ba059;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .signup-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .signup-form-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .signup-title {
+    font-size: 2rem;
+  }
+
+  .signup-subtitle {
+    font-size: 1rem;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="number"] {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
 }

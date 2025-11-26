@@ -3,6 +3,7 @@ import { Outlet, Link, useLocation } from 'react-router-dom';
 import logo from './mainLogo.svg'
 import circleLogo from './circleLogo.svg'
 import Banner from './home-components/banner'
+import Stats from './home-components/stats'
 import About from './home-components/about'
 import Camps from './home-components/camps';
 import Partners from './home-components/partners';
@@ -151,7 +152,7 @@ function Home() {
           </div>
         </div>
         <div className='navbar-announcement'>
-          <a href="https://forms.gle/BgynuhLutzQT2F8A6" className='signup-button'>Sign Up for Workshops</a>
+          <Link to="/signup" className='signup-button'>RSVP to Annual Celebration!</Link>
           {/* <FlowingMenu items={demoItems} /> */}
         </div>
       </div>
@@ -196,6 +197,15 @@ function Home() {
 
       <div className='banner' ref = {bannerRef}>
         <Banner/>
+      </div>
+      <div className='stats'>
+        <Stats onProjectsClick={() => {
+          // Scroll to navbar and open projects dropdown
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          setTimeout(() => {
+            setIsDropdownOpen(true);
+          }, 500);
+        }} />
       </div>
       <div className='abt' ref = {abtRef}>
         <About/>

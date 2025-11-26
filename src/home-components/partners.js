@@ -1,8 +1,8 @@
 import React from 'react';
 import './partners.css';
 import republic from "./republicclear.png";
-import give from "./msft-give2.png";
-import fm from "./future-martians.png";
+import give from "./msft_give.png";
+import fm from "./fm.png";
 
 const Partners = () => {
   const partners = [
