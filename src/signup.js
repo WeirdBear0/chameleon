@@ -139,7 +139,7 @@ function SignUp() {
       <div className="signup-container">
         <Link to="/">
           <img src={logo} className='logo' alt='chameleon' />
-        </Link>
+      </Link>
         <div className="signup-form-container">
           <h1 className="signup-title">RSVP to Annual Celebration</h1>
           <p className="signup-subtitle">Sunday, December 7th • 3:00 PM - 5:30 PM</p>
@@ -225,4 +225,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default SignUp; 

@@ -86,20 +86,46 @@
 
 @media (max-width: 768px) {
   .partners-section {
-    padding: 3rem 1rem;
+    padding: 2.5rem 1rem;
   }
 
   .partner-header {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
   }
 
   .partners-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .partner-card {
+    padding: 1.5rem 1rem;
   }
 
   .partner-image-container {
-    height: 100px;
+    height: 80px;
+  }
+
+  .partner-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .partner-header {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .partners-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }

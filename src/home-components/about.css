@@ -43,13 +43,21 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        height: auto;
+        padding: 3rem 0;
     }
     .webcontainer{
         display: flex;
         flex-direction: row;
         justify-content: center;
         vertical-align: top;
-        width: 100%
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .webcontainer div{
+        margin: 5%;
+        width: 45%;
+        min-width: 300px;
     }
     .statementmobile{
         font-family: 'Montserrat', serif;
@@ -57,7 +65,7 @@
         text-align: center;
         display: block;
         width: 100%;
-        padding-bottom: 3rem;
+        padding: 2rem 1rem;
     }
     .statementmobile p{
         margin: 0 1rem 0;
@@ -66,6 +74,38 @@
         display: none;
     }
     .desc{
-        font-size: 12px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutContainer{
+        padding: 2rem 0;
+        min-height: auto;
+    }
+    .webcontainer{
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+    .webcontainer div{
+        margin: 1.5rem 0;
+        width: 100%;
+        min-width: unset;
+        text-align: center;
+    }
+    .aboutContainer .cause{
+        text-align: center;
+    }
+    .aboutContainer div .title{
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    .desc{
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    .statementmobile{
+        padding: 1.5rem 1rem;
+        font-size: 0.95rem;
     }
 }

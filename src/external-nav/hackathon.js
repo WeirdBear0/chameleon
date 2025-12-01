@@ -64,9 +64,9 @@ function Hackathon() {
                   <a href="#" className="logoLink">
                     <img src={logo} className="logo" alt="chameleon" />
                     <img src={circleLogo} className="mobLogo" alt="chameleon" />
-                  </a>
-                </Link>
-              </div>
+                </a>
+              </Link>
+            </div>
               <div className="title-container">
                 <p className="title" style={{ fontSize: '40px' }}>chameleon</p>
               </div>

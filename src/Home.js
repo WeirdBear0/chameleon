@@ -108,6 +108,17 @@ function Home() {
                   <img src = {circleLogo} className='mobLogo' alt = 'chameleon'></img>
               </a>
             </Link>
+            <div className='hamburger-menu'>
+            <button 
+              className={`hamburger-button ${isMobileMenuOpen ? 'active' : ''}`}
+              onClick={toggleMobileMenu}
+              aria-label="Toggle mobile menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
           </div>
           <div className='title-container'>
             <p className='title' style = {{fontSize: '40px'}}>chameleon</p>
@@ -138,17 +149,6 @@ function Home() {
                   </div>
                 )}
               </div>
-          </div>
-          <div className='hamburger-menu'>
-            <button 
-              className={`hamburger-button ${isMobileMenuOpen ? 'active' : ''}`}
-              onClick={toggleMobileMenu}
-              aria-label="Toggle mobile menu"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
           </div>
         </div>
         <div className='navbar-announcement'>
