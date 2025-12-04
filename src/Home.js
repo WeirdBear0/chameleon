@@ -174,7 +174,12 @@ function Home() {
             }
           }}
         >
-          <div className='mobile-menu' onClick={(e) => e.stopPropagation()}>
+          <div className='mobile-menu' onClick={(e) => {
+            // Only stop propagation if clicking on the menu container itself, not on links/buttons
+            if (e.target === e.currentTarget) {
+              e.stopPropagation();
+            }
+          }}>
             <div className='mobile-menu-header'>
               <button className='close-mobile-menu' onClick={closeMobileMenu}>
                 <span></span>
@@ -185,24 +190,13 @@ function Home() {
               <a className='mobile-section-link' onClick={() => {scrollToSection(bannerRef); closeMobileMenu();}}>Home</a>
               <a className='mobile-section-link' onClick={() => {scrollToSection(abtRef); closeMobileMenu();}}>About</a>
               <a className='mobile-section-link' onClick={() => {scrollToSection(campRef); closeMobileMenu();}}>Workshops</a>
-              <div className='mobile-dropdown'>
-                <button 
-                  className='mobile-dropdown-toggle' 
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  aria-expanded={isDropdownOpen}
-                >
-                  Projects
-                  <span className='mobile-dropdown-arrow'></span>
-                </button>
-                {isDropdownOpen && (
-                  <div className='mobile-dropdown-menu'>
-                    <a className='mobile-dropdown-link' onClick={() => handleMobileNavClick('/windmill')}>Windmill</a>
-                    <a className='mobile-dropdown-link' onClick={() => handleMobileNavClick('/hackathon')}>Hackathon</a>
-                    <a className='mobile-dropdown-link' onClick={() => handleMobileNavClick('/farmbeat')}>Farmbeat</a>
-                    <span className='mobile-dropdown-link disabled'>Ripple</span>
-                    <span className='mobile-dropdown-link disabled'>Rover</span>
-                  </div>
-                )}
+              <div className='mobile-projects-section'>
+                <div className='mobile-projects-label'>Projects</div>
+                <a className='mobile-project-link' onClick={(e) => {e.preventDefault(); handleMobileNavClick('/windmill');}}>Windmill</a>
+                <a className='mobile-project-link' onClick={(e) => {e.preventDefault(); handleMobileNavClick('/hackathon');}}>Hackathon</a>
+                <a className='mobile-project-link' onClick={(e) => {e.preventDefault(); handleMobileNavClick('/farmbeat');}}>Farmbeat</a>
+                <span className='mobile-project-link disabled'>Ripple</span>
+                <span className='mobile-project-link disabled'>Rover</span>
               </div>
             </div>
           </div>

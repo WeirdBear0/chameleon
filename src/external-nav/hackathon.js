@@ -68,7 +68,7 @@ function Hackathon() {
               </Link>
             </div>
               <div className="title-container">
-                <p className="title" style={{ fontSize: '40px' }}>chameleon</p>
+                <p className="external-nav-title" style={{ fontSize: '40px' }}>chameleon</p>
               </div>
               <div className="mob-donate" style={{ display: 'none' }}></div>
               <div className="links">
@@ -82,6 +82,7 @@ function Hackathon() {
             </div>
           </div>
           <div className={styles.hackathonContent}>
+            <h2 className={styles.pageTitle}>Chameleon Hackathon 2025</h2>
             <div className={styles.carouselSection}>
               <div className={styles.carouselContainer}>
                 <div className={styles.carouselImageContainer}>

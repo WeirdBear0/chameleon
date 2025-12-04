@@ -31,6 +31,26 @@ code {
     monospace;
 }
 
+/* External nav title styling to match normal navbar title */
+.external-nav-title {
+  font-family: 'Libre Baskerville', serif;
+  color: #7ba059;
+  transition: 0.5s;
+  margin: 0;
+  line-height: 1;
+}
+
+@media (max-width: 700px) {
+  .external-nav-title {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 /* Prevent horizontal scrolling on mobile */
 @media (max-width: 768px) {
   html, body {
@@ -47,4 +67,7 @@ code {
     max-width: 100%;
     height: auto;
   }
+  /* .external-nav-title{
+    display: none;
+  } */
 }

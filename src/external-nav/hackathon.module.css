@@ -59,7 +59,7 @@
     text-decoration: none;
     margin-right: 2.5rem;
 }
-.navbar .title{
+.navbar .external-nav-title{
     font-family: 'Libre Baskerville', serif;
     color:#7ba059;
     transition: 0.5s;
@@ -71,6 +71,15 @@
     min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
     padding: 2rem 0;
+    padding-top: 160px;
+}
+.pageTitle {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #6c584c;
+    margin-bottom: 2rem;
+    font-family: 'Libre Baskerville', serif;
+    padding-top: 1rem;
 }
 .container{
     display: flex;
@@ -307,7 +316,7 @@
         display: block;
         width: 50px;
     }
-    .navbar .title{
+    .navbar .external-nav-title{
         display: none;
     }
     .navbar .links{
@@ -352,5 +361,21 @@
     }
     .carouselSection {
         padding: 2rem 1rem;
+    }
+}
+@media (max-width: 700px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+    .hackathonContent {
+        padding-top: 180px;
+    }
+    .pageTitle {
+        font-size: 1.5rem;
+        padding: 0 1rem;
     }
 }
