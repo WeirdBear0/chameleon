@@ -127,7 +127,7 @@ function Home() {
           </div>
           </div>
           <div className='title-container'>
-            <p className='title' style = {{fontSize: '40px'}}>chameleon</p>
+            <p className='navtitle' style = {{fontSize: '40px'}}>chameleon</p>
           </div>
           <div className='mob-donate'><Donate/></div>
           <div className='links'>

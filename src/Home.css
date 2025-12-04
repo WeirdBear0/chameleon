@@ -88,7 +88,7 @@
   flex-direction: column;
   height: 100%;
 }
-.navbar .title {
+.navbar .navtitle{
   font-family: 'Libre Baskerville', serif;
   color: #7ba059;
   transition: 0.5s;
@@ -274,7 +274,7 @@
     width: 100%;
     text-align: left;
   }
-  .title{
+  .navtitle{
     display: none;
   }
 }
@@ -313,7 +313,7 @@
   height: 100%;
 }
 
-.navbar .title {
+.navbar .navtitle{
   font-family: 'Libre Baskerville', serif;
   color: #7ba059;
   transition: 0.5s;
@@ -434,7 +434,7 @@
     align-items: center;
     min-width: 0;
   }
-  .title {
+  .navtitle{
     font-size: 0.9rem;
     text-align: center;
     margin: 0;
@@ -511,7 +511,7 @@
     padding: 1.5rem 0.5rem;
     box-sizing: border-box;
   }
-  .sectionHeader .title .campsHeader {
+  .sectionHeader .navtitle.campsHeader {
     line-height: 1.2;
   }
   .cohort-header {
@@ -532,7 +532,7 @@
     max-width: 90px;
     white-space: normal;
   }
-  .campCards .card-title {
+  .campCards .card-navtitle{
     word-break: break-word;
   }
 }
@@ -542,7 +542,7 @@
   text-align: center;
 }
 
-.sectionHeader .title .campsHeader {
+.sectionHeader .navtitle.campsHeader {
   font-family: 'Libre Baskerville', serif;
   color: #6c584c;
   font-size: 2.5rem;
@@ -550,7 +550,7 @@
   margin-bottom: 0.5rem;
 }
 
-.sectionHeader .title .campsHeader .hide {
+.sectionHeader .navtitle.campsHeader .hide {
   color: #a98467;
 }
 
@@ -596,7 +596,7 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.campCards .card-title {
+.campCards .card-navtitle{
   margin: 0;
   white-space: nowrap;
 }
@@ -605,7 +605,7 @@
   .campsContainer {
     padding: 1.5rem 0.2rem;
   }
-  .sectionHeader .title .campsHeader {
+  .sectionHeader .navtitle.campsHeader {
     line-height: 1;
   }
   .cohort-header {
@@ -626,7 +626,7 @@
     max-width: 90px;
     white-space: normal;
   }
-  .campCards .card-title {
+  .campCards .card-navtitle{
     word-break: break-word;
   }
 }
