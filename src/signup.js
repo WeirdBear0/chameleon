@@ -120,7 +120,7 @@ function SignUp() {
         <Font />
         <div className="signup-container">
           <Link to="/">
-            <img src={logo} className='logo' alt='chameleon' />
+            <img src={logo} className='logosignup' alt='chameleon' />
           </Link>
           <div className="success-message">
             <h2>Thank you for RSVPing!</h2>

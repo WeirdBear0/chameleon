@@ -61,7 +61,7 @@
     animation-duration: 0.9s;
 }
 
-.banner .title-container .title {
+.banner .title-container .title-banner {
     margin: 0;
     padding: 0;
     font-family: 'Libre Baskerville', serif;
@@ -95,7 +95,7 @@
         flex-direction: column;
         padding: 0 1rem;
     }
-    .banner .title-container .title {
+    .banner .title-container .title-banner {
         font-size: 50px;
     }
     .banner .title-container .description {
@@ -117,7 +117,7 @@
     .banner .title-container {
         padding: 0 1.5rem;
     }
-    .banner .title-container .title {
+    .banner .title-container .title-banner {
         font-size: 2.5rem;
         line-height: 1.2;
     }

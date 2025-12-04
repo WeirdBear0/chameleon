@@ -18,14 +18,14 @@
   align-items: center;
 }
 
-.logo {
+.logosignup {
   width: 120px;
   height: auto;
   margin-bottom: 2rem;
   transition: transform 0.2s;
 }
 
-.logo:hover {
+.logosignup:hover {
   transform: scale(1.05);
 }
 
@@ -225,7 +225,7 @@
     padding: 0 0.5rem;
   }
 
-  .logo {
+  .logosignup {
     width: 100px;
     margin-bottom: 1.5rem;
   }

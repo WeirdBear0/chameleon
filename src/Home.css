@@ -54,6 +54,7 @@
 .navbar .logoLink{
     padding: 0;
     margin: 0 2.5rem 0;
+    height: 0px;
 }
 .navbar .logoLink .logo{
     width: 8.502rem;
@@ -129,8 +130,6 @@
     }
     .logoContainer .logo{
         display: none;
-    }
-    .navbar .title{
     }
     .navbar .links{
         width: 400px;
@@ -274,6 +273,9 @@
   .dropdown-toggle {
     width: 100%;
     text-align: left;
+  }
+  .title{
+    display: none;
   }
 }
 
@@ -694,6 +696,8 @@
   display: flex;
   flex-direction: column;
   animation: slideIn 0.3s ease-out;
+  position: relative;
+  z-index: 10001;
 }
 
 @keyframes slideIn {
@@ -801,7 +805,7 @@
   padding-left: 1rem;
   animation: slideDown 0.3s ease-out;
   position: relative;
-  z-index: 1;
+  z-index: 10001;
 }
 
 @keyframes slideDown {
@@ -826,6 +830,11 @@
   pointer-events: auto;
   display: block;
   width: 100%;
+  position: relative;
+  z-index: 10002;
+  -webkit-tap-highlight-color: rgba(123, 160, 89, 0.2);
+  touch-action: manipulation;
+  user-select: none;
 }
 
 .mobile-dropdown-link:hover {

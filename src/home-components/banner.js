@@ -8,7 +8,7 @@ const Banner = () => {
       <GradientBanner>
         <div className = 'banner'>
           <div className='title-container'>
-            <p className='title'>
+            <p className='title-banner'>
               <span className='title-line-1'>A Breath of </span>
               <span className='title-line-2-mobile'><br/></span>
               <span className='title-line-2'>Fresh Air</span>

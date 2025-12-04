@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { Outlet, Link, useLocation } from 'react-router-dom';
+import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from './mainLogo.svg'
 import circleLogo from './circleLogo.svg'
 import Banner from './home-components/banner'
@@ -27,6 +27,7 @@ function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToSection = useCallback((ref) => {
     if (!ref.current) return;
@@ -73,6 +74,11 @@ function Home() {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
     setIsDropdownOpen(false);
+  };
+
+  const handleMobileNavClick = (path) => {
+    closeMobileMenu();
+    navigate(path);
   };
 
   // Close dropdown when clicking outside button and menu
@@ -159,8 +165,16 @@ function Home() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className='mobile-menu-overlay'>
-          <div className='mobile-menu'>
+        <div 
+          className='mobile-menu-overlay'
+          onClick={(e) => {
+            // Close menu if clicking on overlay (not on menu itself)
+            if (e.target === e.currentTarget) {
+              closeMobileMenu();
+            }
+          }}
+        >
+          <div className='mobile-menu' onClick={(e) => e.stopPropagation()}>
             <div className='mobile-menu-header'>
               <button className='close-mobile-menu' onClick={closeMobileMenu}>
                 <span></span>
@@ -182,9 +196,9 @@ function Home() {
                 </button>
                 {isDropdownOpen && (
                   <div className='mobile-dropdown-menu'>
-                    <Link to="/windmill" className='mobile-dropdown-link' onClick={closeMobileMenu}>Windmill</Link>
-                    <Link to="/hackathon" className='mobile-dropdown-link' onClick={closeMobileMenu}>Hackathon</Link>
-                    <Link to="/farmbeat" className='mobile-dropdown-link' onClick={closeMobileMenu}>Farmbeat</Link>
+                    <a className='mobile-dropdown-link' onClick={() => handleMobileNavClick('/windmill')}>Windmill</a>
+                    <a className='mobile-dropdown-link' onClick={() => handleMobileNavClick('/hackathon')}>Hackathon</a>
+                    <a className='mobile-dropdown-link' onClick={() => handleMobileNavClick('/farmbeat')}>Farmbeat</a>
                     <span className='mobile-dropdown-link disabled'>Ripple</span>
                     <span className='mobile-dropdown-link disabled'>Rover</span>
                   </div>
