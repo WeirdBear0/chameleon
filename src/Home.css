@@ -67,15 +67,28 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
-.navbar .links .sectionLink{
+.navbar .links .sectionLink {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #7ba059;
     text-decoration: none;
     margin-right: 1rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+.navbar .links .sectionLink:hover,
+.navbar .links .sectionLink:focus {
+    background: #f0ead2;
+    outline: none;
 }
 .navbar .links button.sectionLink {
     background: none;
     border: none;
-    font: inherit;
-    color: inherit;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #7ba059;
     cursor: pointer;
     padding: 0;
 }
@@ -145,7 +158,7 @@
         flex-direction: row;
         justify-content: space-evenly;
     }
-    .navbar .links .sectionLink{
+    .navbar .links .sectionLink {
         text-decoration: none;
     }
     .navbar .logoLink{
