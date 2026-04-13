@@ -158,7 +158,7 @@ function Home() {
           </div>
         </div>
         <div className='navbar-announcement'>
-          <Link to="https://forms.gle/NYThghefXy3XG4Mh7" className='signup-button'>Chameleon Chapter Director Interest Form</Link>
+          <a href="https://forms.gle/NYThghefXy3XG4Mh7" className='signup-button'>Chameleon Chapter Director Interest Form</a>
           {/* <FlowingMenu items={demoItems} /> */}
         </div>
       </div>
