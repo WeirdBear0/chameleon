@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './mainLogo.svg';
-import circleLogo from './circleLogo.svg';
 import Font from './home-components/font';
 import './signup.css';
 

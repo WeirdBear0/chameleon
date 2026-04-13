@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './mainLogo.svg';
 import circleLogo from '../circleLogo.svg';
@@ -61,11 +61,9 @@ function Windmill() {
       <div className="navbar">
         <div className="navbar-main">
           <div className="logoContainer">
-            <Link to="/">
-              <a href="#" className="logoLink">
+            <Link to="/" className="logoLink">
                 <img src={logo} className="logo" alt="chameleon" />
                 <img src={circleLogo} className="mobLogo" alt="chameleon" />
-              </a>
             </Link>
           </div>
           <div className="title-container">
@@ -73,9 +71,7 @@ function Windmill() {
           </div>
           <div className="mob-donate" style={{ display: 'none' }}></div>
           <div className="links">
-            <Link to="/">
-              <a className="sectionLink">Home</a>
-            </Link>
+            <Link to="/" className="sectionLink">Home</Link>
           </div>
         </div>
         <div className="navbar-announcement">

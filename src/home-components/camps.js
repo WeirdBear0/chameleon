@@ -1,22 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Outlet, Link, useNavigate } from 'react-router-dom';
 import './camps.css'
-import Carousel from './campsgallery';
 
 const Camps = () => {
   const hiddenTextRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
-  const navigate = useNavigate();
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
-  const [selectedWorkshop, setSelectedWorkshop] = useState('');
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 700);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -59,22 +46,6 @@ const Camps = () => {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isInView]);
-
-  const handleCampClick = (e, path) => {
-    e.preventDefault();
-    navigate(path);
-  };
-
-  // Workshop details for display
-  // To edit camp/workshop info, update the workshopDetails object below:
-  const workshopDetails = {
-    'august 15': {
-      date: 'August 15, 2025, 2-5:30 PM',
-      location: 'Sammamish Library -  825 228th Ave SE, Sammamish, WA',
-      title: 'Smart Farming Hackathon',
-      description: 'are you a middle/high schooler? join us for a free glorious environmental hackathon on friday, august 15th from 2 PM - 5:30 PM! bring a laptop and some friends. we’ll provide a seedstudio microcomputer, wires, and sensors. your job is to collaborate with your team and come up with an idea of a possible product you can create with these components by brainstorming and researching as a group. then, try your best to make a small functional prototype, although it’s fine if you’re not able to. pitch your idea and prototype to earn potential prizes!'
-    }
-  };
 
   return (
 

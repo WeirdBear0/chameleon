@@ -48,11 +48,13 @@ function Hackathon() {
   // Auto-play carousel
   useEffect(() => {
     const interval = setInterval(() => {
-      nextImage();
-    }, 4000); // Change image every 4 seconds
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [carouselImages.length]);
 
   return (
         <div className="App">
@@ -60,11 +62,9 @@ function Hackathon() {
           <div className="navbar">
             <div className="navbar-main">
               <div className="logoContainer">
-                <Link to="/">
-                  <a href="#" className="logoLink">
+                <Link to="/" className="logoLink">
                     <img src={logo} className="logo" alt="chameleon" />
                     <img src={circleLogo} className="mobLogo" alt="chameleon" />
-                </a>
               </Link>
             </div>
               <div className="title-container">
@@ -72,9 +72,7 @@ function Hackathon() {
               </div>
               <div className="mob-donate" style={{ display: 'none' }}></div>
               <div className="links">
-                <Link to="/">
-                  <a className="sectionLink">Home</a>
-                </Link>
+                <Link to="/" className="sectionLink">Home</Link>
               </div>
             </div>
             <div className="navbar-announcement">

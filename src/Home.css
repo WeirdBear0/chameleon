@@ -71,6 +71,14 @@
     text-decoration: none;
     margin-right: 1rem;
 }
+.navbar .links button.sectionLink {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+}
 .navbar .links .sectionLink.signup-link {
   background-color: #7ba059;
   color: white;
@@ -761,6 +769,13 @@
 
 .mobile-section-link:hover {
   color: #6c584c;
+}
+
+button.mobile-section-link,
+button.mobile-project-link {
+  background: none;
+  border: none;
+  text-align: left;
 }
 
 .mobile-projects-section {

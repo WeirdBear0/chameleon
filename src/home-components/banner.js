@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './banner.css'
 import Donate  from './donate'
 import GradientBanner from './gradientbanner';

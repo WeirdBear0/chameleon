@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from './mainLogo.svg'
 import circleLogo from './circleLogo.svg'
 import Banner from './home-components/banner'
@@ -19,8 +19,6 @@ function Home() {
   const campRef = useRef(null);
   const partnerRef = useRef(null);
   const footerRef = useRef(null);
-  const [projectsOpen, setProjectsOpen] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
   const projectsRef = useRef(null);
   const dropdownMenuRef = useRef(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -51,21 +49,6 @@ function Home() {
     window.addEventListener('scroll', handleNavChange);
     return () => window.removeEventListener('scroll', handleNavChange);
   }, [handleNavChange]);
-
-  const handleDropdownClose = () => {
-    setIsClosing(true);
-    setTimeout(() => {
-      setProjectsOpen(false);
-      setIsClosing(false);
-    }, 200); // Match this with the animation duration
-  };
-
-  const toggleDropdown = (e) => {
-    // Only toggle if clicking the button itself
-    if (e.target.closest('.dropdown-button')) {
-      setIsDropdownOpen(!isDropdownOpen);
-    }
-  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -108,11 +91,26 @@ function Home() {
       <div className='navbar'>
         <div className='navbar-main'>
           <div className='logoContainer'>
-            <Link to = "/">
-              <a href = "#" className='logoLink' onClick={() => {scrollToSection(bannerRef)}}>
-                  <img src = {logo} className='logo' alt = 'chameleon'></img>
-                  <img src = {circleLogo} className='mobLogo' alt = 'chameleon'></img>
-              </a>
+            <Link
+              to="/"
+              className="logoLink"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(bannerRef);
+              }}
+            >
+              <img
+                src={logo}
+                className="logo"
+                alt="chameleon"
+                style={{ maxHeight: navStyle.size, opacity: navStyle.opacity }}
+              />
+              <img
+                src={circleLogo}
+                className="mobLogo"
+                alt="chameleon"
+                style={{ maxHeight: navStyle.size, opacity: navStyle.opacity }}
+              />
             </Link>
             <div className='hamburger-menu'>
             <button 
@@ -131,9 +129,9 @@ function Home() {
           </div>
           <div className='mob-donate'><Donate/></div>
           <div className='links'>
-              <a className='sectionLink' onClick={() => {scrollToSection(bannerRef)}}>Home</a>
-              <a className='sectionLink' onClick={() => {scrollToSection(abtRef)}}>About</a>
-              <a className='sectionLink' onClick={() => {scrollToSection(campRef)}}>Workshops</a>
+              <button type="button" className='sectionLink' onClick={() => scrollToSection(bannerRef)}>Home</button>
+              <button type="button" className='sectionLink' onClick={() => scrollToSection(abtRef)}>About</button>
+              <button type="button" className='sectionLink' onClick={() => scrollToSection(campRef)}>Workshops</button>
               <div className='dropdown' ref={projectsRef}>
                 <button 
                   className='dropdown-toggle' 
@@ -187,14 +185,14 @@ function Home() {
               </button>
             </div>
             <div className='mobile-menu-links'>
-              <a className='mobile-section-link' onClick={() => {scrollToSection(bannerRef); closeMobileMenu();}}>Home</a>
-              <a className='mobile-section-link' onClick={() => {scrollToSection(abtRef); closeMobileMenu();}}>About</a>
-              <a className='mobile-section-link' onClick={() => {scrollToSection(campRef); closeMobileMenu();}}>Workshops</a>
+              <button type="button" className='mobile-section-link' onClick={() => { scrollToSection(bannerRef); closeMobileMenu(); }}>Home</button>
+              <button type="button" className='mobile-section-link' onClick={() => { scrollToSection(abtRef); closeMobileMenu(); }}>About</button>
+              <button type="button" className='mobile-section-link' onClick={() => { scrollToSection(campRef); closeMobileMenu(); }}>Workshops</button>
               <div className='mobile-projects-section'>
                 <div className='mobile-projects-label'>Projects</div>
-                <a className='mobile-project-link' onClick={(e) => {e.preventDefault(); handleMobileNavClick('/windmill');}}>Windmill</a>
-                <a className='mobile-project-link' onClick={(e) => {e.preventDefault(); handleMobileNavClick('/hackathon');}}>Hackathon</a>
-                <a className='mobile-project-link' onClick={(e) => {e.preventDefault(); handleMobileNavClick('/farmbeat');}}>Farmbeat</a>
+                <button type="button" className='mobile-project-link' onClick={() => handleMobileNavClick('/windmill')}>Windmill</button>
+                <button type="button" className='mobile-project-link' onClick={() => handleMobileNavClick('/hackathon')}>Hackathon</button>
+                <button type="button" className='mobile-project-link' onClick={() => handleMobileNavClick('/farmbeat')}>Farmbeat</button>
                 <span className='mobile-project-link disabled'>Ripple</span>
                 <span className='mobile-project-link disabled'>Rover</span>
               </div>
