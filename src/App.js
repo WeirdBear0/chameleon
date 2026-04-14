@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import './App.css';
 
 import Home from './Home';
@@ -18,6 +19,7 @@ function App() {
           <Route path="hackathon" element={<Hackathon />} />
           <Route path="signup" element={<SignUp />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
