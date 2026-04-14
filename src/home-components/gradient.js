@@ -108,7 +108,10 @@ class MiniGl {
                     getDeclaration(name, type, length) {
                         const uniform = this;
                         if (uniform.excludeFrom !== type) {
-                            if ("array" === uniform.type) return uniform.value[0].getDeclaration(name, type, uniform.value.length) + `\nconst int ${name}_length = ${uniform.value.length};`;
+                            if ("array" === uniform.type) {
+                                if (uniform.value.length === 0) return "";
+                                return uniform.value[0].getDeclaration(name, type, uniform.value.length) + `\nconst int ${name}_length = ${uniform.value.length};`;
+                            }
                             if ("struct" === uniform.type) {
                                 let name_no_prefix = name.replace("u_", "");
                                 return name_no_prefix = 
@@ -571,7 +574,7 @@ class Gradient {
   */
   waitForCssVars() {
     // eslint-disable-next-line no-unused-expressions
-      if (this.computedCanvasStyle && -1 !== this.computedCanvasStyle.getPropertyValue("--gradient-color-1").indexOf("#")) this.init(), this.addIsLoadedClass();
+      if (this.computedCanvasStyle && -1 !== this.computedCanvasStyle.getPropertyValue("--gradient-color-1").indexOf("#") && -1 !== this.computedCanvasStyle.getPropertyValue("--gradient-color-2").indexOf("#") && -1 !== this.computedCanvasStyle.getPropertyValue("--gradient-color-3").indexOf("#") && -1 !== this.computedCanvasStyle.getPropertyValue("--gradient-color-4").indexOf("#")) this.init(), this.addIsLoadedClass();
       else {
           if (this.cssVarRetries += 1, this.cssVarRetries > this.maxCssVarRetries) {
               return this.sectionColors = [16711680, 16711680, 16711935, 65280, 255],void this.init();

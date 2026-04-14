@@ -15,24 +15,6 @@
 .mobLogo{
     display: none;
 }
-.interestmob{
-    display: none;
-}
-.interestweb{
-    font-size: 13px;
-    font-family: 'Montserrat', serif;
-    text-align: center;
-    color: #6c584c;
-}
-.interestweb a{
-    margin:0; 
-    padding: 0;
-    font-weight: 700;
-    color: #6c584c !important;
-}
-.cover{
-    position: sticky;
-}
 .navbar a{
     font-family: 'Montserrat', serif;
     text-decoration: none;

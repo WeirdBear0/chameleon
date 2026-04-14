@@ -10,10 +10,11 @@ import Partners from './home-components/partners';
 import Footer from './home-components/footer'
 import Font from './home-components/font';
 import Donate  from './home-components/donate'
+import HomeCarousel from './home-components/HomeCarousel'
 import './Home.css'
 
 function Home() {
-  const [navStyle, setNavStyle] = useState({ size: "55px", opacity: 1 });
+  const [scrolled, setScrolled] = useState(false);
   const bannerRef = useRef(null);
   const abtRef = useRef(null);
   const campRef = useRef(null);
@@ -37,12 +38,7 @@ function Home() {
   }, []);
 
   const handleNavChange = useCallback(() => {
-    const scrollY = window.scrollY;
-    if (scrollY > 80) {
-      setNavStyle({ size: "34px", opacity: 0.85 });
-    } else {
-      setNavStyle({ size: "55px", opacity: 1 });
-    }
+    setScrolled(window.scrollY > 80);
   }, []);
 
   useEffect(() => {
@@ -88,7 +84,7 @@ function Home() {
   return (
     <div className="App">
       <Font/>
-      <div className='navbar'>
+      <div className={`navbar${scrolled ? ' navbar-scrolled' : ''}`}>
         <div className='navbar-main'>
           <div className='logoContainer'>
             <Link
@@ -103,13 +99,11 @@ function Home() {
                 src={logo}
                 className="logo"
                 alt="chameleon"
-                style={{ maxHeight: navStyle.size, opacity: navStyle.opacity }}
               />
               <img
                 src={circleLogo}
                 className="mobLogo"
                 alt="chameleon"
-                style={{ maxHeight: navStyle.size, opacity: navStyle.opacity }}
               />
             </Link>
             <div className='hamburger-menu'>
@@ -204,6 +198,8 @@ function Home() {
       <div className='banner' ref = {bannerRef}>
         <Banner/>
       </div>
+      <div className='carousel-stats-wrapper'>
+      <HomeCarousel />
       <div className='stats'>
         <Stats onProjectsClick={() => {
           // Scroll to navbar and open projects dropdown
@@ -212,6 +208,7 @@ function Home() {
             setIsDropdownOpen(true);
           }, 500);
         }} />
+      </div>
       </div>
       <div className='abt' ref = {abtRef}>
         <About/>

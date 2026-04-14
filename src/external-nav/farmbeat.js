@@ -1,5 +1,5 @@
-import React, {useState, useRef} from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from './mainLogo.svg'
 import circleLogo from '../circleLogo.svg'
 import Footer from '../home-components/footer'
@@ -12,7 +12,8 @@ import farmbeat1 from './farmbeat-pics/farmbeats-1.jpg'
 function Farmbeat() {
   const [isTextVisible, setIsTextVisible] = useState(false); // State for dropdown visibility
   const [arrow, setArrow] = useState("↓")
-  const footerRef = useRef(0)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const navigate = useNavigate()
 
   const toggleTextContent = () => {
     setIsTextVisible(!isTextVisible); // Toggle visibility
@@ -34,6 +35,17 @@ function Farmbeat() {
                     <img src={logo} className="logo" alt="chameleon" />
                     <img src={circleLogo} className="mobLogo" alt="chameleon" />
               </Link>
+              <div className="hamburger-menu">
+                <button
+                  className={`hamburger-button ${isMobileMenuOpen ? 'active' : ''}`}
+                  onClick={() => setIsMobileMenuOpen(v => !v)}
+                  aria-label="Toggle mobile menu"
+                >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
             </div>
               <div className="title-container">
                 <p className="external-nav-title" style={{ fontSize: '40px' }}>chameleon</p>
@@ -47,6 +59,34 @@ function Farmbeat() {
               {/* Optionally add a signup button or announcement here */}
             </div>
           </div>
+          {isMobileMenuOpen && (
+            <div
+              className="mobile-menu-overlay"
+              onClick={e => { if (e.target === e.currentTarget) setIsMobileMenuOpen(false); }}
+            >
+              <div className="mobile-menu" onClick={e => { if (e.target === e.currentTarget) e.stopPropagation(); }}>
+                <div className="mobile-menu-header">
+                  <button className="close-mobile-menu" onClick={() => setIsMobileMenuOpen(false)}>
+                    <span></span>
+                    <span></span>
+                  </button>
+                </div>
+                <div className="mobile-menu-links">
+                  <button type="button" className="mobile-section-link" onClick={() => { navigate('/'); setIsMobileMenuOpen(false); }}>Home</button>
+                  <button type="button" className="mobile-section-link" onClick={() => { navigate('/'); setIsMobileMenuOpen(false); }}>About</button>
+                  <button type="button" className="mobile-section-link" onClick={() => { navigate('/'); setIsMobileMenuOpen(false); }}>Workshops</button>
+                  <div className="mobile-projects-section">
+                    <div className="mobile-projects-label">Projects</div>
+                    <button type="button" className="mobile-project-link" onClick={() => { navigate('/windmill'); setIsMobileMenuOpen(false); }}>Windmill</button>
+                    <button type="button" className="mobile-project-link" onClick={() => { navigate('/hackathon'); setIsMobileMenuOpen(false); }}>Hackathon</button>
+                    <button type="button" className="mobile-project-link" onClick={() => { navigate('/farmbeat'); setIsMobileMenuOpen(false); }}>Farmbeat</button>
+                    <span className="mobile-project-link disabled">Ripple</span>
+                    <span className="mobile-project-link disabled">Rover</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
           <div className={styles.farmbeatContent}>
             <div className={styles.container}>
               <div className={styles.text}>
@@ -90,7 +130,7 @@ function Farmbeat() {
               </div>
             </div>
           </div>
-         <div className='footer' ref = {footerRef}>
+         <div className='footer'>
           <Footer/>
         </div>
       </div>

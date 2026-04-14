@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from './mainLogo.svg';
 import circleLogo from '../circleLogo.svg';
 import Footer from '../home-components/footer';
@@ -53,7 +53,8 @@ void loop() {
 }`;
 
 function Windmill() {
-  const footerRef = useRef(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="App">
@@ -65,6 +66,17 @@ function Windmill() {
                 <img src={logo} className="logo" alt="chameleon" />
                 <img src={circleLogo} className="mobLogo" alt="chameleon" />
             </Link>
+            <div className="hamburger-menu">
+              <button
+                className={`hamburger-button ${isMobileMenuOpen ? 'active' : ''}`}
+                onClick={() => setIsMobileMenuOpen(v => !v)}
+                aria-label="Toggle mobile menu"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
           </div>
           <div className="title-container">
             <p className="external-nav-title" style={{ fontSize: '40px' }}>chameleon</p>
@@ -78,6 +90,34 @@ function Windmill() {
           {/* Optionally add a signup button or announcement here */}
         </div>
       </div>
+      {isMobileMenuOpen && (
+        <div
+          className="mobile-menu-overlay"
+          onClick={e => { if (e.target === e.currentTarget) setIsMobileMenuOpen(false); }}
+        >
+          <div className="mobile-menu" onClick={e => { if (e.target === e.currentTarget) e.stopPropagation(); }}>
+            <div className="mobile-menu-header">
+              <button className="close-mobile-menu" onClick={() => setIsMobileMenuOpen(false)}>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+            <div className="mobile-menu-links">
+              <button type="button" className="mobile-section-link" onClick={() => { navigate('/'); setIsMobileMenuOpen(false); }}>Home</button>
+              <button type="button" className="mobile-section-link" onClick={() => { navigate('/'); setIsMobileMenuOpen(false); }}>About</button>
+              <button type="button" className="mobile-section-link" onClick={() => { navigate('/'); setIsMobileMenuOpen(false); }}>Workshops</button>
+              <div className="mobile-projects-section">
+                <div className="mobile-projects-label">Projects</div>
+                <button type="button" className="mobile-project-link" onClick={() => { navigate('/windmill'); setIsMobileMenuOpen(false); }}>Windmill</button>
+                <button type="button" className="mobile-project-link" onClick={() => { navigate('/hackathon'); setIsMobileMenuOpen(false); }}>Hackathon</button>
+                <button type="button" className="mobile-project-link" onClick={() => { navigate('/farmbeat'); setIsMobileMenuOpen(false); }}>Farmbeat</button>
+                <span className="mobile-project-link disabled">Ripple</span>
+                <span className="mobile-project-link disabled">Rover</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       <div className={styles.windmillContent}>
         <h2 className={styles.pageTitle}>Wind Turbine Project: Step-by-Step Guide</h2>
         <div className={styles.stepsList}>
@@ -127,7 +167,7 @@ function Windmill() {
       <div>
         <p className={styles.windmillNote}>Congrats on your completed windmill! Things to note: When the motor wire is in yellow port 0, hand-spinning the windmill will turn on the LED. When the motor wire is plugged into blue port 5V, it will spin quickly on its own. For this to work, the microcontroller MUST be connected to power using a USB-C cable.</p>
       </div>
-      <div className="footer" ref={footerRef}>
+      <div className="footer">
         <Footer />
       </div>
     </div>
