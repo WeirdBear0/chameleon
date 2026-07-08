@@ -364,9 +364,10 @@
     display: flex;
     justify-content: space-between;
   }
-  .logoLink {
+  .navbar .logoLink {
     margin: 0;
     padding: 0;
+    height: auto;
   }
   .logo {
     width: 60px;
@@ -374,15 +375,12 @@
   }
   .mobLogo {
     display: block;
-    width: 35px;
+    width: 40px;
+    height: auto;
     margin-right: 0.75rem;
   }
-  .title-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 0;
+  .navbar .title-container {
+    display: none;
   }
   .navtitle{
     font-size: 0.9rem;

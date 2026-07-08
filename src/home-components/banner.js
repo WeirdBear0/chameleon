@@ -26,8 +26,8 @@ const Banner = () => {
       setTimeout(() => {
         setCurrent(prev => (prev + 1) % bgImages.length);
         setVisible(true);
-      }, 1200);
-    }, 10000);
+      }, 800);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 

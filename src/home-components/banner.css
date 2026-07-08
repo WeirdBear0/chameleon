@@ -54,7 +54,7 @@
 .banner-bg-photo {
   object-fit: cover;
   object-position: center center;
-  transition: opacity 1.2s ease;
+  transition: opacity 0.8s ease;
 }
 
 .banner-bg-fading {
@@ -137,6 +137,7 @@
         justify-content: flex-start;
     }
     .banner .title-container {
+        display: block;
         padding: 0 1.5rem;
         max-width: 100%;
     }

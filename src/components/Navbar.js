@@ -1,19 +1,10 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import logo from '../mainLogo.svg';
 import circleLogo from '../circleLogo.svg';
 import Donate from '../home-components/donate';
 
-/**
- * Shared navbar used on every page.
- *
- * Props (all optional — omit on non-home pages):
- *   onHomeClick      — scroll to banner on home page
- *   onAboutClick     — scroll to about on home page
- *   onWorkshopsClick — scroll to workshops on home page
- */
 const Navbar = ({ onHomeClick, onAboutClick, onWorkshopsClick }) => {
-  const [scrolled, setScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -21,13 +12,6 @@ const Navbar = ({ onHomeClick, onAboutClick, onWorkshopsClick }) => {
   const dropdownMenuRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
-
-  // Track scroll for shadow
-  const handleScroll = useCallback(() => setScrolled(window.scrollY > 80), []);
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -57,7 +41,7 @@ const Navbar = ({ onHomeClick, onAboutClick, onWorkshopsClick }) => {
 
   return (
     <>
-      <div className={`navbar${scrolled ? ' navbar-scrolled' : ''}`}>
+      <div className="navbar">
         <div className='navbar-main'>
           <div className='logoContainer'>
             <Link to="/" className="logoLink" onClick={(e) => { e.preventDefault(); goHome(); }}>
