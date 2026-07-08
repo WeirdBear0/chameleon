@@ -1,111 +1,176 @@
-.statementmobile{
-    display:none;
+.statementmobile {
+  display: none;
 }
-.aboutContainer{
-    height: 37rem;
-    background: rgba(194, 197, 170, 1);
+
+.aboutContainer {
+  position: relative;
+  background: linear-gradient(135deg, #3d6b35 0%, #5a8f4a 40%, #7ba059 70%, #a8c686 100%);
+  overflow: hidden;
+}
+
+/* Dappled light texture */
+.aboutContainer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 200px 150px at 10% 30%, rgba(255,255,255,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 150px 200px at 85% 70%, rgba(255,255,255,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 100px 100px at 50% 10%, rgba(255,255,255,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Leaf decoration — top right */
+.aboutContainer::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 220px;
+  height: 220px;
+  border-radius: 0 0 0 100%;
+  background: rgba(255,255,255,0.05);
+  pointer-events: none;
+}
+
+.webcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.webcontainer div {
+  margin: 10%;
+  width: 60%;
+}
+
+.aboutContainer div .title {
+  font-family: 'Libre Baskerville', serif;
+  color: #fff;
+}
+
+.aboutContainer .cause {
+  text-align: right;
+}
+
+.aboutContainer .statementweb {
+  font-family: 'Montserrat', serif;
+  font-weight: 500;
+  text-align: center;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Decorative leaf divider between quote columns */
+.aboutContainer .statementweb::before {
+  content: '❧';
+  display: block;
+  font-size: 1.8rem;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0;
+}
+
+.desc {
+  font-family: 'Montserrat', serif;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.75;
+}
+
+.amazonLink {
+  color: #f0ead2;
+  text-decoration: none;
+  font-weight: 650;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .aboutContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-}
-.webcontainer{
+    height: auto;
+    padding: 3rem 0;
+  }
+
+  .webcontainer {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    align-self: center;
     justify-content: center;
+    vertical-align: top;
     width: 100%;
-}
-.webcontainer div{
-    margin: 10%;
-    width: 60%;
-}
-.aboutContainer div .title{
-    font-family: 'Libre Baskerville', serif;
-}
-.aboutContainer .cause{
-    text-align: right;
-}
-.aboutContainer .statementweb{
+    flex-wrap: wrap;
+  }
+
+  .webcontainer div {
+    margin: 5%;
+    width: 45%;
+    min-width: 300px;
+  }
+
+  .statementmobile {
     font-family: 'Montserrat', serif;
     font-weight: 500;
     text-align: center;
-}
-.desc{
-    font-family: 'Montserrat', serif;
-}
-.amazonLink{
-    color: #6c584c;
-    text-decoration: none;
-    font-weight: 650;
-}
-@media (max-width: 1100px) {
-    .aboutContainer{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
-        padding: 3rem 0;
-    }
-    .webcontainer{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        vertical-align: top;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-    .webcontainer div{
-        margin: 5%;
-        width: 45%;
-        min-width: 300px;
-    }
-    .statementmobile{
-        font-family: 'Montserrat', serif;
-        font-weight: 500;
-        text-align: center;
-        display: block;
-        width: 100%;
-        padding: 2rem 1rem;
-    }
-    .statementmobile p{
-        margin: 0 1rem 0;
-    }
-    .statementweb{
-        display: none;
-    }
-    .desc{
-        font-size: 1rem;
-    }
+    display: block;
+    width: 100%;
+    padding: 2rem 1rem;
+    color: rgba(255,255,255,0.85);
+    position: relative;
+    z-index: 1;
+  }
+
+  .statementmobile p {
+    margin: 0 1rem 0;
+  }
+
+  .statementweb {
+    display: none;
+  }
+
+  .desc {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .aboutContainer{
-        padding: 2rem 0;
-        min-height: auto;
-    }
-    .webcontainer{
-        flex-direction: column;
-        padding: 0 1rem;
-    }
-    .webcontainer div{
-        margin: 1.5rem 0;
-        width: 100%;
-        min-width: unset;
-        text-align: center;
-    }
-    .aboutContainer .cause{
-        text-align: center;
-    }
-    .aboutContainer div .title{
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-    .desc{
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-    .statementmobile{
-        padding: 1.5rem 1rem;
-        font-size: 0.95rem;
-    }
+  .aboutContainer {
+    padding: 2rem 0;
+    min-height: auto;
+  }
+
+  .webcontainer {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .webcontainer div {
+    margin: 1.5rem 0;
+    width: 100%;
+    min-width: unset;
+    text-align: center;
+  }
+
+  .aboutContainer .cause {
+    text-align: center;
+  }
+
+  .aboutContainer div .title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .statementmobile {
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+  }
 }

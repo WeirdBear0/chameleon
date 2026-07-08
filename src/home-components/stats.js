@@ -59,7 +59,7 @@ const Stats = ({ onProjectsClick }) => {
     <div className="stats-section">
       <div className="stats-container">
         <div className="stat-card">
-          <div className="stat-value">300+</div>
+          <div className="stat-value">2000+</div>
           <div className="stat-label">Kids Reached</div>
         </div>
         <div className="stat-card stat-card-link" onClick={handleProjectsClick}>
@@ -71,7 +71,7 @@ const Stats = ({ onProjectsClick }) => {
           <div className="stat-label">Days Active</div>
         </div>
         <div className="stat-card">
-          <div className="stat-value">$15k</div>
+          <div className="stat-value">$20k</div>
           <div className="stat-label">Money Raised</div>
         </div>
       </div>

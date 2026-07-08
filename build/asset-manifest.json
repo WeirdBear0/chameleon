@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.09f4654d.css",
-    "main.js": "/static/js/main.2d126d36.js",
-    "static/js/453.79a26a54.chunk.js": "/static/js/453.79a26a54.chunk.js",
+    "main.css": "/static/css/main.802dd21f.css",
+    "main.js": "/static/js/main.dd61a8a9.js",
+    "static/js/453.64dd31dd.chunk.js": "/static/js/453.64dd31dd.chunk.js",
     "static/media/hackathon-6.png": "/static/media/hackathon-6.b42ac6e1adb8ca9a9983.png",
     "static/media/hackathon-5.png": "/static/media/hackathon-5.9a2db7f526b506cf96d1.png",
     "static/media/IMG_0280.jpg": "/static/media/IMG_0280.71adbd1aece1271b383e.jpg",
     "static/media/pic1.png": "/static/media/pic1.ed744d637f198675edf1.png",
+    "static/media/IMG_8066.webp": "/static/media/IMG_8066.bb11894cba806b7ff2eb.webp",
     "static/media/IMG_0279.jpg": "/static/media/IMG_0279.0a8f13d18a2bdc11658d.jpg",
     "static/media/IMG_0286.jpg": "/static/media/IMG_0286.b33e766ce39692804d56.jpg",
     "static/media/IMG_0273.jpg": "/static/media/IMG_0273.9c8f82a4d6df45d920bd.jpg",
@@ -20,11 +21,15 @@
     "static/media/IMG_0271.jpg": "/static/media/IMG_0271.6f089be66a4d5e4f9bae.jpg",
     "static/media/IMG_0288.jpg": "/static/media/IMG_0288.b8a918629868fee87b95.jpg",
     "static/media/IMG_0284.jpg": "/static/media/IMG_0284.e23de8ab82c2b46f8157.jpg",
+    "static/media/IMG_2256.webp": "/static/media/IMG_2256.9dc024aec8f8d973f0c0.webp",
+    "static/media/IMG_7223.webp": "/static/media/IMG_7223.af6c9285fdc6299c3a7d.webp",
+    "static/media/IMG_2235.webp": "/static/media/IMG_2235.40cd1b00903a2f5ca8d3.webp",
     "static/media/hackathon-1.jpg": "/static/media/hackathon-1.148814c86cffb3b59f09.jpg",
     "static/media/boardselect.png": "/static/media/boardselect.f2ddf3c8f30855c39954.png",
     "static/media/farmbeats-1.jpg": "/static/media/farmbeats-1.f18c532524580c37daff.jpg",
     "static/media/hackathon-main.jpg": "/static/media/hackathon-main.e35553e94a78df2739fb.jpg",
     "static/media/hackathon-3.jpg": "/static/media/hackathon-3.6e87bb3eb47e5ea32834.jpg",
+    "static/media/IMG_1956.webp": "/static/media/IMG_1956.3fe24e3ea8114255233c.webp",
     "static/media/microbit-1.jpg": "/static/media/microbit-1.8107e33d96f03c206351.jpg",
     "static/media/fm.png": "/static/media/fm.ea7b7e71396a0164127a.png",
     "static/media/hackathon-4.jpg": "/static/media/hackathon-4.567dbde7ec5eeab08c13.jpg",
@@ -33,12 +38,12 @@
     "static/media/circleLogo.svg": "/static/media/circleLogo.8bb2d3973221b0615fdf1122996fd057.svg",
     "static/media/mainLogo.svg": "/static/media/mainLogo.38e7f4e7122553faada2931a37bf7c52.svg",
     "index.html": "/index.html",
-    "main.09f4654d.css.map": "/static/css/main.09f4654d.css.map",
-    "main.2d126d36.js.map": "/static/js/main.2d126d36.js.map",
-    "453.79a26a54.chunk.js.map": "/static/js/453.79a26a54.chunk.js.map"
+    "main.802dd21f.css.map": "/static/css/main.802dd21f.css.map",
+    "main.dd61a8a9.js.map": "/static/js/main.dd61a8a9.js.map",
+    "453.64dd31dd.chunk.js.map": "/static/js/453.64dd31dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.09f4654d.css",
-    "static/js/main.2d126d36.js"
+    "static/css/main.802dd21f.css",
+    "static/js/main.dd61a8a9.js"
   ]
 }

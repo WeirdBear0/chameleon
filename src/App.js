@@ -8,6 +8,7 @@ import Farmbeat from './external-nav/farmbeat';
 import Windmill from './external-nav/windmill';
 import Hackathon from './external-nav/hackathon';
 import SignUp from './signup';
+import Chapters from './chapters/Chapters';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="windmill" element={<Windmill />} />
           <Route path="hackathon" element={<Hackathon />} />
           <Route path="signup" element={<SignUp />} />
+          <Route path="chapters" element={<Chapters />} />
       </Routes>
       <Analytics />
     </BrowserRouter>

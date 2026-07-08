@@ -10,7 +10,6 @@ import Partners from './home-components/partners';
 import Footer from './home-components/footer'
 import Font from './home-components/font';
 import Donate  from './home-components/donate'
-import HomeCarousel from './home-components/HomeCarousel'
 import './Home.css'
 
 function Home() {
@@ -126,6 +125,7 @@ function Home() {
               <button type="button" className='sectionLink' onClick={() => scrollToSection(bannerRef)}>Home</button>
               <button type="button" className='sectionLink' onClick={() => scrollToSection(abtRef)}>About</button>
               <button type="button" className='sectionLink' onClick={() => scrollToSection(campRef)}>Workshops</button>
+              <button type="button" className='sectionLink' onClick={() => navigate('/chapters')}>Chapters</button>
               <div className='dropdown' ref={projectsRef}>
                 <button 
                   className='dropdown-toggle' 
@@ -148,10 +148,6 @@ function Home() {
                 )}
               </div>
           </div>
-        </div>
-        <div className='navbar-announcement'>
-          <a href="https://forms.gle/NYThghefXy3XG4Mh7" className='signup-button'>Chameleon Chapter Director Interest Form</a>
-          {/* <FlowingMenu items={demoItems} /> */}
         </div>
       </div>
 
@@ -182,6 +178,7 @@ function Home() {
               <button type="button" className='mobile-section-link' onClick={() => { scrollToSection(bannerRef); closeMobileMenu(); }}>Home</button>
               <button type="button" className='mobile-section-link' onClick={() => { scrollToSection(abtRef); closeMobileMenu(); }}>About</button>
               <button type="button" className='mobile-section-link' onClick={() => { scrollToSection(campRef); closeMobileMenu(); }}>Workshops</button>
+              <button type="button" className='mobile-section-link' onClick={() => { closeMobileMenu(); navigate('/chapters'); }}>Chapters</button>
               <div className='mobile-projects-section'>
                 <div className='mobile-projects-label'>Projects</div>
                 <button type="button" className='mobile-project-link' onClick={() => handleMobileNavClick('/windmill')}>Windmill</button>
@@ -198,17 +195,11 @@ function Home() {
       <div className='banner' ref = {bannerRef}>
         <Banner/>
       </div>
-      <div className='carousel-stats-wrapper'>
-      <HomeCarousel />
       <div className='stats'>
         <Stats onProjectsClick={() => {
-          // Scroll to navbar and open projects dropdown
           window.scrollTo({ top: 0, behavior: 'smooth' });
-          setTimeout(() => {
-            setIsDropdownOpen(true);
-          }, 500);
+          setTimeout(() => { setIsDropdownOpen(true); }, 500);
         }} />
-      </div>
       </div>
       <div className='abt' ref = {abtRef}>
         <About/>
