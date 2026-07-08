@@ -4,6 +4,7 @@ import Stats from './home-components/stats'
 import About from './home-components/about'
 import Camps from './home-components/camps';
 import Partners from './home-components/partners';
+import Gallery from './home-components/gallery';
 import Footer from './home-components/footer'
 import Font from './home-components/font';
 import Navbar from './components/Navbar';
@@ -44,6 +45,9 @@ function Home() {
       </div>
       <div className='partners' ref={partnerRef}>
         <Partners/>
+      </div>
+      <div className='gallery'>
+        <Gallery/>
       </div>
       <div className='footer' ref={footerRef}>
         <Footer/>
