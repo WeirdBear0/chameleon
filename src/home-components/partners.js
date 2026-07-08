@@ -3,15 +3,18 @@ import './partners.css';
 import republic from "./republicclear.png";
 import give from "./msft_give.png";
 import fm from "./fm.png";
+import fish from "./FISH.png";
+import cornell from "./CORNELL.webp";
+import rev from "./REV.png";
 
 const Partners = () => {
   const partners = [
     { image: republic, link: 'https://www.republicservices.com' },
     { image: give, link: 'https://www.microsoft.com/en-us/corporate-responsibility/philanthropies/employee-engagement' },
     { image: fm, link: 'https://futuremartians.org' },
-    { image: 'https://logo.clearbit.com/cornell.edu', name: 'Cornell University', link: 'https://www.cornell.edu' },
-    { image: 'https://logo.clearbit.com/revithaca.com', name: 'REV Ithaca', link: 'https://www.revithaca.com' },
-    { image: 'https://logo.clearbit.com/issaquahfish.org', name: 'Issaquah Salmon Hatchery', link: 'https://issaquahfish.org' },
+    { image: cornell, name: 'Cornell University', link: 'https://www.cornell.edu' },
+    { image: rev, name: 'REV Ithaca', link: 'https://www.revithaca.com' },
+    { image: fish, name: 'Issaquah Salmon Hatchery', link: 'https://issaquahfish.org' },
   ];
 
   return (

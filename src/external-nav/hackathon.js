@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import logo from './mainLogo.svg'
-import circleLogo from '../circleLogo.svg'
 import Footer from '../home-components/footer'
 import Font from '../home-components/font';
+import Navbar from '../components/Navbar';
 import '../Home.css';
 import styles from './hackathon.module.css'
 import hackathon1 from './hackathon-pics/hackathon-1.jpg'
@@ -16,8 +14,6 @@ import hackathonMain from './hackathon-pics/hackathon-main.jpg'
 
 function Hackathon() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const navigate = useNavigate()
 
   // Hackathon carousel images - replace these files in hackathon-pics folder with your actual images
   const carouselImages = [
@@ -60,65 +56,7 @@ function Hackathon() {
   return (
         <div className="App">
           <Font/>
-          <div className="navbar">
-            <div className="navbar-main">
-              <div className="logoContainer">
-                <Link to="/" className="logoLink">
-                    <img src={logo} className="logo" alt="chameleon" />
-                    <img src={circleLogo} className="mobLogo" alt="chameleon" />
-              </Link>
-              <div className="hamburger-menu">
-                <button
-                  className={`hamburger-button ${isMobileMenuOpen ? 'active' : ''}`}
-                  onClick={() => setIsMobileMenuOpen(v => !v)}
-                  aria-label="Toggle mobile menu"
-                >
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </button>
-              </div>
-            </div>
-              <div className="title-container">
-                <p className="external-nav-title" style={{ fontSize: '40px' }}>chameleon</p>
-              </div>
-              <div className="mob-donate" style={{ display: 'none' }}></div>
-              <div className="links">
-                <Link to="/" className="sectionLink">Home</Link>
-              </div>
-            </div>
-            <div className="navbar-announcement">
-              {/* Optionally add a signup button or announcement here */}
-            </div>
-          </div>
-          {isMobileMenuOpen && (
-            <div
-              className="mobile-menu-overlay"
-              onClick={e => { if (e.target === e.currentTarget) setIsMobileMenuOpen(false); }}
-            >
-              <div className="mobile-menu" onClick={e => { if (e.target === e.currentTarget) e.stopPropagation(); }}>
-                <div className="mobile-menu-header">
-                  <button className="close-mobile-menu" onClick={() => setIsMobileMenuOpen(false)}>
-                    <span></span>
-                    <span></span>
-                  </button>
-                </div>
-                <div className="mobile-menu-links">
-                  <button type="button" className="mobile-section-link" onClick={() => { navigate('/'); setIsMobileMenuOpen(false); }}>Home</button>
-                  <button type="button" className="mobile-section-link" onClick={() => { navigate('/'); setIsMobileMenuOpen(false); }}>About</button>
-                  <button type="button" className="mobile-section-link" onClick={() => { navigate('/'); setIsMobileMenuOpen(false); }}>Workshops</button>
-                  <div className="mobile-projects-section">
-                    <div className="mobile-projects-label">Projects</div>
-                    <button type="button" className="mobile-project-link" onClick={() => { navigate('/windmill'); setIsMobileMenuOpen(false); }}>Windmill</button>
-                    <button type="button" className="mobile-project-link" onClick={() => { navigate('/hackathon'); setIsMobileMenuOpen(false); }}>Hackathon</button>
-                    <button type="button" className="mobile-project-link" onClick={() => { navigate('/farmbeat'); setIsMobileMenuOpen(false); }}>Farmbeat</button>
-                    <span className="mobile-project-link disabled">Ripple</span>
-                    <span className="mobile-project-link disabled">Rover</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+          <Navbar />
           <div className={styles.hackathonContent}>
             <h2 className={styles.pageTitle}>Chameleon Hackathon 2025</h2>
             <div className={styles.carouselSection}>

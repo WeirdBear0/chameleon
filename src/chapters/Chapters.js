@@ -1,24 +1,15 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
-import logo from '../mainLogo.svg';
-import circleLogo from '../circleLogo.svg';
 import Footer from '../home-components/footer';
 import Font from '../home-components/font';
+import Navbar from '../components/Navbar';
 import '../Home.css';
 import './chapters.css';
 
 const GEO_URL = 'https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json';
 
 const CHAPTERS = [
-  { name: 'South Dakota', coordinates: [-100.35, 44.37] },
-  { name: 'Virginia', coordinates: [-78.70, 37.78] },
-  { name: 'West Virginia', coordinates: [-80.45, 38.67] },
-  { name: 'New Jersey', coordinates: [-74.41, 40.06] },
   { name: 'Sammamish, WA', coordinates: [-122.04, 47.62] },
-  { name: 'Vancouver, WA', coordinates: [-122.67, 45.64] },
-  { name: 'Austin, TX', coordinates: [-97.74, 30.27] },
-  { name: 'Kansas', coordinates: [-98.48, 38.51] },
 ];
 
 const BOARD = [
@@ -30,57 +21,11 @@ const BOARD = [
 
 function Chapters() {
   const [activeChapter, setActiveChapter] = useState(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navigate = useNavigate();
 
   return (
     <div className="App chapters-page">
       <Font />
-
-      {/* Navbar */}
-      <div className="navbar">
-        <div className="navbar-main">
-          <div className="logoContainer">
-            <Link to="/" className="logoLink">
-              <img src={logo} className="logo" alt="chameleon" />
-              <img src={circleLogo} className="mobLogo" alt="chameleon" />
-            </Link>
-            <div className="hamburger-menu">
-              <button
-                className={`hamburger-button ${isMobileMenuOpen ? 'active' : ''}`}
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                aria-label="Toggle mobile menu"
-              >
-                <span></span><span></span><span></span>
-              </button>
-            </div>
-          </div>
-          <div className="title-container">
-            <p className="navtitle" style={{ fontSize: '40px' }}>chameleon</p>
-          </div>
-          <div className="links">
-            <button type="button" className="sectionLink" onClick={() => navigate('/')}>Home</button>
-            <button type="button" className="sectionLink chapters-active">Chapters</button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="mobile-menu-overlay" onClick={(e) => { if (e.target === e.currentTarget) setIsMobileMenuOpen(false); }}>
-          <div className="mobile-menu">
-            <div className="mobile-menu-header">
-              <button className="close-mobile-menu" onClick={() => setIsMobileMenuOpen(false)}>
-                <span></span><span></span>
-              </button>
-            </div>
-            <div className="mobile-menu-links">
-              <button type="button" className="mobile-section-link" onClick={() => { setIsMobileMenuOpen(false); navigate('/'); }}>Home</button>
-              <button type="button" className="mobile-section-link chapters-active" onClick={() => setIsMobileMenuOpen(false)}>Chapters</button>
-            </div>
-          </div>
-        </div>
-      )}
+      <Navbar />
 
       {/* Hero */}
       <div className="chapters-hero">
@@ -153,6 +98,7 @@ function Chapters() {
           {CHAPTERS.map(({ name }) => (
             <span key={name} className="chapter-pill">{name}</span>
           ))}
+          <span className="chapter-pill chapter-pill-soon">🌱 Expanding Soon</span>
         </div>
       </section>
 

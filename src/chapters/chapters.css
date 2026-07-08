@@ -104,6 +104,13 @@
   border: 1.5px solid #b5c99a;
 }
 
+.chapter-pill-soon {
+  color: #a98467;
+  background: #f5f0e8;
+  border-color: #d4b896;
+  font-style: italic;
+}
+
 /* ── Board Section ───────────────────────────────────── */
 .chapters-board-section {
   background: #ffffff;

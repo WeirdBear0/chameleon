@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from './mainLogo.svg';
 import Font from './home-components/font';
+import Navbar from './components/Navbar';
 import './signup.css';
 
 function SignUp() {
@@ -117,10 +117,8 @@ function SignUp() {
     return (
       <div className="signup-page">
         <Font />
+        <Navbar />
         <div className="signup-container">
-          <Link to="/">
-            <img src={logo} className='logosignup' alt='chameleon' />
-          </Link>
           <div className="success-message">
             <h2>Thank you for RSVPing!</h2>
             <p>We've received your RSVP for the Annual Celebration.</p>
@@ -135,10 +133,8 @@ function SignUp() {
   return (
     <div className="signup-page">
       <Font />
+      <Navbar />
       <div className="signup-container">
-        <Link to="/">
-          <img src={logo} className='logo' alt='chameleon' />
-      </Link>
         <div className="signup-form-container">
           <h1 className="signup-title">RSVP to Annual Celebration</h1>
           <p className="signup-subtitle">Sunday, December 7th • 3:00 PM - 5:30 PM</p>
