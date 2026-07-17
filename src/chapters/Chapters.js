@@ -207,7 +207,7 @@ function Chapters() {
       </section>
 
       {/* ── Board Members ── */}
-      <section className="chapters-board-section">
+      <section className="chapters-board-section" style={{ display: 'none' }}>
         <h2 className="chapters-section-title">Our Board</h2>
         <div className="board-grid">
           {BOARD.map(({ name, grade, role }) => (
