@@ -57,7 +57,7 @@ const Camps = () => {
               <span className='hide' ref={hiddenTextRef}>Are hidden in plain sight</span>
             </p>
           </div>
-          <p className='cohort-header'>Workshops<br/><span className='notifclick'>returning in June 2026</span></p>
+          <p className='cohort-header'>Workshops<br/><span className='notifclick'>returning in August 2026</span></p>
           {/* <a href="https://forms.gle/BgynuhLutzQT2F8A6" className="workshop-signup-btn">Sign Up for Workshops</a>
           <div className="workshop-dropdown-container">
             <select
