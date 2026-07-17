@@ -6,74 +6,94 @@ import Navbar from '../components/Navbar';
 import '../Home.css';
 import './chapters.css';
 
-const GEO_URL = 'https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json';
+const WA_GEO   = 'https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json';
+const WORLD_GEO = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 
-const CHAPTERS = [
-  { name: 'Sammamish, WA', coordinates: [-122.04, 47.62] },
+const SCHOOLS = [
+  { name: 'Skyline High School',       city: 'Sammamish', state: 'WA', coordinates: [-122.028, 47.598] },
+  { name: 'Eastlake High School',      city: 'Redmond',   state: 'WA', coordinates: [-122.052, 47.622] },
+  { name: 'Tesla STEM High School',    city: 'Sammamish', state: 'WA', coordinates: [-122.019, 47.548] },
+  { name: 'Redmond High School',       city: 'Redmond',   state: 'WA', coordinates: [-122.121, 47.701] },
+  { name: 'Issaquah High School',      city: 'Issaquah',  state: 'WA', coordinates: [-122.033, 47.527] },
+  { name: 'Mountain View High School', city: 'Vancouver', state: 'WA', coordinates: [-122.501, 45.596] },
+];
+
+const STATE_CHAPTERS = [
+  { state: 'Washington', abbr: 'WA', coordinates: [-120.5, 47.5], schools: SCHOOLS },
 ];
 
 const BOARD = [
-  { name: 'Ayush', grade: '12', role: 'Board Member' },
-  { name: 'Andrew', grade: '12', role: 'Board Member' },
-  { name: 'Sana', grade: '11', role: 'Board Member' },
+  { name: 'Ayush',   grade: '12', role: 'Board Member' },
+  { name: 'Andrew',  grade: '12', role: 'Board Member' },
+  { name: 'Sana',    grade: '11', role: 'Board Member' },
   { name: 'Kruthik', grade: '12', role: 'Board Member' },
+  { name: 'Aarav',   grade: '10', role: 'Board Member' },
 ];
 
+const geoStyle = {
+  default: { outline: 'none' },
+  hover:   { fill: '#c5dba0', outline: 'none' },
+  pressed: { outline: 'none' },
+};
+
 function Chapters() {
-  const [activeChapter, setActiveChapter] = useState(null);
+  const [activeSchool,  setActiveSchool]  = useState(null);
+  const [expandedState, setExpandedState] = useState(null);
 
   return (
     <div className="App chapters-page">
       <Font />
       <Navbar />
 
-      {/* Hero */}
       <div className="chapters-hero">
         <h1 className="chapters-hero-title">Our Chapters</h1>
         <p className="chapters-hero-sub">Chameleon chapters are student-led communities bringing hands-on nature science to youth across the country.</p>
       </div>
 
-      {/* Map Section */}
+      {/* ── Washington State Map ── */}
       <section className="chapters-map-section">
-        <h2 className="chapters-section-title">Where We Are</h2>
-        <div className="chapters-map-container">
+        <h2 className="chapters-section-title">Chapters</h2>
+        <p className="chapters-map-subtitle">{SCHOOLS.length} member schools across the Puget Sound region</p>
+        <div className="chapters-map-container chapters-wa-map-container">
           <ComposableMap
-            projection="geoAlbersUsa"
+            width={860}
+            height={460}
+            projection="geoMercator"
+            projectionConfig={{ scale: 4200, center: [-120.8, 47.0] }}
             style={{ width: '100%', height: '100%' }}
           >
-            <Geographies geography={GEO_URL}>
+            <Geographies geography={WA_GEO}>
               {({ geographies }) =>
-                geographies.map((geo) => (
-                  <Geography
-                    key={geo.rsmKey}
-                    geography={geo}
-                    fill="#d4e6b5"
-                    stroke="#b5c99a"
-                    strokeWidth={0.5}
-                    style={{
-                      default: { outline: 'none' },
-                      hover: { fill: '#c5dba0', outline: 'none' },
-                      pressed: { outline: 'none' },
-                    }}
-                  />
-                ))
+                geographies
+                  .filter(geo => geo.id.startsWith('53'))
+                  .map(geo => (
+                    <Geography
+                      key={geo.rsmKey}
+                      geography={geo}
+                      fill="#d4e6b5"
+                      stroke="#b5c99a"
+                      strokeWidth={0.5}
+                      style={geoStyle}
+                    />
+                  ))
               }
             </Geographies>
-            {CHAPTERS.map(({ name, coordinates }) => (
+
+            {SCHOOLS.map(school => (
               <Marker
-                key={name}
-                coordinates={coordinates}
-                onMouseEnter={() => setActiveChapter(name)}
-                onMouseLeave={() => setActiveChapter(null)}
+                key={school.name}
+                coordinates={school.coordinates}
+                onMouseEnter={() => setActiveSchool(school.name)}
+                onMouseLeave={() => setActiveSchool(null)}
               >
                 <circle
-                  r={activeChapter === name ? 9 : 7}
-                  fill={activeChapter === name ? '#6c584c' : '#7ba059'}
+                  r={activeSchool === school.name ? 9 : 7}
+                  fill={activeSchool === school.name ? '#6c584c' : '#7ba059'}
                   stroke="#fff"
                   strokeWidth={2}
                   style={{ cursor: 'pointer', transition: 'r 0.2s ease, fill 0.2s ease' }}
                 />
-                {activeChapter === name && (
+                {activeSchool === school.name && (
                   <text
                     textAnchor="middle"
                     y={-14}
@@ -81,11 +101,11 @@ function Chapters() {
                       fontFamily: 'Montserrat, sans-serif',
                       fontSize: '11px',
                       fontWeight: '600',
-                      fill: '#6c584c',
+                      fill: '#4a7c3f',
                       pointerEvents: 'none',
                     }}
                   >
-                    {name}
+                    {school.name}
                   </text>
                 )}
               </Marker>
@@ -93,16 +113,100 @@ function Chapters() {
           </ComposableMap>
         </div>
 
-        {/* Chapter pills */}
         <div className="chapters-pills">
-          {CHAPTERS.map(({ name }) => (
-            <span key={name} className="chapter-pill">{name}</span>
+          {SCHOOLS.map(({ name, city }) => (
+            <span key={name} className="chapter-pill">{name} · {city}</span>
           ))}
           <span className="chapter-pill chapter-pill-soon">🌱 Expanding Soon</span>
         </div>
       </section>
 
-      {/* Board Members */}
+      {/* ── World Map ── */}
+      <section className="chapters-map-section chapters-world-section">
+        <p className="chapters-map-subtitle">Click a marker to see chapter details</p>
+        <div className="chapters-map-container">
+          <ComposableMap
+            width={800}
+            height={400}
+            projection="geoNaturalEarth1"
+            projectionConfig={{ scale: 153 }}
+            style={{ width: '100%', height: '100%' }}
+          >
+            <Geographies geography={WORLD_GEO}>
+              {({ geographies }) =>
+                geographies.map(geo => (
+                  <Geography
+                    key={geo.rsmKey}
+                    geography={geo}
+                    fill="#d4e6b5"
+                    stroke="#b5c99a"
+                    strokeWidth={0.3}
+                    style={geoStyle}
+                  />
+                ))
+              }
+            </Geographies>
+
+            {STATE_CHAPTERS.map(sc => (
+              <Marker
+                key={sc.abbr}
+                coordinates={sc.coordinates}
+                onClick={() => setExpandedState(s => s === sc.abbr ? null : sc.abbr)}
+              >
+                <circle
+                  r={expandedState === sc.abbr ? 20 : 16}
+                  fill={expandedState === sc.abbr ? '#6c584c' : '#7ba059'}
+                  stroke="#fff"
+                  strokeWidth={2.5}
+                  style={{ cursor: 'pointer', transition: 'r 0.2s ease, fill 0.2s ease' }}
+                />
+                <text
+                  textAnchor="middle"
+                  dy="0.35em"
+                  style={{
+                    fontFamily: 'Montserrat, sans-serif',
+                    fontSize: '13px',
+                    fontWeight: '700',
+                    fill: '#fff',
+                    pointerEvents: 'none',
+                  }}
+                >
+                  {sc.schools.length}
+                </text>
+              </Marker>
+            ))}
+          </ComposableMap>
+        </div>
+
+        {expandedState && (() => {
+          const sg = STATE_CHAPTERS.find(s => s.abbr === expandedState);
+          if (!sg) return null;
+          return (
+            <div className="world-detail-panel">
+              <div className="world-detail-header">
+                <h3 className="world-detail-title">{sg.state}</h3>
+                <span className="world-detail-badge">{sg.schools.length} schools</span>
+                <button
+                  className="world-detail-close"
+                  onClick={() => setExpandedState(null)}
+                  aria-label="Close"
+                >✕</button>
+              </div>
+              <ul className="world-detail-list">
+                {sg.schools.map(school => (
+                  <li key={school.name} className="world-detail-item">
+                    <span className="world-detail-dot" />
+                    <span className="world-detail-school">{school.name}</span>
+                    <span className="world-detail-city">{school.city}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })()}
+      </section>
+
+      {/* ── Board Members ── */}
       <section className="chapters-board-section">
         <h2 className="chapters-section-title">Our Board</h2>
         <div className="board-grid">
@@ -121,7 +225,7 @@ function Chapters() {
         </div>
       </section>
 
-      {/* Interest Form */}
+      {/* ── Interest Form ── */}
       <section className="chapters-form-section">
         <div className="chapters-form-card">
           <h2 className="chapters-form-title">Start a Chapter</h2>
