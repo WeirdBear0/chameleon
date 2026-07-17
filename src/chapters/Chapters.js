@@ -10,12 +10,7 @@ const WA_GEO   = 'https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json';
 const WORLD_GEO = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 
 const SCHOOLS = [
-  { name: 'Skyline High School',       city: 'Sammamish', state: 'WA', coordinates: [-122.028, 47.598] },
-  { name: 'Eastlake High School',      city: 'Redmond',   state: 'WA', coordinates: [-122.052, 47.622] },
-  { name: 'Tesla STEM High School',    city: 'Sammamish', state: 'WA', coordinates: [-122.019, 47.548] },
-  { name: 'Redmond High School',       city: 'Redmond',   state: 'WA', coordinates: [-122.121, 47.701] },
-  { name: 'Issaquah High School',      city: 'Issaquah',  state: 'WA', coordinates: [-122.033, 47.527] },
-  { name: 'Mountain View High School', city: 'Vancouver', state: 'WA', coordinates: [-122.501, 45.596] },
+  { name: 'Skyline High School', city: 'Sammamish', state: 'WA', coordinates: [-122.028, 47.598] },
 ];
 
 const STATE_CHAPTERS = [
