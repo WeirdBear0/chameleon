@@ -40,7 +40,7 @@ const Banner = () => {
              <span className='title-line-2-mobile'><br/></span>
              <span className='title-line-2'>Fresh Air</span>
            </p>
-           <p className='description'>Innovative camps with hands-on learning</p>
+           <p className='description'>A new take on envirotech</p>
            <p className='specs'> EST. 2024 | Sammamish, WA </p>
            <br/>
            <span className='donate-banner'><Donate/></span>
@@ -64,8 +64,8 @@ const Banner = () => {
               <span className='title-line-2-mobile'><br/></span>
               <span className='title-line-2'>Fresh Air</span>
             </p>
-            <p className='description'>Innovative camps with hands-on learning</p>
-            <p className='specs'> EST. 2024 | Sammamish, WA </p>
+            <p className='description'>A new take on envirotech</p>
+            <p className='specs'> EST. 2024</p>
             <br/>
             <span className='donate-banner'><Donate/></span>
           </div>

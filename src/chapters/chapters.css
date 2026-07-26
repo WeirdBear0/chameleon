@@ -99,6 +99,11 @@
   height: 480px;
 }
 
+.chapters-wa-map-small {
+  height: 300px;
+  max-width: 600px;
+}
+
 /* ── World detail panel ─────────────────────────────── */
 .world-detail-panel {
   background: #fff;
@@ -187,6 +192,99 @@
   color: #a98467;
   font-style: italic;
   white-space: nowrap;
+}
+
+.world-detail-panel {
+  max-width: 680px;
+}
+
+.world-detail-chapters {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.world-detail-chapter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.world-detail-chapter-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #3d3028;
+}
+
+.world-detail-directors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.world-detail-director-card {
+  background: #f5f0e8;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 0 0 130px;
+  text-align: center;
+  border: 1px solid #e9edc9;
+}
+
+.world-detail-director-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #b5c99a, #7ba059);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.world-detail-director-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #4a7c3f;
+  margin: 0;
+}
+
+.world-detail-director-activity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  background: #eef5e5;
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  width: 100%;
+}
+
+.world-detail-activity-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  color: #a98467;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.world-detail-activity-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #4a7c3f;
 }
 
 .chapters-pills {
@@ -296,6 +394,313 @@
   font-size: 0.8rem;
   color: #a98467;
   margin: 0;
+}
+
+/* ── Accordion ───────────────────────────────────────── */
+.chapters-accordion {
+  max-width: 860px;
+  margin: 2rem auto 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1.5px solid #e9edc9;
+  box-shadow: 0 2px 16px rgba(108, 88, 76, 0.07);
+}
+
+.accordion-item {
+  border-bottom: 1.5px solid #e9edc9;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  width: 100%;
+  background: #fff;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.accordion-header:hover,
+.accordion-header.open {
+  background: #f5f0e8;
+}
+
+.accordion-header-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.accordion-school {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4a7c3f;
+}
+
+.accordion-location {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  color: #a98467;
+}
+
+.accordion-arrow {
+  font-size: 1.1rem;
+  color: #7ba059;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.accordion-header.open .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding: 2rem 1.5rem;
+  background: #fafdf7;
+  border-top: 1.5px solid #e9edc9;
+}
+
+.accordion-directors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.accordion-director-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  flex: 0 0 200px;
+  box-shadow: 0 2px 12px rgba(108, 88, 76, 0.08);
+  border: 1px solid #e9edc9;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accordion-director-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(108, 88, 76, 0.13);
+}
+
+.accordion-director-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #b5c99a, #7ba059);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(108, 88, 76, 0.15);
+  flex-shrink: 0;
+}
+
+.accordion-director-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.accordion-director-initials {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.accordion-director-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.05rem;
+  color: #4a7c3f;
+  margin: 0;
+}
+
+.accordion-director-role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6c584c;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.accordion-director-activity {
+  background: #eef5e5;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  width: 100%;
+}
+
+.accordion-activity-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  color: #a98467;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.accordion-activity-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a7c3f;
+}
+
+.accordion-no-directors {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #a98467;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .accordion-header {
+    padding: 1rem;
+  }
+  .accordion-content {
+    padding: 1.25rem 1rem;
+  }
+  .accordion-director-card {
+    flex: 0 0 160px;
+    padding: 1.5rem 1rem;
+  }
+  .accordion-director-photo {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+/* ── Chapter Directors ───────────────────────────────── */
+.chapters-directors-section {
+  background: #f5f0e8;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.directors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.director-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 12px rgba(108, 88, 76, 0.08);
+  border: 1px solid #e9edc9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex: 0 0 200px;
+  text-align: center;
+}
+
+.director-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(108, 88, 76, 0.14);
+}
+
+.director-photo-placeholder {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #b5c99a, #7ba059);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(108, 88, 76, 0.15);
+  flex-shrink: 0;
+}
+
+.director-initials {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.director-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.director-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.05rem;
+  color: #4a7c3f;
+  margin: 0;
+}
+
+.director-chapter {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6c584c;
+  margin: 0;
+}
+
+.director-location {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.74rem;
+  color: #a98467;
+  margin: 0;
+  font-style: italic;
+}
+
+.director-activity {
+  margin-top: 0.6rem;
+  background: #eef5e5;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  width: 100%;
+}
+
+.director-activity-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  color: #a98467;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.director-activity-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a7c3f;
 }
 
 /* ── Interest Form Section ───────────────────────────── */
