@@ -67,7 +67,7 @@ const CHAPTERS = [
     city: 'Vancouver', state: 'WA', country: 'USA',
     coordinates: [-122.621, 45.636],
     directors: [
-      { name: 'Victor Simal', outdoorActivity: 'Golfing', photo: require('./Director images/1000007397 - Victor Simal.jpeg') },
+      { name: 'Victor Simal', outdoorActivity: 'Golfing', photo: require('./Director images/1000007397 - Victor Simal.jpeg'), photoStyle: { transform: 'scale(1.6)', objectPosition: 'center 15%' } },
     ],
   },
   {
@@ -303,7 +303,7 @@ function Chapters() {
                           <div key={dir.name} className="accordion-director-card">
                             <div className="accordion-director-photo">
                               {dir.photo
-                                ? <img src={dir.photo} alt={dir.name} />
+                                ? <img src={dir.photo} alt={dir.name} style={dir.photoStyle || {}} />
                                 : <span className="accordion-director-initials">{dir.name.split(' ').map(n => n[0]).join('')}</span>
                               }
                             </div>
