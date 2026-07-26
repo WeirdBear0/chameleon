@@ -18,11 +18,12 @@ const CHAPTERS = [
       {
         name: 'Ania Awasthi',
         outdoorActivity: 'Hiking',
+
         photo: require('./Director images/IMG_3613 - Ania Awasthi.jpeg'),
       },
       {
         name: 'Richa Sharma',
-        outdoorActivity: 'Rock Climbing',
+        outdoorActivity: 'Hiking and Walking',
         photo: require('./Director images/IMG_2799 - Richa Sharma.jpeg'),
       },
     ],
@@ -34,7 +35,7 @@ const CHAPTERS = [
     directors: [
       {
         name: 'Malhar Pawar',
-        outdoorActivity: 'Camping',
+        outdoorActivity: 'Basketball',
         photo: require('./Director images/Malhar PFP for Resume - Malhar Pawar.jpeg'),
       },
     ],
@@ -45,7 +46,7 @@ const CHAPTERS = [
     directors: [
       {
         name: 'Yahya Luqman',
-        outdoorActivity: 'Fishing',
+        outdoorActivity: 'Soccer',
         photo: require('./Director images/IMG_4339 - Yahya Luqman.jpeg'),
       },
     ],
@@ -56,7 +57,7 @@ const CHAPTERS = [
     directors: [
       {
         name: 'Shaurya Agarwal',
-        outdoorActivity: 'Swimming',
+        outdoorActivity: 'Hiking and Camping',
         photo: require('./Director images/Confident teen in executive attire - Shaurya Agarwal.png'),
       },
     ],
@@ -66,7 +67,7 @@ const CHAPTERS = [
     city: 'Vancouver', state: 'WA', country: 'USA',
     coordinates: [-122.621, 45.636],
     directors: [
-      { name: 'Victor Simal', outdoorActivity: 'Hiking', photo: require('./Director images/1000007397 - Victor Simal.jpeg') },
+      { name: 'Victor Simal', outdoorActivity: 'Golfing', photo: require('./Director images/1000007397 - Victor Simal.jpeg') },
     ],
   },
   {
@@ -74,14 +75,14 @@ const CHAPTERS = [
     city: 'North Bend', state: 'WA', country: 'USA',
     coordinates: [-121.785, 47.490],
     directors: [
-      { name: 'Anandi Chaganla', outdoorActivity: 'Hiking', photo: require('./Director images/101_1080 - anandi.jpeg') },
+      { name: 'Anandi Chaganla', outdoorActivity: 'Camping', photo: require('./Director images/101_1080 - anandi.jpeg') },
     ],
   },
   {
     name: 'Auckland Grammar School',
     city: 'Auckland', state: null, country: 'New Zealand',
     directors: [
-      { name: 'Kelvin Chen', outdoorActivity: 'Hiking', photo: require('./Director images/IMG_20240825_150026 - Klevin Cen.jpg') },
+      { name: 'Kelvin Chen', outdoorActivity: 'Basketball', photo: require('./Director images/IMG_20240825_150026 - Klevin Cen.jpg') },
     ],
   },
 ];
