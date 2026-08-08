@@ -3,6 +3,7 @@ import Banner from './home-components/banner'
 import Stats from './home-components/stats'
 import About from './home-components/about'
 import Camps from './home-components/camps';
+import Board from './home-components/board';
 import Partners from './home-components/partners';
 import Gallery from './home-components/gallery';
 import Footer from './home-components/footer'
@@ -39,6 +40,9 @@ function Home() {
       </div>
       <div className='abt' ref={abtRef}>
         <About/>
+      </div>
+      <div className='board'>
+        <Board/>
       </div>
       <div className='camps' ref={campRef}>
         <Camps/>

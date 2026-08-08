@@ -71,7 +71,7 @@ const Footer = () => {
                             <span className={styles.creditName}><strong>Andrew</strong> Wang</span>
                             <span className={styles.creditName}><strong>Kruthik</strong> Ankam</span>
                         </div>
-                        <p className={styles.copyright}>© chameleon 2025</p>
+                        <p className={styles.copyright}>© chameleon 2025 · EIN 99-3456787</p>
                     </div>
                 </div>
             </div>

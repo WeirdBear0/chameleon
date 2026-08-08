@@ -13,7 +13,7 @@ const CHAPTERS = [
   {
     name: 'Issaquah High School',
     city: 'Issaquah', state: 'WA', country: 'USA',
-    coordinates: [-122.033, 47.527],
+    coordinates: [-122.032, 47.530],
     directors: [
       {
         name: 'Ania Awasthi',
@@ -31,7 +31,7 @@ const CHAPTERS = [
   {
     name: 'Tesla STEM High School',
     city: 'Sammamish', state: 'WA', country: 'USA',
-    coordinates: [-122.019, 47.548],
+    coordinates: [-122.039, 47.623],
     directors: [
       {
         name: 'Malhar Pawar',
