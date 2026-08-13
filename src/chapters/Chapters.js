@@ -10,6 +10,7 @@ const WORLD_GEO = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.jso
 const WA_GEO    = 'https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json';
 
 const CHAPTERS = [
+  // ── Washington, USA ──
   {
     name: 'Issaquah High School',
     city: 'Issaquah', state: 'WA', country: 'USA',
@@ -38,27 +39,10 @@ const CHAPTERS = [
         outdoorActivity: 'Basketball',
         photo: require('./Director images/Malhar PFP for Resume - Malhar Pawar.jpeg'),
       },
-    ],
-  },
-  {
-    name: 'Dakota Valley High School',
-    city: 'North Sioux City', state: 'SD', country: 'USA',
-    directors: [
       {
-        name: 'Yahya Luqman',
-        outdoorActivity: 'Soccer',
-        photo: require('./Director images/IMG_4339 - Yahya Luqman.jpeg'),
-      },
-    ],
-  },
-  {
-    name: 'Saint Peters International School',
-    city: 'Barcelona', state: null, country: 'Spain',
-    directors: [
-      {
-        name: 'Shaurya Agarwal',
-        outdoorActivity: 'Hiking and Camping',
-        photo: require('./Director images/Confident teen in executive attire - Shaurya Agarwal.png'),
+        name: 'Khush Kothari',
+        outdoorActivity: 'Pickleball and Volleyball',
+        photo: require('./Director images/IMG-20260808-WA0020 - Khush Kothari.jpg'),
       },
     ],
   },
@@ -76,6 +60,40 @@ const CHAPTERS = [
     coordinates: [-121.785, 47.490],
     directors: [
       { name: 'Anandi Chaganla', outdoorActivity: 'Camping', photo: require('./Director images/101_1080 - anandi.jpeg') },
+    ],
+  },
+
+  // ── Other US states ──
+  {
+    name: 'Dakota Valley High School',
+    city: 'North Sioux City', state: 'SD', country: 'USA',
+    directors: [
+      {
+        name: 'Yahya Luqman',
+        outdoorActivity: 'Soccer',
+        photo: require('./Director images/IMG_4339 - Yahya Luqman.jpeg'),
+      },
+    ],
+  },
+  {
+    name: 'Lynbrook High School',
+    city: 'San Jose', state: 'CA', country: 'USA',
+    directors: [
+      { name: 'Kushal Dugasani', outdoorActivity: 'Track and Field', photo: require('./Director images/763318221_1519069772820900_1376275498782221526_n - Kushal Dugasani.jpg') },
+      { name: 'Devesh Anand', outdoorActivity: 'Basketball', photo: require('./Director images/IMG_4559 - Devesh Anand.jpeg') },
+    ],
+  },
+
+  // ── International ──
+  {
+    name: 'Saint Peters International School',
+    city: 'Barcelona', state: null, country: 'Spain',
+    directors: [
+      {
+        name: 'Shaurya Agarwal',
+        outdoorActivity: 'Hiking and Camping',
+        photo: require('./Director images/Confident teen in executive attire - Shaurya Agarwal.png'),
+      },
     ],
   },
   {
@@ -97,6 +115,11 @@ const REGION_GROUPS = [
     label: 'South Dakota, USA', abbr: 'SD',
     coordinates: [-100.35, 44.37],
     chapters: CHAPTERS.filter(c => c.state === 'SD'),
+  },
+  {
+    label: 'California, USA', abbr: 'CA',
+    coordinates: [-121.95, 37.31],
+    chapters: CHAPTERS.filter(c => c.state === 'CA'),
   },
   {
     label: 'New Zealand', abbr: 'NZ',
