@@ -62,6 +62,18 @@ const CHAPTERS = [
       { name: 'Anandi Chaganla', outdoorActivity: 'Camping', photo: require('./Director images/101_1080 - anandi.jpeg') },
     ],
   },
+  {
+    name: 'Skyline High School',
+    city: 'Sammamish', state: 'WA', country: 'USA',
+    coordinates: [-122.009, 47.578],
+    directors: [
+      { name: 'Ayush', outdoorActivity: '' },
+      { name: 'Andrew', outdoorActivity: '' },
+      { name: 'Kruthik', outdoorActivity: '' },
+      { name: 'Sana', outdoorActivity: '' },
+      { name: 'Aarav', outdoorActivity: '' },
+    ],
+  },
 
   // ── Other US states ──
   {
@@ -131,14 +143,6 @@ const REGION_GROUPS = [
     coordinates: [2.154, 41.390],
     chapters: CHAPTERS.filter(c => c.country === 'Spain'),
   },
-];
-
-const BOARD = [
-  { name: 'Ayush',   grade: '12', role: 'Board Member' },
-  { name: 'Andrew',  grade: '12', role: 'Board Member' },
-  { name: 'Sana',    grade: '11', role: 'Board Member' },
-  { name: 'Kruthik', grade: '12', role: 'Board Member' },
-  { name: 'Aarav',   grade: '10', role: 'Board Member' },
 ];
 
 const geoStyle = {
@@ -332,10 +336,12 @@ function Chapters() {
                             </div>
                             <h3 className="accordion-director-name">{dir.name}</h3>
                             <p className="accordion-director-role">Chapter Director</p>
-                            <div className="accordion-director-activity">
-                              <span className="accordion-activity-label">Favorite outdoor activity</span>
-                              <span className="accordion-activity-value">{dir.outdoorActivity}</span>
-                            </div>
+                            {dir.outdoorActivity && (
+                              <div className="accordion-director-activity">
+                                <span className="accordion-activity-label">Favorite outdoor activity</span>
+                                <span className="accordion-activity-value">{dir.outdoorActivity}</span>
+                              </div>
+                            )}
                           </div>
                         ))}
                       </div>
@@ -347,25 +353,6 @@ function Chapters() {
               </div>
             );
           })}
-        </div>
-      </section>
-
-      {/* ── Board Members (hidden) ── */}
-      <section className="chapters-board-section" style={{ display: 'none' }}>
-        <h2 className="chapters-section-title">Our Board</h2>
-        <div className="board-grid">
-          {BOARD.map(({ name, grade, role }) => (
-            <div key={name} className="board-card">
-              <div className="board-photo-placeholder">
-                <span className="board-initials">{name[0]}</span>
-              </div>
-              <div className="board-info">
-                <h3 className="board-name">{name}</h3>
-                <p className="board-role">{role}</p>
-                <p className="board-grade">Grade {grade}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
