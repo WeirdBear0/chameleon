@@ -703,6 +703,109 @@
   color: #4a7c3f;
 }
 
+/* ── Board Section ───────────────────────────────────── */
+.chapters-board-section {
+  background: #f5f0e8;
+  padding: 4rem 0 4rem;
+}
+
+.chapters-board-header {
+  padding: 0 0 2rem;
+  text-align: center;
+}
+
+.chapters-board-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.2rem;
+  color: #3d3028;
+  margin: 0;
+}
+
+.chapters-board-track {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  padding: 0 2rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  justify-content: center;
+}
+
+.chapters-board-track::-webkit-scrollbar {
+  display: none;
+}
+
+.chapters-board-card {
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chapters-board-photo {
+  width: 240px;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(160deg, #2d5a27 0%, #4a7c3f 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chapters-board-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.chapters-board-initial {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 700;
+}
+
+.chapters-board-info {
+  padding: 0.75rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.chapters-board-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #3d3028;
+}
+
+.chapters-board-grade {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  color: #a98467;
+}
+
+@media (max-width: 700px) {
+  .chapters-board-header {
+    padding: 0 0 1.5rem;
+  }
+
+  .chapters-board-track {
+    padding: 0 1.25rem;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .chapters-board-card {
+    flex: 0 0 160px;
+  }
+
+  .chapters-board-photo {
+    width: 160px;
+  }
+}
+
 /* ── Interest Form Section ───────────────────────────── */
 .chapters-form-section {
   background: linear-gradient(135deg, #e9f0db 0%, #f0ead2 100%);

@@ -7,7 +7,6 @@ import '../Home.css';
 import './chapters.css';
 
 const WORLD_GEO = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
-const WA_GEO    = 'https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json';
 
 const CHAPTERS = [
   // ── Washington, USA ──
@@ -62,19 +61,6 @@ const CHAPTERS = [
       { name: 'Anandi Chaganla', outdoorActivity: 'Camping', photo: require('./Director images/101_1080 - anandi.jpeg') },
     ],
   },
-  {
-    name: 'Skyline High School',
-    city: 'Sammamish', state: 'WA', country: 'USA',
-    coordinates: [-122.009, 47.578],
-    directors: [
-      { name: 'Ayush', outdoorActivity: '' },
-      { name: 'Andrew', outdoorActivity: '' },
-      { name: 'Kruthik', outdoorActivity: '' },
-      { name: 'Sana', outdoorActivity: '' },
-      { name: 'Aarav', outdoorActivity: '' },
-    ],
-  },
-
   // ── Other US states ──
   {
     name: 'Dakota Valley High School',
@@ -145,17 +131,22 @@ const REGION_GROUPS = [
   },
 ];
 
+const BOARD = [
+  { name: 'Ayush',   grade: 12, photo: require('./leads images/ayush.png') },
+  { name: 'Andrew',  grade: 12, photo: require('./leads images/andrew.png') },
+  { name: 'Kruthik', grade: 12, photo: require('./leads images/kruthik.png') },
+  { name: 'Sana',    grade: 11, photo: require('./leads images/sana.png') },
+  { name: 'Aarav',   grade: 10, photo: require('./leads images/aarav.png') },
+];
+
 const geoStyle = {
   default: { outline: 'none' },
   hover:   { fill: '#c5dba0', outline: 'none' },
   pressed: { outline: 'none' },
 };
 
-const WA_CHAPTERS = CHAPTERS.filter(c => c.state === 'WA');
-
 function Chapters() {
   const [activeRegion,    setActiveRegion]    = useState(null);
-  const [activeSchool,    setActiveSchool]    = useState(null);
   const [expandedChapter, setExpandedChapter] = useState(null);
 
   return (
@@ -244,66 +235,6 @@ function Chapters() {
           </ComposableMap>
         </div>
 
-        {/* Washington Map */}
-        <p className="chapters-map-subtitle" style={{ marginTop: '2.5rem' }}>Washington State</p>
-        <div className="chapters-map-container chapters-wa-map-small">
-          <ComposableMap
-            width={860}
-            height={320}
-            projection="geoMercator"
-            projectionConfig={{ scale: 4200, center: [-120.8, 47.0] }}
-            style={{ width: '100%', height: '100%' }}
-          >
-            <Geographies geography={WA_GEO}>
-              {({ geographies }) =>
-                geographies
-                  .filter(geo => geo.id.startsWith('53'))
-                  .map(geo => (
-                    <Geography
-                      key={geo.rsmKey}
-                      geography={geo}
-                      fill="#d4e6b5"
-                      stroke="#b5c99a"
-                      strokeWidth={0.5}
-                      style={geoStyle}
-                    />
-                  ))
-              }
-            </Geographies>
-            {WA_CHAPTERS.filter(ch => ch.coordinates).map(ch => (
-              <Marker
-                key={ch.name}
-                coordinates={ch.coordinates}
-                onMouseEnter={() => setActiveSchool(ch.name)}
-                onMouseLeave={() => setActiveSchool(null)}
-              >
-                <circle
-                  r={activeSchool === ch.name ? 9 : 7}
-                  fill={activeSchool === ch.name ? '#6c584c' : '#7ba059'}
-                  stroke="#fff"
-                  strokeWidth={2}
-                  style={{ transition: 'r 0.2s ease, fill 0.2s ease' }}
-                />
-                {activeSchool === ch.name && (
-                  <text
-                    textAnchor="middle"
-                    y={-13}
-                    style={{
-                      fontFamily: 'Montserrat, sans-serif',
-                      fontSize: '11px',
-                      fontWeight: '600',
-                      fill: '#4a7c3f',
-                      pointerEvents: 'none',
-                    }}
-                  >
-                    {ch.name}
-                  </text>
-                )}
-              </Marker>
-            ))}
-          </ComposableMap>
-        </div>
-
         {/* Accordion */}
         <div className="chapters-accordion">
           {CHAPTERS.map(ch => {
@@ -353,6 +284,29 @@ function Chapters() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* ── Board ── */}
+      <section className="chapters-board-section">
+        <div className="chapters-board-header">
+          <h2 className="chapters-board-title">Our Board</h2>
+        </div>
+        <div className="chapters-board-track">
+          {BOARD.map(({ name, grade, photo }) => (
+            <div key={name} className="chapters-board-card">
+              <div className="chapters-board-photo">
+                {photo
+                  ? <img src={photo} alt={name} />
+                  : <span className="chapters-board-initial">{name[0]}</span>
+                }
+              </div>
+              <div className="chapters-board-info">
+                <span className="chapters-board-name">{name}</span>
+                <span className="chapters-board-grade">Grade {grade}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
