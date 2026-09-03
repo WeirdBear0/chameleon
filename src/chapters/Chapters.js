@@ -66,14 +66,14 @@ const CHAPTERS = [
     name: 'Marvin Ridge High School',
     city: 'Waxhaw', state: 'NC', country: 'USA',
     directors: [
-      { name: 'Snithi Pingili', outdoorActivity: 'Rowing', photo: require('./Director images/Snithi Pingili.jpg') },
+      { name: 'Snithi Pingili', outdoorActivity: 'Rowing', photo: require('./Director images/Screenshot 2026-08-31 at 4.35.10 PM - Snithi Reddy.png') },
     ],
   },
   {
     name: 'Spring Ford 9th Grade Center',
     city: 'Royersford', state: 'PA', country: 'USA',
     directors: [
-      { name: 'Advaith Nair', outdoorActivity: 'Basketball', photo: require('./Director images/Advaith Nair.jpg') },
+      { name: 'Advaith Nair', outdoorActivity: 'Basketball', photo: require('./Director images/PXL_20260831_204904902 - Advaith Nair.jpg') },
     ],
   },
   {
