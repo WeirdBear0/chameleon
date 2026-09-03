@@ -63,6 +63,20 @@ const CHAPTERS = [
   },
   // ── Other US states ──
   {
+    name: 'Marvin Ridge High School',
+    city: 'Waxhaw', state: 'NC', country: 'USA',
+    directors: [
+      { name: 'Snithi Pingili', outdoorActivity: 'Rowing', photo: require('./Director images/Snithi Pingili.jpg') },
+    ],
+  },
+  {
+    name: 'Spring Ford 9th Grade Center',
+    city: 'Royersford', state: 'PA', country: 'USA',
+    directors: [
+      { name: 'Advaith Nair', outdoorActivity: 'Basketball', photo: require('./Director images/Advaith Nair.jpg') },
+    ],
+  },
+  {
     name: 'Dakota Valley High School',
     city: 'North Sioux City', state: 'SD', country: 'USA',
     directors: [
@@ -118,6 +132,16 @@ const REGION_GROUPS = [
     label: 'California, USA', abbr: 'CA',
     coordinates: [-121.95, 37.31],
     chapters: CHAPTERS.filter(c => c.state === 'CA'),
+  },
+  {
+    label: 'North Carolina, USA', abbr: 'NC',
+    coordinates: [-79.0, 35.5],
+    chapters: CHAPTERS.filter(c => c.state === 'NC'),
+  },
+  {
+    label: 'Pennsylvania, USA', abbr: 'PA',
+    coordinates: [-77.0, 40.9],
+    chapters: CHAPTERS.filter(c => c.state === 'PA'),
   },
   {
     label: 'New Zealand', abbr: 'NZ',
