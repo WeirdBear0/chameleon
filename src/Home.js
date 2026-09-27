@@ -27,7 +27,6 @@ function Home() {
       <Font/>
       <Navbar
         onHomeClick={() => scrollToSection(bannerRef)}
-        onAboutClick={() => scrollToSection(abtRef)}
         onWorkshopsClick={() => scrollToSection(campRef)}
       />
 
@@ -40,7 +39,7 @@ function Home() {
       <div className='abt' ref={abtRef}>
         <About/>
       </div>
-      <div className='camps' ref={campRef}>
+      <div className='camps' id="workshops" ref={campRef}>
         <Camps/>
       </div>
       <div className='partners' ref={partnerRef}>

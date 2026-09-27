@@ -50,6 +50,18 @@
     gap: 1rem;
 }
 
+.addressBlock {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-style: normal;
+}
+
+.addressBlock .contactLink {
+    display: block;
+    line-height: 1.5;
+}
+
 .contactLink, .socialLink {
     color: #6c584c;
     text-decoration: none;

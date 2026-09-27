@@ -4,7 +4,7 @@ import logo from '../mainLogo.svg';
 import circleLogo from '../circleLogo.svg';
 import Donate from '../home-components/donate';
 
-const Navbar = ({ onHomeClick, onAboutClick, onWorkshopsClick }) => {
+const Navbar = ({ onHomeClick, onWorkshopsClick }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -35,7 +35,7 @@ const Navbar = ({ onHomeClick, onAboutClick, onWorkshopsClick }) => {
 
   // On subpages, section links just navigate home
   const goHome      = () => { close(); onHomeClick      ? onHomeClick()      : navigate('/'); };
-  const goAbout     = () => { close(); onAboutClick     ? onAboutClick()     : navigate('/'); };
+  const goAbout     = () => { close(); navigate('/about'); };
   const goWorkshops = () => { close(); onWorkshopsClick ? onWorkshopsClick() : navigate('/'); };
   const goChapters  = () => { close(); navigate('/chapters'); };
 
@@ -83,8 +83,6 @@ const Navbar = ({ onHomeClick, onAboutClick, onWorkshopsClick }) => {
                   <Link to="/windmill"  className='dropdown-link' onClick={close}>Windmill</Link>
                   <Link to="/hackathon" className='dropdown-link' onClick={close}>Hackathon</Link>
                   <Link to="/farmbeat"  className='dropdown-link' onClick={close}>Farmbeat</Link>
-                  <span className='dropdown-link disabled'>Ripple</span>
-                  <span className='dropdown-link disabled'>Rover</span>
                 </div>
               )}
             </div>
@@ -113,8 +111,6 @@ const Navbar = ({ onHomeClick, onAboutClick, onWorkshopsClick }) => {
                 <button type="button" className='mobile-project-link' onClick={() => { navigate('/windmill');  close(); }}>Windmill</button>
                 <button type="button" className='mobile-project-link' onClick={() => { navigate('/hackathon'); close(); }}>Hackathon</button>
                 <button type="button" className='mobile-project-link' onClick={() => { navigate('/farmbeat');  close(); }}>Farmbeat</button>
-                <span className='mobile-project-link disabled'>Ripple</span>
-                <span className='mobile-project-link disabled'>Rover</span>
               </div>
             </div>
           </div>
