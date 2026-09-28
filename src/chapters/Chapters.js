@@ -46,14 +46,6 @@ const CHAPTERS = [
     ],
   },
   {
-    name: 'Mountain View High School',
-    city: 'Vancouver', state: 'WA', country: 'USA',
-    coordinates: [-122.621, 45.636],
-    directors: [
-      { name: 'Victor Simal', outdoorActivity: 'Golfing', photo: require('./Director images/1000007397 - Victor Simal.jpeg'), photoStyle: { transform: 'scale(1.6)', objectPosition: 'center 15%' } },
-    ],
-  },
-  {
     name: 'Mt Si High School',
     city: 'North Bend', state: 'WA', country: 'USA',
     coordinates: [-121.785, 47.490],
