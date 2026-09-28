@@ -9,6 +9,7 @@ import Windmill from './external-nav/windmill';
 import Hackathon from './external-nav/hackathon';
 import SignUp from './signup';
 import Chapters from './chapters/Chapters';
+import AboutPage from './about/AboutPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="hackathon" element={<Hackathon />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="chapters" element={<Chapters />} />
+          <Route path="about" element={<AboutPage />} />
       </Routes>
       <Analytics />
     </BrowserRouter>

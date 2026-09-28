@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { quotes } from './quotes';
 import './about.css'
 
@@ -30,6 +31,7 @@ const About = () => {
                     <p className='desc'>
                     We believe that everyone needs to have a real connection to their environment, and deserve to be taught that in an engaging, unique way, different from your average coding class.
                     </p>
+                    <Link to="/about" className='aboutMore'>Learn more about us →</Link>
                 </div>
               </div>
               <span className='statementmobile'>
