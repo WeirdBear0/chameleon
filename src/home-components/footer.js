@@ -37,9 +37,9 @@ const Footer = () => {
                                 <span className={styles.contactIcon}>✉️</span>
                                 info@chameleoncamps.org
                             </a>
-                            <a href="tel:+14257382825" className={styles.contactLink}>
+                            <a href="tel:+14252954118" className={styles.contactLink}>
                                 <span className={styles.contactIcon}>📞</span>
-                                425.738.2825
+                                425.295.4118
                             </a>
                         </div>
                     </div>
