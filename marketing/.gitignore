@@ -1,0 +1,4 @@
+# Never commit prospect/lead data. Keep it in a private tool (Sheet/CRM).
+leads*/
+*.csv
+*.xlsx
