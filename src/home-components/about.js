@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { quotes } from './quotes';
+import GradientBanner from './gradientbanner';
 import './about.css'
 
 const About = () => {
@@ -13,6 +14,10 @@ const About = () => {
 
   return (
     <div>
+      <GradientBanner
+        colors={['#3d6b35', '#5a8f4a', '#2d5a27', '#7ba059']}
+        density={[0.06, 0.16]}
+      >
         <div className='aboutContainer'>
               <div className='webcontainer'>
                 <div className='team'>
@@ -38,6 +43,7 @@ const About = () => {
                 <p>"{randomQuote.text}" - {randomQuote.author}</p>
               </span>
             </div>
+        </GradientBanner>
     </div>
   );
 };

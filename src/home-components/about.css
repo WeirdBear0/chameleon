@@ -4,7 +4,6 @@
 
 .aboutContainer {
   position: relative;
-  background: linear-gradient(135deg, #3d6b35 0%, #5a8f4a 40%, #7ba059 70%, #a8c686 100%);
   overflow: hidden;
 }
 
@@ -52,6 +51,7 @@
 .aboutContainer div .title {
   font-family: 'Libre Baskerville', serif;
   color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
 
 .aboutContainer .cause {
@@ -77,8 +77,9 @@
 
 .desc {
   font-family: 'Montserrat', serif;
-  color: rgba(255,255,255,0.92);
+  color: rgba(255,255,255,0.95);
   line-height: 1.75;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.35);
 }
 
 .amazonLink {
